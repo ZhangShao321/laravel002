@@ -41,8 +41,13 @@
     <body>
         <div class="container">
             <div class="content">
+
+                <!-- <div class="title">Be right back.</div> -->
+                <!-- <img src="/public/images/2.jpg" width="100%" alt=""> -->
+
                 <!-- <div class="title"><img src="/1.jpg"></div> -->
                 <img src="/public/images/2.jpg">
+
             </div>
         </div>
     </body>
