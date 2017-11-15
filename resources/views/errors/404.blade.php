@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>404 Not Find.</title>
+        <title>404 Not Found</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
@@ -18,6 +18,7 @@
                 display: table;
                 font-weight: 100;
                 font-family: 'Lato';
+                background:  
             }
 
             .container {
@@ -40,8 +41,13 @@
     <body>
         <div class="container">
             <div class="content">
+
                 <!-- <div class="title">Be right back.</div> -->
-                <img src="/public/images/2.jpg" width="100%" alt="">
+                <!-- <img src="/public/images/2.jpg" width="100%" alt=""> -->
+
+                <!-- <div class="title"><img src="/1.jpg"></div> -->
+                <img src="/public/images/2.jpg">
+
             </div>
         </div>
     </body>
