@@ -42,7 +42,7 @@
         <div class="container">
             <div class="content">
                 <!-- <div class="title"><img src="/1.jpg"></div> -->
-                <img src="/2.jpg">
+                <img src="/public/images/2.jpg">
             </div>
         </div>
     </body>
