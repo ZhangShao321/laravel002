@@ -32,7 +32,7 @@ Route::group([], function(){
 
 
 
-//电影院路由组
+//电影院路由组 'middleware'=>'filelogin'
 Route::group([], function(){
     	
      Route::get('/Filmshow','FilmUserController@index');
