@@ -7,10 +7,7 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-<<<<<<< HEAD
         "gregwar/captcha": "v1.1.3",
-=======
->>>>>>> 789ec453382297b9ca61386a974760a779ba24fc
         "flc/alidayu": "^2.0"
     },
     "require-dev": {
