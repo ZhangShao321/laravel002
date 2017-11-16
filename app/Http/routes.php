@@ -56,21 +56,24 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     //电影院信息
     Route::get('info','FilmUserController@FilmInfo');
 
-    Route::get('/add','FilmRoomController@add');
+    Route::get('/filmroom/add','FilmRoomController@add');
 
 
 
 });
 
 
-Route::get('/login','FilmRoomController@a');
+// Route::get('/login','FilmRoomController@a');
 
-Route::post('/login','FilmRoomController@login');
-
-
+// Route::post('/login','FilmRoomController@login');
 
 
+Route::get('login','RoomController@index');
 
+Route::post('login','RoomController@code');
+
+
+Route::post('logins/login','RoomController@login');
 
 
 
