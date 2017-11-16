@@ -45,6 +45,11 @@ Route::group([], function(){
 });
 
 
+Route::get('/login','FilmRoomController@a');
+
+Route::post('/login','FilmRoomController@login');
+
+
 
 
 
