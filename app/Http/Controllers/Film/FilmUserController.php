@@ -16,11 +16,21 @@ class FilmUserController extends Controller
 		return view('FilmAdmins.index');
 	} 
 
+
+	//电影院的list
+	public  function listFilm()
+	{
+		return view('FilmAdmins.FilmUser.FilmList');
+	}
 	  //电影院信息填写
+	
+
     public function FilmInfo()
     {
         return view('FilmAdmins.FilmUser.info');
     }
+
+
 
 
 
