@@ -89,7 +89,20 @@ Route::post('logins/login','RoomController@login');
 
 
 //前台路由组
-Route::group([], function(){
+Route::group(['prefix' => 'homes', 'namespace' => 'Homes'], function(){
 
+	//首页
+	Route::get('index','HomesController@index');
 
+	//电影列表页
+	Route::get('filmlist','HomesController@filmlist');
+
+	//电影详情页
+	Route::get('filmdetail','HomesController@filmdetail');
+
+	//电影院列表
+	Route::get('cinemalist','HomesController@cinemalist');
+
+	//电影院详情
+	Route::get('cinemadetail','HomesController@cinemadetail');
 });
