@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8077389b8c08c6546464412334828ba3",
-    "content-hash": "9f62939b13445266c0a9d1a8a58c908a",
+    "hash": "afdbf38eb8013046f1b627726753163a",
+    "content-hash": "e5a937eaf4388471b28249d1d9ec8be8",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -216,6 +216,40 @@
                 "string"
             ],
             "time": "2017-07-22 12:18:28"
+        },
+        {
+            "name": "flc/alidayu",
+            "version": "v2.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flc1125/alidayu.git",
+                "reference": "f4df2beaa90e639ef639b562d2b71e8dc2c3806c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flc1125/alidayu/zipball/f4df2beaa90e639ef639b562d2b71e8dc2c3806c",
+                "reference": "f4df2beaa90e639ef639b562d2b71e8dc2c3806c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Flc\\Alidayu\\": "src/Alidayu/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "阿里大于(鱼)API-SDK；适用任何PHP项目，包括Laravel、Yii、Thinkphp等...",
+            "keywords": [
+                "alidayu",
+                "flc"
+            ],
+            "time": "2017-08-12 02:55:34"
         },
         {
             "name": "gregwar/captcha",

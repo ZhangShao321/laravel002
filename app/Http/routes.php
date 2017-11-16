@@ -47,18 +47,25 @@ Route::get('/Film','FilmLoginController@code');
 
 
 //电影院路由组
-Route::group([], function(){
-    	
+//访问 prefix -> resources 中view视图中的 文件夹名
+// namespace  是控制器文件夹名 
+//  php artisan make:controller Film/FilmLoginController --plain
+
+Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     //电影院首页
-     Route::get('/Filmshow','FilmUserController@index');
-
+     Route::get('index','FilmUserController@index');
     //电影院信息
-    Route::get('/FilmInfo','FilmUserController@FilmInfo');
-
-    
+    Route::get('info','FilmUserController@FilmInfo');
 
 
 });
+
+
+
+	//测试短信验证
+    Route::get('/ceshi','TestController@yanzheng');
+
+
 
 
 

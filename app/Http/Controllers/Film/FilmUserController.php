@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Film;
 
 use Illuminate\Http\Request;
 
@@ -9,7 +9,8 @@ use App\Http\Controllers\Controller;
 
 class FilmUserController extends Controller
 {
-    //电影院后台首页
+    //
+	//电影院后台首页
 	public function index()
 	{
 		return view('FilmAdmins.index');
@@ -22,8 +23,9 @@ class FilmUserController extends Controller
     }
 
 
-	
+
+    
 
 
-
+    
 }

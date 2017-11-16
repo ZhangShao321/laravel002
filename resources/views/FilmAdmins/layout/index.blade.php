@@ -320,7 +320,7 @@
                     <li>
                         <a href="/admins/#"><i class="icon-user"></i> 电影院管理</a>
                         <ul class="closed">
-                            <li><a href="">电影院列表</a></li>
+                            <li><a href="{{asset('/FilmAdmins/info')}}">电影院信息</a></li>
                            
                         </ul>
                     </li>
