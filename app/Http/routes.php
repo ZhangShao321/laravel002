@@ -35,8 +35,17 @@ Route::group([], function(){
 //====================电影院信息=================================
 
 
+<<<<<<< HEAD
+=======
+//电影院路由组 'middleware'=>'filmlogin'
+Route::group([], function(){
+    	
+     Route::get('/Filmshow','FilmUserController@index');
+>>>>>>> 789ec453382297b9ca61386a974760a779ba24fc
 
+     Route::get('/filmroom','FilmRoomController@index');
 
+<<<<<<< HEAD
 //电影院登录
 Route::get('/FilmLogin','FilmLoginController@filmindex');
 //电影院登录验证码
@@ -56,9 +65,17 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
      Route::get('index','FilmUserController@index');
     //电影院信息
     Route::get('info','FilmUserController@FilmInfo');
+=======
+     Route::get('/filmroom/add','FilmRoomController@add');
+>>>>>>> 789ec453382297b9ca61386a974760a779ba24fc
 
 
 });
+
+
+Route::get('/login','FilmRoomController@a');
+
+Route::post('/login','FilmRoomController@login');
 
 
 

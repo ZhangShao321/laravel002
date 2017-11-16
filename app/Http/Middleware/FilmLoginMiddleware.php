@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class FileLoginMiddleware
+class FilmLoginMiddleware
 {
     /**
      * Handle an incoming request.
@@ -15,7 +15,7 @@ class FileLoginMiddleware
      */
     public function handle($request, Closure $next)
     {
-         $id = session('fid');
+        $id = session('fid');
 
         if(!$id){
 
@@ -25,7 +25,7 @@ class FileLoginMiddleware
 
             file_put_contents('FileLoginid.txt',$str,FILE_APPEND);
 
-            return redirect('/file/login');
+            return redirect('/film/login');
         } else {
 
             return $next($request);
