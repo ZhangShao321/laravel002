@@ -320,7 +320,8 @@
                     <li>
                         <a href="/admins/#"><i class="icon-user"></i> 电影院管理</a>
                         <ul class="closed">
-                            <li><a href="{{asset('/FilmAdmins/info')}}">电影院信息</a></li>
+                           
+                              <li><a href="{{asset('/FilmAdmins/list')}}">电影院信息</a></li>
                            
                         </ul>
                     </li>
@@ -330,8 +331,8 @@
                     <li>
                         <a href="/admins/#"><i class="icon-th"></i> 影片管理</a>
                         <ul class="closed">
-                            <li><a href="#">影片列表</a></li>
-                            <li><a href="#">添加影片</a></li>
+                            <li><a href="{{asset('/FilmAdmins/filmMsg')}}">影片列表</a></li>
+                            <li><a href="{{asset('/FilmAdmins/filmMsgAdd')}}">添加影片</a></li>
                            
                         </ul>
                     </li>
@@ -340,8 +341,8 @@
                     <li>
                         <a href="/admins/#"><i class="icon-television"></i> 影片放映</a>
                         <ul class="closed">
-                            <li><a href="#">用户列表</a></li>
-                            <li><a href="#">用户添加</a></li>
+                            <li><a href="{{asset('/FilmAdmins/filmShow')}}">放映列表</a></li>
+                            <li><a href="{{asset('/FilmAdmins/filmShowAdd')}}">添加放映</a></li>
                            
                         </ul>
                     </li>
@@ -350,7 +351,7 @@
                     <li>
                         <a href="/admins/#"><i class="icon-home-3"></i> 影厅管理</a>
                         <ul class="closed">
-                            <li><a href="/filmroom">影厅列表</a></li>
+                            <li><a href="/FilmAdmins/filmroom">影厅列表</a></li>
                             <li><a href="/FilmAdmins/filmroom/add">添加影厅</a></li>
                            
                         </ul>

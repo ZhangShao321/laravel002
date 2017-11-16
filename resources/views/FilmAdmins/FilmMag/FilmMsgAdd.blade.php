@@ -1,6 +1,6 @@
 @extends('FilmAdmins.layout.index')
 
-@section('title', '电影院编辑')
+@section('title', '影片添加')
 
 
 @section('content')
@@ -8,7 +8,7 @@
 		<div class="mws-panel grid_8">
 			    <div class="mws-panel-header">
 			        <span>
-			            电影院信息
+			            影片添加
 			        </span>
 			    </div>
 			    <div class="mws-panel-body no-padding">
@@ -16,7 +16,7 @@
 			            <div class="mws-form-inline">
 			                <div class="mws-form-row">
 			                    <label class="mws-form-label">
-			                        电影院名称
+			                        影片名称
 			                    </label>
 			                    <div class="mws-form-item">
 			                        <input type="text" class="small">
@@ -24,7 +24,7 @@
 			                </div>
 			                <div class="mws-form-row">
 			                    <label class="mws-form-label">
-			                        电影院法人
+			                       上映时间
 			                    </label>
 			                    <div class="mws-form-item">
 			                        <input type="text" class="medium">
@@ -32,7 +32,7 @@
 			                </div>
 			                <div class="mws-form-row">
 			                    <label class="mws-form-label">
-			                        电话
+			                        关键字
 			                    </label>
 			                    <div class="mws-form-item">
 			                        <input type="text" class="large">
@@ -41,7 +41,7 @@
 
 			                 <div class="mws-form-row">
 			                    <label class="mws-form-label">
-			                        城市
+			                        导演
 			                    </label>
 			                    <div class="mws-form-item">
 			                        <input type="text" class="large">
@@ -51,7 +51,7 @@
 
 			                 <div class="mws-form-row">
 			                    <label class="mws-form-label">
-			                        区域
+			                        主演
 			                    </label>
 			                    <div class="mws-form-item">
 			                        <input type="text" class="large">
@@ -60,7 +60,7 @@
 
 			                 <div class="mws-form-row">
 			                    <label class="mws-form-label">
-			                       状态
+			                       票价
 			                    </label>
 			                    <div class="mws-form-item">
 			                        <input type="text" class="large">
@@ -73,7 +73,7 @@
 			               
 			                <div class="mws-form-row">
 			                    <label class="mws-form-label">
-			                        影院执照
+			                        图片
 			                    </label>
 			                    <div class="mws-form-item">
 			                       <input type="file" class="large">
@@ -82,7 +82,7 @@
 
 							 <div class="mws-form-row">
 			                    <label class="mws-form-label">
-			                       影院地址
+			                       简介
 			                    </label>
 			                    <div class="mws-form-item">
 			                        <textarea class="large" cols="" rows="">
@@ -90,15 +90,7 @@
 			                    </div>
 			                </div>
 
-			                 <div class="mws-form-row">
-			                    <label class="mws-form-label">
-			                       影院详细地址
-			                    </label>
-			                    <div class="mws-form-item">
-			                        <textarea class="large" cols="" rows="">
-			                        </textarea>
-			                    </div>
-			                </div>
+			                 
 			                <div class="mws-form-row">
                     				<label class="mws-form-label">状态</label>
                     				<div class="mws-form-item clearfix">
@@ -113,8 +105,7 @@
 			           
 			            </div>
 			            <div class="mws-button-row">
-			                <input type="submit" class="btn btn-danger" value="Submit">
-			                <input type="reset" class="btn " value="Reset">
+			                <input type="submit" class="btn btn-danger" value="添加">
 			            </div>
 			        </form>
 			    </div>

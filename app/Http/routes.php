@@ -36,13 +36,8 @@ Route::group([], function(){
 
 
 
-//电影院登录
-Route::get('/FilmLogin','FilmLoginController@filmindex');
-//电影院登录验证码
-Route::get('/FilmLogin/code','FilmLoginController@code');
 
-//电影院验证码
-Route::get('/Film','FilmLoginController@code');
+
 
 
 //电影院路由组
@@ -51,29 +46,42 @@ Route::get('/Film','FilmLoginController@code');
 //  php artisan make:controller Film/FilmLoginController --plain
 
 Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
+
     //电影院首页
     Route::get('index','FilmUserController@index');
+    //电影院列表
+    Route::get('list','FilmUserController@listFilm');
     //电影院信息
     Route::get('info','FilmUserController@FilmInfo');
 
+    //影片管理
+    Route::get('filmMsg','FilmMsgController@index');
+    Route::get('filmMsgAdd','FilmMsgController@add');
+
+    //放映管理
+    Route::get('filmShow','FilmShowController@index');
+    Route::get('filmShowAdd','FilmShowController@add');
+
+     //测试
+    Route::get('/test/login','TestController@index');
+    Route::get('test','TestController@doAction');
+    Route::post('panduan','TestController@login');
+
+    //影厅
     Route::get('/filmroom/add','FilmRoomController@add');
+    Route::post('/filmroom/insert','FilmRoomController@insert');
+
+    //电影院登录
+    Route::get('FilmLogin','FilmLoginController@index');
+    //电影院登录验证码
+    Route::get('FilmCode','FilmLoginController@code');
+    //电影院验证码
+    Route::get('Film','FilmLoginController@code');
 
 
 
 });
 
-
-// Route::get('/login','FilmRoomController@a');
-
-// Route::post('/login','FilmRoomController@login');
-
-
-Route::get('login','RoomController@index');
-
-Route::post('login','RoomController@code');
-
-
-Route::post('logins/login','RoomController@login');
 
 
 
