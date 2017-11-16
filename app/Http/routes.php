@@ -52,6 +52,7 @@ Route::get('/Film','FilmLoginController@code');
 
 Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     //电影院首页
+<<<<<<< HEAD
      Route::get('index','FilmUserController@index');
      //电影院列表
      Route::get('list','FilmUserController@listFilm');
@@ -85,19 +86,38 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
      Route::get('/test/login','TestController@index');
      Route::get('test','TestController@doAction');
      Route::post('panduan','TestController@login');
+=======
+    Route::get('index','FilmUserController@index');
+    //电影院信息
+    Route::get('info','FilmUserController@FilmInfo');
+>>>>>>> 9f3424fc67d18ef046fd4dfbf075bda35c890098
+
+    Route::get('/filmroom/add','FilmRoomController@add');
 
 
+
+<<<<<<< HEAD
+
+=======
 });
 
 
+// Route::get('/login','FilmRoomController@a');
+>>>>>>> 9f3424fc67d18ef046fd4dfbf075bda35c890098
+
+// Route::post('/login','FilmRoomController@login');
 
 
-
-
+<<<<<<< HEAD
 	
+=======
+Route::get('login','RoomController@index');
+>>>>>>> 9f3424fc67d18ef046fd4dfbf075bda35c890098
+
+Route::post('login','RoomController@code');
 
 
-
+Route::post('logins/login','RoomController@login');
 
 
 
