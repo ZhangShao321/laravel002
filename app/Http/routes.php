@@ -21,6 +21,8 @@ Route::get('/404',function(){
 });
 
 
+//=======================后台信息===================================
+
 
 //后台路由组
 Route::group([], function(){
@@ -30,6 +32,9 @@ Route::group([], function(){
 
 
 
+//====================电影院信息=================================
+
+
 
 
 //电影院登录
@@ -37,19 +42,32 @@ Route::get('/FilmLogin','FilmLoginController@filmindex');
 //电影院登录验证码
 Route::get('/FilmLogin/code','FilmLoginController@code');
 
+//电影院验证码
+Route::get('/Film','FilmLoginController@code');
+
 
 //电影院路由组
 Route::group([], function(){
     	
+    //电影院首页
      Route::get('/Filmshow','FilmUserController@index');
 
-     //电影院登录
-     Route::get('/FilmLogin','FilmLoginController@filmindex');
+    //电影院信息
+    Route::get('/FilmInfo','FilmUserController@FilmInfo');
 
-
+    
 
 
 });
+
+
+
+
+
+
+
+//===============================前台信息=============================
+
 
 
 

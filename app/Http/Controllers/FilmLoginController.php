@@ -41,6 +41,14 @@ class FilmLoginController extends Controller
 
 
 
+    //电影院信息填写
+    public function FilmInfo()
+    {
+        return view('FilmAdmins.FilmUser.register');
+    }
+
+
+
 
 
 

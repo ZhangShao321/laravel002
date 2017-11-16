@@ -375,14 +375,7 @@
                     </li>
 
 
-                    <li>
-                        <a href="/admins/#"><i class="icon-wrench"></i> 申请管理</a>
-                        <ul class="closed">
-                            <li><a href="#">申请列表</a></li>
-                            
-                           
-                        </ul>
-                    </li>
+                   
                     
                     
                     
