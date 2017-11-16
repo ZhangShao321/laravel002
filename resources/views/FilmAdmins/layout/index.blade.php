@@ -351,7 +351,7 @@
                     <li>
                         <a href="/admins/#"><i class="icon-home-3"></i> 影厅管理</a>
                         <ul class="closed">
-                            <li><a href="/filmroom">影厅列表</a></li>
+                            <li><a href="/FilmAdmins/filmroom">影厅列表</a></li>
                             <li><a href="/FilmAdmins/filmroom/add">添加影厅</a></li>
                            
                         </ul>

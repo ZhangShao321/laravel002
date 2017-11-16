@@ -94,6 +94,7 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
 
     Route::get('/filmroom/add','FilmRoomController@add');
 
+    Route::post('/filmroom/insert','FilmRoomController@insert');
 
 
 <<<<<<< HEAD
@@ -102,6 +103,7 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
 });
 
 
+<<<<<<< HEAD
 // Route::get('/login','FilmRoomController@a');
 >>>>>>> 9f3424fc67d18ef046fd4dfbf075bda35c890098
 
@@ -118,6 +120,9 @@ Route::post('login','RoomController@code');
 
 
 Route::post('logins/login','RoomController@login');
+=======
+
+>>>>>>> b48d17529a3ca20f6027faebc9dccc4e52ed178f
 
 
 

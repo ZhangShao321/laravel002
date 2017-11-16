@@ -10,22 +10,22 @@
         <span>添加影厅</span>
     </div>
     <div class="mws-panel-body no-padding">
-        <form class="mws-form" action="form_layouts.html">
+        <form class="mws-form" action="/FilmAdmins/Filmroom/insert" method="post">
             <div class="mws-form-block">
                 <div class="mws-form-row">
                     <label class="mws-form-label">影厅名</label>
                     <div class="mws-form-item">
-                        <input type="text" class="small" name="roomname">
+                        <input type="text" class="small" name="roomname"><span></span>
                     </div>
                 </div>
                 <div class="mws-form-row">
                     <label class="mws-form-label">影厅类型</label>
                     <div class="mws-form-item">
-                        <input type="text" class="small" name="roomtype">
+                        <input type="text" class="small" name="roomtype"><span></span>
                     </div>
                 </div>
 
-                 <div class="mws-form-row">
+               <!--  <div class="mws-form-row">
                     <label class="mws-form-label">座位图</label>
                     <div class="mws-form-item">
                         行: <input type="text"  name="hang">
@@ -33,15 +33,15 @@
                         <button id="buts" class="btn btn-danger">确认</button>
                     </div>
                 </div>
-
+                 
                 <div class="mws-form-row">
                     <label class="mws-form-label">座位图</label>
                     <div class="mws-form-item">
                         
                     </div>
-                </div>
+                </div> 
                 
-                <!-- <div class="mws-form-row">
+                <div class="mws-form-row">
                     <label class="mws-form-label">影厅类型</label>
                     <div class="mws-form-item">
                         <select class="small">
@@ -51,13 +51,13 @@
                             <option>Option 5</option>
                         </select>
                     </div>
-                </div> -->
+                </div> --> 
                 
-                </div>
+                
             </div>
             <div class="mws-button-row">
                 {{ csrf_field() }}
-                <input type="submit" value="添加" class="btn btn-danger">
+                <input type="submit" style="float:right;margin-right:450px" value="下一步" class="btn btn-danger">
                 
             </div>
         </form>
@@ -68,12 +68,50 @@
 
 
 @endsection
+@section('js')      
+<script>
+
+//影厅名验证
+$('input[name=roomname]').blur(function(){
+    // alert(1111111);
+    var roomname = $(this).val();
+
+    var reg = /^\S*$/;
+
+    var x = reg.exec(roomname);
+
+    if(x){
+
+        $(this).next().text('√');
+        $(this).next().css('color','green');
+    }else{
+        $(this).next().text('您的影厅名字不正确');
+        $(this).next().css('color','red');
+    }
+
+})
+//影厅类型验证
+$('input[name=roomtype]').blur(function(){
+    // alert(1111111);
+    var roomname = $(this).val();
+
+    var reg = /^\S*$/;
+
+    var x = reg.exec(roomname);
+
+    if(x){
+
+        $(this).next().text('√');
+        $(this).next().css('color','green');
+    }else{
+        $(this).next().text('您的影厅名字不正确');
+        $(this).next().css('color','red');
+    }
+
+})
 
 
-
-@section('js')
-        
-
+</script>
 
 
 @endsection
