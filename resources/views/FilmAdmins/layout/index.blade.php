@@ -328,7 +328,7 @@
 
 
                     <li>
-                        <a href="/admins/#"><i class="icon-add-contact"></i> 影片管理</a>
+                        <a href="/admins/#"><i class="icon-th"></i> 影片管理</a>
                         <ul class="closed">
                             <li><a href="#">影片列表</a></li>
                             <li><a href="#">添加影片</a></li>
@@ -348,7 +348,7 @@
 
 
                     <li>
-                        <a href="/admins/#"><i class="icon-add-contact"></i> 影厅管理</a>
+                        <a href="/admins/#"><i class="icon-home-3"></i> 影厅管理</a>
                         <ul class="closed">
                             <li><a href="#">影厅列表</a></li>
                             <li><a href="#">添加影厅</a></li>
@@ -366,7 +366,7 @@
                     </li>
 
                     <li>
-                        <a href="/admins/#"><i class="icon-add-contact"></i> 钱包信息</a>
+                        <a href="/admins/#"><i class="icon-database"></i> 钱包信息</a>
                         <ul class="closed">
                             <li><a href="#">钱包列表</a></li>
                             

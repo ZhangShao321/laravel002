@@ -15,13 +15,7 @@ class FilmUserController extends Controller
 		return view('FilmAdmins.index');
 	} 
 
-	//电影院登录
-
-	public function filmlogin()
-	{
-		return view('FilmUser.login');
-	}
-
+	
 
 
 

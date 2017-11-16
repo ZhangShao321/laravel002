@@ -32,10 +32,19 @@ Route::group([], function(){
 
 
 
+//电影院登录
+Route::get('/FilmLogin','FilmLoginController@filmindex');
+//电影院登录验证码
+Route::get('/FilmLogin/code','FilmLoginController@code');
+
+
 //电影院路由组
 Route::group([], function(){
     	
      Route::get('/Filmshow','FilmUserController@index');
+
+     //电影院登录
+     Route::get('/FilmLogin','FilmLoginController@filmindex');
 
 
 
