@@ -24,40 +24,18 @@
                         <input type="text" class="small" name="roomtype"><span></span>
                     </div>
                 </div>
-
-               <!--  <div class="mws-form-row">
-                    <label class="mws-form-label">座位图</label>
-                    <div class="mws-form-item">
-                        行: <input type="text"  name="hang">
-                        列: <input type="text"  name="lie">
-                        <button id="buts" class="btn btn-danger">确认</button>
-                    </div>
-                </div>
                  
                 <div class="mws-form-row">
-                    <label class="mws-form-label">座位图</label>
+                    <label class="mws-form-label"></label>
                     <div class="mws-form-item">
                         
                     </div>
                 </div> 
-                
-                <div class="mws-form-row">
-                    <label class="mws-form-label">影厅类型</label>
-                    <div class="mws-form-item">
-                        <select class="small">
-                            <option>Option 1</option>
-                            <option>Option 3</option>
-                            <option>Option 4</option>
-                            <option>Option 5</option>
-                        </select>
-                    </div>
-                </div> --> 
-                
-                
+                 
             </div>
             <div class="mws-button-row">
                 {{ csrf_field() }}
-                <input type="submit" style="float:right;margin-right:450px" value="下一步" class="btn btn-danger">
+                <input type="submit"  value="下一步" class="btn btn-danger">
                 
             </div>
         </form>
