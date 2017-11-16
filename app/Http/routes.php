@@ -58,22 +58,13 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
 
     Route::get('/filmroom/add','FilmRoomController@add');
 
+    Route::post('/filmroom/insert','FilmRoomController@insert');
 
 
 });
 
 
-// Route::get('/login','FilmRoomController@a');
 
-// Route::post('/login','FilmRoomController@login');
-
-
-Route::get('login','RoomController@index');
-
-Route::post('login','RoomController@code');
-
-
-Route::post('logins/login','RoomController@login');
 
 
 
