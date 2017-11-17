@@ -154,10 +154,14 @@
                         <a href="/admins/#"><i class="icon-home-3"></i> 影厅管理</a>
                         <ul class="closed">
 
+<<<<<<< HEAD
                             <li><a href="">影厅列表</a></li>
                             <li><a href="">添加影厅</a></li>
+=======
+                            <li><a href="/FilmAdmins/room/list">影厅列表</a></li>
+                            <li><a href="/FilmAdmins/room/add">添加影厅</a></li>                          
+>>>>>>> 25ba28eb8f37d235eba55bd464d962b0d30aec1c
 
-                           
                         </ul>
                     </li>
 

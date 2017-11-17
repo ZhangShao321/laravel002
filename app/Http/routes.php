@@ -96,13 +96,18 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
 
     //影厅
 
+<<<<<<< HEAD
    
+=======
+    Route::get('/room/add','FilmRoomController@add');
+    Route::post('/room/insert','FilmRoomController@insert');
+    Route::get('/room/list','FilmRoomController@index');
+    Route::post('/room/seat','FilmRoomController@seat');
+    Route::get('/room/edit/{id}','FilmRoomController@edit');
+    Route::post('/room/update/{id}','FilmRoomController@update');
+    Route::get('/room/delete/{id}','FilmRoomController@delete');
+>>>>>>> 25ba28eb8f37d235eba55bd464d962b0d30aec1c
 
-
-   
-
-
-    
 
 
 });
