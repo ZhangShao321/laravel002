@@ -40,9 +40,7 @@ Route::group([], function(){
 
 
 
-//电影院路由组
-//访问 prefix -> resources 中view视图中的 文件夹名
-// namespace  是控制器文件夹名 
+//电影院路由组 
 //  php artisan make:controller Film/FilmLoginController --plain
 
 Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
@@ -82,8 +80,7 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     Route::get('Film','FilmLoginController@code');
 
 
-    //测试数据库
-    Route::get('date',"TestController@test");
+    
 
 
 });

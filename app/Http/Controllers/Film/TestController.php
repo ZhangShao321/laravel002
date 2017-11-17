@@ -98,12 +98,9 @@ class TestController extends Controller
 
     public function  test()
     {
-    	// $res = DB::select('select * from user');
-    	// var_dump($res);
-
-    	// $res = user::get();
-    	  $res = user::where('id','1')->first();
-    	// $res = user::select('select * from user');
+		//注意别忘了  use App\Http\Model\user;
+    	 
+    	$res = user::where('id','1')->first();
     	echo "<pre>";
     	var_dump($res->phone);
     }
