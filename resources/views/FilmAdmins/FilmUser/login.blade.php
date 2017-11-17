@@ -44,10 +44,10 @@
           
             @endif
              
-                <form class="/admin/dologin" action="{{asset('/admin/dologin')}}" method="post">
+                <form class="/admin/dologin" action="{{asset('/FilmAdmins/doAction')}}" method="post">
                     <div class="mws-form-row">
                         <div class="mws-form-item">
-                            <input type="text" name="uname" class="mws-login-username required" placeholder="username">
+                            <input type="text" name="cinema" class="mws-login-username required" placeholder="username">
                         </div>
                     </div>
                     <div class="mws-form-row">
@@ -58,9 +58,9 @@
 
                     <div class="mws-form-row">
                         <div class="mws-form-item">
-                            <input type="type" name="code" placeholder="请输入验证码" class="mws-login " style="width:120px;height:30px;margin-right:10px" >
+                            <input type="type" name="code"  class="mws-login " style="width:120px;height:30px;margin-right:10px" >
 
-                            <img src="{{asset('/FilmLogin/code')}}" class="img-rounded" onclick="this.src = this.src += '?1'" >
+                            <img src="{{asset('/FilmAdmins/FilmCode')}}" class="img-rounded" onclick="this.src = this.src += '?1'" >
                         </div>
                     </div>
                     
