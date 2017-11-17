@@ -10,7 +10,7 @@
         <span>添加影厅</span>
     </div>
     <div class="mws-panel-body no-padding">
-        <form class="mws-form" action="/FilmAdmins/Filmroom/insert" method="post">
+        <form class="mws-form" action="/FilmAdmins/room/insert" method="post">
             <div class="mws-form-block">
                 <div class="mws-form-row">
                     <label class="mws-form-label">影厅名</label>

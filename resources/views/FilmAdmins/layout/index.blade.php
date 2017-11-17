@@ -32,6 +32,7 @@
 <!-- Theme Stylesheet -->
 <link rel="stylesheet" type="text/css" href="/FilmAdmin/css/mws-theme.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/FilmAdmin/css/themer.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/FilmAdmin/css/seat/jquery.seat-charts.css" media="screen">
 
 
 <style type="text/css">
@@ -351,8 +352,8 @@
                     <li>
                         <a href="/admins/#"><i class="icon-home-3"></i> 影厅管理</a>
                         <ul class="closed">
-                            <li><a href="/FilmAdmins/filmroom">影厅列表</a></li>
-                            <li><a href="/FilmAdmins/filmroom/add">添加影厅</a></li>
+                            <li><a href="/FilmAdmins/room">影厅列表</a></li>
+                            <li><a href="/FilmAdmins/room/add">添加影厅</a></li>
                            
                         </ul>
                     </li>
@@ -452,7 +453,7 @@
 
     <!-- Demo Scripts (remove if not needed) -->
     <script src="/FilmAdmin/js/demo/demo.dashboard.js"></script>
-
+    <script src="/FilmAdmin/js/seat/jquery.seat-charts.min.js"></script>
 
         @section('js')
 

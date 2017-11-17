@@ -68,8 +68,8 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     Route::post('panduan','TestController@login');
 
     //影厅
-    Route::get('/filmroom/add','FilmRoomController@add');
-    Route::post('/filmroom/insert','FilmRoomController@insert');
+    Route::get('/room/add','FilmRoomController@add');
+    Route::post('/room/insert','FilmRoomController@insert');
 
     //电影院登录
     Route::get('FilmLogin','FilmLoginController@index');
