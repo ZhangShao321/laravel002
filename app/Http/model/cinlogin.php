@@ -8,4 +8,5 @@ class cinlogin extends Model
 {
     //
     protected $table = 'cinlogin';
+    public $timestamps = false;
 }

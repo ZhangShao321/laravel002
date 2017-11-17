@@ -12,12 +12,15 @@ class FilmMsgController extends Controller
     //影片管理
     public  function index()
     {
-    	return view('FilmAdmins.FilmMag.FilmMsgList');
+        return view('FilmAdmins.FilmMag.FilmMsgList');
+        
     }
 
     public function add()
     {
-    	return view('FilmAdmins.FilmMag.FilmMsgAdd');
+        return view('FilmAdmins.FilmMag.FilmMsgAdd');
+
+    	
     }
 
 

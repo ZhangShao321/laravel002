@@ -11,6 +11,12 @@
 |
 */
 
+Event::listen('illuminate.query',function($query){
+     var_dump($query);
+ }); 
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -57,8 +63,15 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
 
     //电影院首页
     Route::get('index','FilmUserController@index');
-    //电影院列表
-    Route::get('list','FilmUserController@listFilm');
+    //电影院logo修改
+    Route::get('Profile','FilmUserController@Profile');
+    //执行图片修改
+    Route::post('dopro','FilmUserController@doPro');
+
+
+
+
+   
     //电影院信息
     Route::get('info','FilmUserController@FilmInfo');
 
@@ -78,13 +91,12 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
      //测试
     Route::get('/test/login','TestController@index');
     Route::get('test','TestController@doAction');
+    Route::get('te','TestController@test');
     Route::post('panduan','TestController@login');
 
     //影厅
 
-    Route::get('/filmroom/add','FilmRoomController@add');
-    Route::get('/filmroom/list','FilmRoomController@index');
-    Route::post('/filmroom/insert','FilmRoomController@insert');
+   
 
 
    

@@ -8,5 +8,6 @@ class filmtype extends Model
 {
     //
      protected $table = 'filmtype';
+     public $timestamps = false;
     
 }

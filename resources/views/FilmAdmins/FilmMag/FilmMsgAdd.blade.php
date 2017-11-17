@@ -80,6 +80,17 @@
 			                    </div>
 			                </div>
 
+
+			                 <div class="mws-form-row">
+			                    <label class="mws-form-label">
+			                        影片
+			                    </label>
+			                    <div class="mws-form-item">
+			                       <input type="file" class="large">
+			                    </div>
+			                </div>
+
+
 							 <div class="mws-form-row">
 			                    <label class="mws-form-label">
 			                       简介

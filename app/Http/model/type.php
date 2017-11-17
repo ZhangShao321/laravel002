@@ -8,5 +8,7 @@ class type extends Model
 {
     //
      protected $table = 'type';
+     public $timestamps = false;
+     
     
 }

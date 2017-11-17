@@ -66,6 +66,8 @@ class FilmLoginController extends Controller
             return redirect('/FilmAdmins/FilmLogin')->with('msg','密码错误');
         }
 
+
+        //使用hash
         // Hash::check('plain-text', $hashedPassword)
 
         // if(!Hash::check($res['password'],$uname->password))

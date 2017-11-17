@@ -16,7 +16,7 @@ class FilmRoomController extends Controller
     //影厅列表
     public function index()
     {
-       return view('/FilmAdmins/FilmRoom/seatList'); 
+       return view('/FilmAdmins/FilmRoom/list'); 
     }
 
 

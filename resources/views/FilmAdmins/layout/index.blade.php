@@ -123,7 +123,7 @@
                         <a href="/admins/#"><i class="icon-user"></i> 电影院管理</a>
                         <ul class="closed">
                            
-                              <li><a href="{{asset('/FilmAdmins/list')}}">电影院信息</a></li>
+                              <li><a href="{{asset('/FilmAdmins/info')}}">电影院信息</a></li>
                            
                         </ul>
                     </li>
@@ -154,8 +154,8 @@
                         <a href="/admins/#"><i class="icon-home-3"></i> 影厅管理</a>
                         <ul class="closed">
 
-                            <li><a href="{{asset('/FilmAdmins/filmroom/list')}}">影厅列表</a></li>
-                            <li><a href="{{asset('/FilmAdmins/filmroom/add')}}">添加影厅</a></li>
+                            <li><a href="">影厅列表</a></li>
+                            <li><a href="">添加影厅</a></li>
 
                            
                         </ul>

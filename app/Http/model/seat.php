@@ -8,5 +8,6 @@ class seat extends Model
 {
     //
      protected $table = 'seat';
+     public $timestamps = false;
     
 }

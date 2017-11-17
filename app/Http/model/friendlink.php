@@ -8,5 +8,6 @@ class friendlink extends Model
 {
     //
      protected $table = 'friendlink';
+     public $timestamps = false;
     
 }

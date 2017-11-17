@@ -8,5 +8,6 @@ class roominfo extends Model
 {
     //
      protected $table = 'roominfo';
+     public $timestamps = false;
     
 }
