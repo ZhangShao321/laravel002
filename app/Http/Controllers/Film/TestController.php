@@ -14,7 +14,9 @@ use Flc\Alidayu\App;
 use Flc\Alidayu\Requests\AlibabaAliqinFcSmsNumSend;
 use Flc\Alidayu\Requests\IRequest;
 
-use  DB;
+// use  DB;
+
+use App\Http\Model\user;
 
 class TestController extends Controller
 {
@@ -96,9 +98,11 @@ class TestController extends Controller
 
     public function  test()
     {
-    	$res = DB::select('select * from user');
-    	var_dump($res);
-
+		//注意别忘了  use App\Http\Model\user;
+    	 
+    	$res = user::where('id','1')->first();
+    	echo "<pre>";
+    	var_dump($res->phone);
     }
 
 }

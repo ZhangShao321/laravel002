@@ -11,17 +11,21 @@ use DB;
 class FilmRoomController extends Controller
 {
 
+
+
     //影厅列表
     public function index()
     {   
 
         $res = DB::table('roominfo')->get();
 
-        return view('/FilmAdmins/Filmroom/list', ['res'=>$res]); 
+        return view('/FilmAdmins/FilmRoom/list', ['res'=>$res]); 
 
     }
 
+
 	//添加影厅页面
+
     public function add()
     {
         return view('/FilmAdmins/FilmRoom/add');

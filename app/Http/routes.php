@@ -40,12 +40,20 @@ Route::group([], function(){
 
 
 
-//电影院路由组
-//访问 prefix -> resources 中view视图中的 文件夹名
-// namespace  是控制器文件夹名 
+//电影院路由组 
 //  php artisan make:controller Film/FilmLoginController --plain
 
 Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
+
+     
+     //电影院登录
+    Route::get('FilmLogin','FilmLoginController@index');
+    //电影院登录验证码
+    Route::get('FilmCode','FilmLoginController@code');
+    //处理登录
+    Route::post('doAction','FilmLoginController@doAction');
+
+
 
     //电影院首页
     Route::get('index','FilmUserController@index');
@@ -62,12 +70,18 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     Route::get('filmShow','FilmShowController@index');
     Route::get('filmShowAdd','FilmShowController@add');
 
+
+
+    //钱包
+    Route::get('money','FilmMoneyController@index');
+
      //测试
     Route::get('/test/login','TestController@index');
     Route::get('test','TestController@doAction');
     Route::post('panduan','TestController@login');
 
     //影厅
+
     Route::get('/room/add','FilmRoomController@add');
     Route::post('/room/insert','FilmRoomController@insert');
     Route::get('/room/list','FilmRoomController@index');
@@ -76,17 +90,6 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     Route::post('/room/update/{id}','FilmRoomController@update');
     Route::get('/room/delete/{id}','FilmRoomController@delete');
 
-
-    //电影院登录
-    Route::get('FilmLogin','FilmLoginController@index');
-    //电影院登录验证码
-    Route::get('FilmCode','FilmLoginController@code');
-    //电影院验证码
-    Route::get('Film','FilmLoginController@code');
-
-
-    //测试数据库
-    Route::get('date',"TestController@test");
 
 
 });
