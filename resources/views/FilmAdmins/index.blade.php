@@ -9,16 +9,10 @@
         
              <p style="float:left">现在时间&nbsp; : &nbsp;</p>
            
-            <div id="dvs" >
-
-
-
-            </div>
-
-        
+            <div id="dvs" > </div>
         </div>
 
-    
+       
 
 
 
