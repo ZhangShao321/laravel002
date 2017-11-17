@@ -14,6 +14,8 @@ use Flc\Alidayu\App;
 use Flc\Alidayu\Requests\AlibabaAliqinFcSmsNumSend;
 use Flc\Alidayu\Requests\IRequest;
 
+use  DB;
+
 class TestController extends Controller
 {
     //
@@ -86,6 +88,17 @@ class TestController extends Controller
 
 
     		
+    }
+
+
+
+    //测试是数据库
+
+    public function  test()
+    {
+    	$res = DB::select('select * from user');
+    	var_dump($res);
+
     }
 
 }

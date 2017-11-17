@@ -68,8 +68,14 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     Route::post('panduan','TestController@login');
 
     //影厅
+<<<<<<< HEAD
     Route::get('/room/add','FilmRoomController@add');
     Route::post('/room/insert','FilmRoomController@insert');
+=======
+    Route::get('/filmroom/add','FilmRoomController@add');
+    Route::get('/filmroom/list','FilmRoomController@index');
+    Route::post('/filmroom/insert','FilmRoomController@insert');
+>>>>>>> c29e17864905fa460e561b60f3c5da8f625a9761
 
     //电影院登录
     Route::get('FilmLogin','FilmLoginController@index');
@@ -78,6 +84,9 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     //电影院验证码
     Route::get('Film','FilmLoginController@code');
 
+
+    //测试数据库
+    Route::get('date',"TestController@test");
 
 
 });
@@ -97,7 +106,20 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
 
 
 //前台路由组
-Route::group([], function(){
+Route::group(['prefix' => 'homes', 'namespace' => 'Homes'], function(){
 
+	//首页
+	Route::get('index','HomesController@index');
 
+	//电影列表页
+	Route::get('filmlist','HomesController@filmlist');
+
+	//电影详情页
+	Route::get('filmdetail','HomesController@filmdetail');
+
+	//电影院列表
+	Route::get('cinemalist','HomesController@cinemalist');
+
+	//电影院详情
+	Route::get('cinemadetail','HomesController@cinemadetail');
 });

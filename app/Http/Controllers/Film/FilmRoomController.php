@@ -10,6 +10,18 @@ use DB;
 
 class FilmRoomController extends Controller
 {
+<<<<<<< HEAD
+=======
+
+
+    //影厅列表
+    public function index()
+    {
+       return view('/FilmAdmins/FilmRoom/seatList'); 
+    }
+
+	//添加影厅页面
+>>>>>>> c29e17864905fa460e561b60f3c5da8f625a9761
     public function add()
     {
         return view('/FilmAdmins/FilmRoom/add');
@@ -44,4 +56,7 @@ class FilmRoomController extends Controller
 
         // var_dump($data);
     }
+
+
+
 }
