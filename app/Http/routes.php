@@ -69,6 +69,7 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
 
     //影厅
     Route::get('/filmroom/add','FilmRoomController@add');
+    Route::get('/filmroom/list','FilmRoomController@index');
     Route::post('/filmroom/insert','FilmRoomController@insert');
 
     //电影院登录
@@ -78,6 +79,9 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     //电影院验证码
     Route::get('Film','FilmLoginController@code');
 
+
+    //测试数据库
+    Route::get('date',"TestController@test");
 
 
 });

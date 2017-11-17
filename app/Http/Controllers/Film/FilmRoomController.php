@@ -10,6 +10,13 @@ use App\Http\Controllers\Controller;
 class FilmRoomController extends Controller
 {
 
+
+    //影厅列表
+    public function index()
+    {
+       return view('/FilmAdmins/FilmRoom/seatList'); 
+    }
+
 	//添加影厅页面
     public function add()
     {
@@ -22,4 +29,7 @@ class FilmRoomController extends Controller
     	
         return view('/FilmAdmins/FilmRoom/seat');
     }
+
+
+
 }

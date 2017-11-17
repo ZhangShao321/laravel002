@@ -11,27 +11,33 @@
     </div>
     <div class="mws-panel-body no-padding">
         <form class="mws-form" action="/FilmAdmins/Filmroom/insert" method="post">
-            <div class="mws-form-block">
-                <div class="mws-form-row">
-                    <label class="mws-form-label">影厅名</label>
-                    <div class="mws-form-item">
-                        <input type="text" class="small" name="roomname"><span></span>
+              <div class="mws-form-inline">
+                <br>
+                <br>
+                <br>
+                   <div class="mws-form-row">
+                        <label class="mws-form-label">
+                          影厅名称
+                        </label>
+                        <div class="mws-form-item">
+                            <input type="text" class="medium">
+                        </div>
                     </div>
-                </div>
-                <div class="mws-form-row">
-                    <label class="mws-form-label">影厅类型</label>
-                    <div class="mws-form-item">
-                        <input type="text" class="small" name="roomtype"><span></span>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="mws-form-row">
+                        <label class="mws-form-label">
+                        影厅类型
+                        </label>
+                        <div class="mws-form-item">
+                            <input type="text" class="medium">
+                        </div>
                     </div>
-                </div>
-                 
-                <div class="mws-form-row">
-                    <label class="mws-form-label"></label>
-                    <div class="mws-form-item">
-                        
-                    </div>
-                </div> 
-                 
+                    <br>
+                    <br>
+                    <br>
+                       
             </div>
             <div class="mws-button-row">
                 {{ csrf_field() }}
