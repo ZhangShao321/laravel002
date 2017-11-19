@@ -14,13 +14,12 @@
 			    <div class="mws-panel-body no-padding">
 
 
-
 			        <form action="{{asset('/FilmAdmins/dopro')}}" class="mws-form" method="post" enctype="multipart/form-data">
 			            <div class="mws-form-inline">
 							<br/>
 			            	<div style="width:240px;height:240px;border:1px solid #C5C5C5;margin:auto;">
 								
-								<img src="" width="100%">
+								<img src="{{asset($res->clogo)}}" style="width:239px;height:239px"  />
 
 							</div>
 
@@ -36,7 +35,7 @@
 			                    </div>
 			                </div>
 
-			           
+			         
 			            </div>
 			            <div class="mws-button-row" style="text-align: right">
 			                <input  type="submit" class="btn btn-info" value="修改">

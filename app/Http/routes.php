@@ -45,7 +45,6 @@ Route::group([], function(){
 
 
 
-
 //电影院路由组 
 //  php artisan make:controller Film/FilmLoginController --plain
 
@@ -58,6 +57,10 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     Route::get('FilmCode','FilmLoginController@code');
     //处理登录
     Route::post('doAction','FilmLoginController@doAction');
+
+    //退出登录
+    Route::get('outlogin','FilmLoginController@outlogin');
+
 
 
 
@@ -96,9 +99,7 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
 
     //影厅
 
-<<<<<<< HEAD
-   
-=======
+
     Route::get('/room/add','FilmRoomController@add');
     Route::post('/room/insert','FilmRoomController@insert');
     Route::get('/room/list','FilmRoomController@index');
@@ -106,7 +107,6 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     Route::get('/room/edit/{id}','FilmRoomController@edit');
     Route::post('/room/update/{id}','FilmRoomController@update');
     Route::get('/room/delete/{id}','FilmRoomController@delete');
->>>>>>> 25ba28eb8f37d235eba55bd464d962b0d30aec1c
 
 
 

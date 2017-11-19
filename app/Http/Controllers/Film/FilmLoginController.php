@@ -84,24 +84,34 @@ class FilmLoginController extends Controller
         {
             return redirect('/FilmAdmins/FilmLogin')->with('msg','验证码错误');
         }
-
-
     
         session(['uid' => $dd->id]);
-            // var_dump($uname->id);
-            // var_dump(session('uid'));
-
-
 
         return redirect("/FilmAdmins/index");
 
-
-
-
-
-       
-
     }
+
+
+
+
+    //退出
+   public  function outlogin(Request $request)
+   {
+
+        //销毁session
+        $res = $request->session()->flush();
+
+
+        if($res)
+        {
+                return  redirect("/FilmAdmins/FilmLogin");
+        }
+        else{
+            return back();
+        }
+
+   }  
+
 
 
 

@@ -81,9 +81,9 @@
                         你好 , 用户名
                     </div>
                     <ul>
-                    	<li><a href="#">修改头像</a></li>
-                        <li><a href="#">修改密码</a></li>
-                        <li><a href="index.html">退出</a></li>
+                    	<li><a href="{{asset('/FilmAdmins/Profile')}}">修改头像</a></li>
+                        <li><a href="">修改密码</a></li>
+                        <li><a href="{{asset('/FilmAdmins/outlogin')}}">退出</a></li>
                     </ul>
                 </div>
             </div>
@@ -153,14 +153,10 @@
                     <li>
                         <a href="/admins/#"><i class="icon-home-3"></i> 影厅管理</a>
                         <ul class="closed">
-
-<<<<<<< HEAD
-                            <li><a href="">影厅列表</a></li>
-                            <li><a href="">添加影厅</a></li>
-=======
+                            
                             <li><a href="/FilmAdmins/room/list">影厅列表</a></li>
                             <li><a href="/FilmAdmins/room/add">添加影厅</a></li>                          
->>>>>>> 25ba28eb8f37d235eba55bd464d962b0d30aec1c
+
 
                         </ul>
                     </li>
@@ -201,6 +197,15 @@
         
         	<!-- Inner Container Start -->
             <div class="container">
+
+        
+             @if(session('msg'))
+                <div class="mws-form-message info" id="msg">
+                       {{session('msg')}}   
+                </div>         
+              
+             @endif
+             
             
             	<!-- Statistics Button Container -->
             	@section('content')
@@ -261,6 +266,10 @@
     <!-- Demo Scripts (remove if not needed) -->
     <script src="{{asset('/FilmAdmin/js/demo/demo.dashboard.js')}}"></script>
     <script src="{{asset('/FilmAdmin/js/seat/jquery.seat-charts.min.js')}}"></script>
+    <script type="text/javascript">
+
+            $('.mws-form-message').delay('3000').slideUp('2000');
+    </script>
 
         @section('js')
 

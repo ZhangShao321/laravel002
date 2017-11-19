@@ -28,8 +28,9 @@ class FilmUserController extends Controller
 
     public function Profile()
     {
+         $res = cinema::find(1);
 
-    	return view('FilmAdmins.FilmUser.Profile');
+    	return view('FilmAdmins.FilmUser.Profile',['res'=>$res]);
     }
 
 
@@ -37,31 +38,63 @@ class FilmUserController extends Controller
     public function doPro(Request $request)
     {
 
-    	//获取
-    	// $res = $request->all();
-    	$res = $request->only(['clogo']);
+             //先删除原先的图片
 
-    	// //判断文件是否上传
-        if($request -> hasFile('clogo'))
-        {
-            //文件名
-            $name = rand(1111,9999).time();
+            //1,先查询
+            $find = cinema::find(1);
+            //2,判断图片是否存在
+            //存在就删除
+            if(file_exists($find->clogo))
+             {
+                unlink($find->clogo);
+             }
+  
 
-            //获取后缀名
-            $jpg = $request -> file('clogo')->getClientOriginalExtension();
-           var_dump($jpg);
+            	$res = $request->only(['clogo']);
 
-            //移动图片
-            $request ->file('clogo') -> move('./public/FilmPublic/Uploads',$name.'.'.$jpg);
-        }
+            	// //判断文件是否上传
+                if($request -> hasFile('clogo'))
+                {
+                    //文件名
+                    $name = rand(1111,9999).time();
+
+                    //获取后缀名
+                    $jpg = $request -> file('clogo')->getClientOriginalExtension();
+                   var_dump($jpg);
+
+                    //移动图片
+                    $request ->file('clogo') -> move('./public/FilmPublic/Uploads',$name.'.'.$jpg);
+                }
+
+                $clogo = './public/FilmPublic/Uploads/'.$name.'.'.$jpg;
+
+                $info =cinema::find(1); 
+                $info->clogo = "{$clogo}";
+                if($info->save())
+                {
+                    echo "修改成功";
+                    return redirect('/FilmAdmins/Profile')->with('msg','修改成功');
 
 
-        $info = cinema::find(1); 
+                }else{
+                    
+                    return back();
 
-
-
-
+                }
+   
     }
+
+
+
+
+    //修改密码
+
+
+
+
+
+    
+
 
 
 
