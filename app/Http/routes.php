@@ -81,6 +81,14 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     //影片管理
     Route::get('filmMsg','FilmMsgController@index');
     Route::get('filmMsgAdd','FilmMsgController@add');
+    //处理影片
+    Route::post('doAdd','FilmMsgController@doAdd');
+    //编辑页面
+    Route::get('edit','FilmMsgController@edit');
+    //处理更爱
+    Route::post('update','FilmMsgController@update');
+
+
 
     //放映管理
     Route::get('filmShow','FilmShowController@index');

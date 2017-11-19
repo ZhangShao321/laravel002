@@ -72,7 +72,7 @@ class FilmUserController extends Controller
                 $info->clogo = "{$clogo}";
                 if($info->save())
                 {
-                    echo "修改成功";
+                    // echo "修改成功";
                     return redirect('/FilmAdmins/Profile')->with('msg','修改成功');
 
 

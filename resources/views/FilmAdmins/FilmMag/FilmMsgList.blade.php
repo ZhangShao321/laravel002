@@ -39,15 +39,22 @@
                                     <td>{{$v->director}}</td>
                                     <td>{{$v->protagonist}}</td>
                                     <td>{{$v->summary}}</td>
-                                    <td>{{ date('Y-m-d', $v->showtime) }}</td>
-                                      <td>{{$v->price}}</td>
-                                    <td>{{$v->filepic}}</td>
+                                    <!-- date('Y-m-d', $v->showtime) -->
+                                    <td>{{ $v->showtime }}</td>
+                                    <td>{{$v->price}}</td>
                                     <td>{{$v->shownum}}</td>
+                                    <td>
+                                        <img src="{{asset($v->filepic)}}" style="width:120px;height:60px"  />
+                                    </td>
                                   
                                   
                                     
-                                    <td>{{$v->status}}</td>
-                                   <td> <a href="#">编辑</a></td>
+                                    <td>{{$v->status }}</td>
+                                   <td>
+                                     <a href="{{asset('/FilmAdmins/edit?id=').$v->id}}">编辑</a> |
+                                     <a href="#">删除</a>
+
+                                   </td>
                                 </tr>
                      @endforeach 
                           
