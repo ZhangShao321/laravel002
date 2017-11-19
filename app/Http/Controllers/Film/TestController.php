@@ -14,6 +14,10 @@ use Flc\Alidayu\App;
 use Flc\Alidayu\Requests\AlibabaAliqinFcSmsNumSend;
 use Flc\Alidayu\Requests\IRequest;
 
+// use  DB;
+
+use App\Http\Model\user;
+
 class TestController extends Controller
 {
     //
@@ -86,6 +90,34 @@ class TestController extends Controller
 
 
     		
+    }
+
+
+
+    //测试是数据库
+
+    public function  test()
+    {
+		//注意别忘了  use App\Http\Model\user;
+    	 
+    	// $res = user::where('id','1')->first();
+    	// echo "<pre>";
+    	// var_dump($res->phone);
+
+
+      //   $info = user::findOrFail(1);
+      //   $info -> phone="1234567890";
+      //   if($info -> save())
+      //   {
+      //       echo "修改成功";
+
+      //   }else{
+      //       echo "修改失败";
+      //   }
+       
+      // echo "<pre>";
+        // var_dump($info);
+
     }
 
 }

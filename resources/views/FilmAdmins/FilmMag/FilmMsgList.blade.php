@@ -12,6 +12,7 @@
                         <table class="mws-table">
                             <thead>
                                 <tr>
+                                    <th>ID</th>
                                     <th>名称</th>
                                     <th>时长</th>
                                     <th>关键字</th>
@@ -27,20 +28,35 @@
                                 </tr>
                             </thead>
                             <tbody>
+
+                                 <!--遍历 -->
+                     @foreach($film as $k => $v)
                                 <tr>
-                                    <td>Trident</td>
-                                    <td>Int 4.0</td>
-                                    <td>Win 95+</td>
-                                    <td>Win 95+</td>
-                                    <td>Win 95+</td>
-                                    <td>4</td>
-                                    <td>X</td>
-                                    <td>X</td>
-                                    <td>X</td>
-                                    <td>X</td>
-                                    <td>X</td>
-                                   <td> <a href="#">编辑</a></td>
+                                    <td>{{$v->id}}</td>
+                                    <td>{{$v->filmname}}</td>
+                                    <td>{{$v->filmtime}}</td>
+                                    <td>{{$v->keywords}}</td>
+                                    <td>{{$v->director}}</td>
+                                    <td>{{$v->protagonist}}</td>
+                                    <td>{{$v->summary}}</td>
+                                    <!-- date('Y-m-d', $v->showtime) -->
+                                    <td>{{ $v->showtime }}</td>
+                                    <td>{{$v->price}}</td>
+                                    <td>{{$v->shownum}}</td>
+                                    <td>
+                                        <img src="{{asset($v->filepic)}}" style="width:120px;height:60px"  />
+                                    </td>
+                                  
+                                  
+                                    
+                                    <td>{{$v->status }}</td>
+                                   <td>
+                                     <a href="{{asset('/FilmAdmins/edit?id=').$v->id}}">编辑</a> |
+                                     <a href="#">删除</a>
+
+                                   </td>
                                 </tr>
+                     @endforeach 
                           
                             </tbody>
                         </table>

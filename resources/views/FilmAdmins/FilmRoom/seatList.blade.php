@@ -1,26 +1,28 @@
 @extends('FilmAdmins.layout.index')
 
-@section('title', '电影院列表')
+@section('title', '影厅列表')
 
 
 @section('content')
-			<div class="mws-panel grid_8">
-                	<div class="mws-panel-header">
-                    	<span><i class="icon-table"></i> 影院信息</span>
+            <div class="mws-panel grid_8">
+                    <div class="mws-panel-header">
+                        <span><i class="icon-table"></i> 影厅列表</span>
                     </div>
                     <div class="mws-panel-body no-padding">
                         <table class="mws-table">
                             <thead>
                                 <tr>
                                     <th>名称</th>
-                                    <th>法人</th>
-                                    <th>电话</th>
-                                    <th>省份</th>
-                                    <th>区域</th>
-                                    <th>营业执照</th>
-                                    <th>logo</th>
-                                    <th>地址</th>
-                                    <th>详细地址</th>
+                                    <th>时长</th>
+                                    <th>关键字</th>
+                                    <th>导演</th>
+                                    <th>主演</th>
+                                    <th>简介</th>
+                                    <th>上映时间</th>
+                                    <th>票价</th>
+                                    <th>售票数量</th>
+                                    <th>图片</th>
+                                    <th>状态</th>
                                     <th>操作</th>
                                 </tr>
                             </thead>
@@ -35,14 +37,16 @@
                                     <td>X</td>
                                     <td>X</td>
                                     <td>X</td>
-                                   <td> <a href="{{asset('/FilmAdmins/info')}}">编辑</a></td>
+                                    <td>X</td>
+                                    <td>X</td>
+                                   <td> <a href="#">编辑</a></td>
                                 </tr>
                           
                             </tbody>
                         </table>
                     </div>
                 </div>
-	
+    
 
 
 
