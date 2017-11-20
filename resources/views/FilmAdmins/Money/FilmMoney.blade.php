@@ -20,15 +20,18 @@
                                                                     </tr>
                             </thead>
                             <tbody>
+                            
+                         @foreach($res as $k => $v)
                                 <tr>
-                                    <td>Trident</td>
-                                    <td>Int 4.0</td>
-                                    <td>Win 95+</td>
-                                    <td>Win 95+</td>
-                                    <td>Win 95+</td>
+                                    <td>{{$v->cinema}}</td>
+                                    <td>{{$v->legal}}</td>
+                                    <td>{{$v->phone}}</td>
+                                    <td>{{$v->money}}</td>
+                                    <td>收益</td>
                                    
                                    
                                 </tr>
+                        @endforeach
                           
                             </tbody>
                         </table>
