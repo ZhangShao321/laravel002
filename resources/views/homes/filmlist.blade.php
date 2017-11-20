@@ -9,7 +9,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<ul class="breadcrumb">
-					<li><a href="#">电影</a></li>
+					<li><a href="{{url('/homes/index')}}">首页</a></li>
 					
 					<li class="active">电影列表</li>
 				</ul>
@@ -36,48 +36,19 @@
 						</ul>
 					</aside>
 				<!-- widget-categories end -->
-				<!-- shop-filter start -->
-				<aside class="widget shop-filter">
-						<h3 class="sidebar-title">price</h3>
-						<div class="info_widget">
-							<div class="price_filter">
-								<div id="slider-range"></div>
-								<div class="price_slider_amount">
-									<input type="text" id="amount" name="price"  placeholder="Add Your Price" />
-									<input type="submit"  value="Filter">  
-								</div>
-							</div>
-						</div>							
-					</aside>
-				<!-- shop-filter end -->
+				
 				<!-- filter-by start -->
 				<aside class="widget filter-by">
-						<h3 class="sidebar-title">Filter by</h3>
+						<h3 class="sidebar-title">电影排行榜</h3>
 						<ul class="sidebar-menu">
-							<li><a href="#">L</a> <span class="count">(1)</span></li>
-							<li><a href="#">M</a> <span class="count">(1)</span></li>
-							<li><a href="#">S</a> <span class="count">(1)</span></li>
-							<li><a href="#">XL</a> <span class="count">(1)</span></li>
+							<li><a href="#">教父</a> <span class="count">1</span></li>
+							<li><a href="#">当幸福来敲门</a> <span class="count">2</span></li>
+							<li><a href="#">奇怪的她</a> <span class="count">3</span></li>
+							<li><a href="#">初恋这件小事</a> <span class="count">4</span></li>
 						</ul>						
 					</aside>
 				<!-- filter-by end -->
-				<!-- widget-tags start -->
-				<aside class="widget widget-tags">
-						<h3 class="sidebar-title">Tags</h3>
-						<ul>
-							<li><a href="#">asian</a></li>
-							<li><a href="#">brown</a></li>
-							<li><a href="#">euro</a></li>
-							<li><a href="#">fashion</a></li>
-							<li><a href="#">france</a></li>
-							<li><a href="#">hat</a></li>
-							<li><a href="#">travel</a></li>
-							<li><a href="#">white</a></li>
-							<li><a href="#">t-shirt</a></li>
-							<li><a href="#">teen</a></li>
-						</ul>
-					</aside>
-				<!-- widget-tags end -->
+				
 			</div>
 			<!-- left-sidebar end -->
 			<!-- shop-content start -->
@@ -107,7 +78,7 @@
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="single-product">
                     <div class="product-img">
-                        <a href="single-product.html">
+                        <a href="{{url('/homes/filmdetail')}}">
                             <img class="primary-img" src="img/product/1.jpg" alt="" />
                             <img class="secondary-img" src="img/product/2.jpg" alt="" />
                         </a>
@@ -163,485 +134,7 @@
                 </div>
             </div>
             <!-- single-product end -->
-            <!-- single-product start -->
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="single-product">
-                    <div class="product-img">
-                        <a href="single-product.html">
-                            <img class="primary-img" src="img/product/5.jpg" alt="" />
-                            <img class="secondary-img" src="img/product/6.jpg" alt="" />
-                        </a>
-                        <div class="product-action">
-                            <div class="pro-button-top">
-                                <a href="#">
-                                    add to cart
-                                </a>
-                            </div>
-                            <div class="pro-button-bottom">
-                                <a href="#">
-                                    <i class="fa fa-heart">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-retweet">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-search-plus">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>
-                            <a href="single-product.html">
-                                电影名字
-                            </a>
-                        </h3>
-                        <div class="pro-price">
-                            <span class="normal">
-                                $50/span>
-                                <span class="old">
-                                    $180
-                                </span>
-                        </div>
-                        <div class="pro-rating">
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- single-product end -->
-            <!-- single-product start -->
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="single-product">
-                    <div class="product-img">
-                        <a href="single-product.html">
-                            <img class="primary-img" src="img/product/19.jpg" alt="" />
-                            <img class="secondary-img" src="img/product/20.jpg" alt="" />
-                        </a>
-                        <div class="product-action">
-                            <div class="pro-button-top">
-                                <a href="#">
-                                    add to cart
-                                </a>
-                            </div>
-                            <div class="pro-button-bottom">
-                                <a href="#">
-                                    <i class="fa fa-heart">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-retweet">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-search-plus">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>
-                            <a href="single-product.html">
-                                Feugiat justo lacinia
-                            </a>
-                        </h3>
-                        <div class="pro-price">
-                            <span class="normal">
-                                $150
-                            </span>
-                            <span class="old">
-                                $180
-                            </span>
-                        </div>
-                        <div class="pro-rating">
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- single-product end -->
-            <!-- single-product start -->
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="single-product">
-                    <div class="product-img">
-                        <a href="single-product.html">
-                            <img class="primary-img" src="img/product/35.jpg" alt="" />
-                            <img class="secondary-img" src="img/product/36.jpg" alt="" />
-                        </a>
-                        <div class="product-action">
-                            <div class="pro-button-top">
-                                <a href="#">
-                                    add to cart
-                                </a>
-                            </div>
-                            <div class="pro-button-bottom">
-                                <a href="#">
-                                    <i class="fa fa-heart">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-retweet">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-search-plus">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>
-                            <a href="single-product.html">
-                                Feugiat justo lacinia
-                            </a>
-                        </h3>
-                        <div class="pro-price">
-                            <span class="normal">
-                                $150
-                            </span>
-                            <span class="old">
-                                $180
-                            </span>
-                        </div>
-                        <div class="pro-rating">
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- single-product end -->
-            <!-- single-product start -->
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="single-product">
-                    <div class="product-img">
-                        <a href="single-product.html">
-                            <img class="primary-img" src="img/product/9.jpg" alt="" />
-                            <img class="secondary-img" src="img/product/10.jpg" alt="" />
-                        </a>
-                        <div class="product-action">
-                            <div class="pro-button-top">
-                                <a href="#">
-                                    add to cart
-                                </a>
-                            </div>
-                            <div class="pro-button-bottom">
-                                <a href="#">
-                                    <i class="fa fa-heart">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-retweet">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-search-plus">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>
-                            <a href="single-product.html">
-                                Feugiat justo lacinia
-                            </a>
-                        </h3>
-                        <div class="pro-price">
-                            <span class="normal">
-                                $150
-                            </span>
-                            <span class="old">
-                                $180
-                            </span>
-                        </div>
-                        <div class="pro-rating">
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- single-product end -->
-            <!-- single-product start -->
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="single-product">
-                    <div class="product-img">
-                        <a href="single-product.html">
-                            <img class="primary-img" src="img/product/12.jpg" alt="" />
-                            <img class="secondary-img" src="img/product/13.jpg" alt="" />
-                        </a>
-                        <div class="product-action">
-                            <div class="pro-button-top">
-                                <a href="#">
-                                    add to cart
-                                </a>
-                            </div>
-                            <div class="pro-button-bottom">
-                                <a href="#">
-                                    <i class="fa fa-heart">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-retweet">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-search-plus">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>
-                            <a href="single-product.html">
-                                Feugiat justo lacinia
-                            </a>
-                        </h3>
-                        <div class="pro-price">
-                            <span class="normal">
-                                $150
-                            </span>
-                            <span class="old">
-                                $180
-                            </span>
-                        </div>
-                        <div class="pro-rating">
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- single-product end -->
-            <!-- single-product start -->
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="single-product">
-                    <div class="product-img">
-                        <a href="single-product.html">
-                            <img class="primary-img" src="img/product/25.jpg" alt="" />
-                            <img class="secondary-img" src="img/product/26.jpg" alt="" />
-                        </a>
-                        <div class="product-action">
-                            <div class="pro-button-top">
-                                <a href="#">
-                                    add to cart
-                                </a>
-                            </div>
-                            <div class="pro-button-bottom">
-                                <a href="#">
-                                    <i class="fa fa-heart">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-retweet">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-search-plus">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>
-                            <a href="single-product.html">
-                                Feugiat justo lacinia
-                            </a>
-                        </h3>
-                        <div class="pro-price">
-                            <span class="normal">
-                                $150
-                            </span>
-                            <span class="old">
-                                $180
-                            </span>
-                        </div>
-                        <div class="pro-rating">
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- single-product end -->
-            <!-- single-product start -->
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="single-product">
-                    <div class="product-img">
-                        <a href="single-product.html">
-                            <img class="primary-img" src="img/product/26.jpg" alt="" />
-                            <img class="secondary-img" src="img/product/28.jpg" alt="" />
-                        </a>
-                        <div class="product-action">
-                            <div class="pro-button-top">
-                                <a href="#">
-                                    add to cart
-                                </a>
-                            </div>
-                            <div class="pro-button-bottom">
-                                <a href="#">
-                                    <i class="fa fa-heart">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-retweet">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-search-plus">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>
-                            <a href="single-product.html">
-                                Feugiat justo lacinia
-                            </a>
-                        </h3>
-                        <div class="pro-price">
-                            <span class="normal">
-                                $150
-                            </span>
-                            <span class="old">
-                                $180
-                            </span>
-                        </div>
-                        <div class="pro-rating">
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- single-product end -->
-            <!-- single-product start -->
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="single-product">
-                    <div class="product-img">
-                        <a href="single-product.html">
-                            <img class="primary-img" src="img/product/5.jpg" alt="" />
-                            <img class="secondary-img" src="img/product/10.jpg" alt="" />
-                        </a>
-                        <div class="product-action">
-                            <div class="pro-button-top">
-                                <a href="#">
-                                    add to cart
-                                </a>
-                            </div>
-                            <div class="pro-button-bottom">
-                                <a href="#">
-                                    <i class="fa fa-heart">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-retweet">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-search-plus">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>
-                            <a href="single-product.html">
-                                Feugiat justo lacinia
-                            </a>
-                        </h3>
-                        <div class="pro-price">
-                            <span class="normal">
-                                $150
-                            </span>
-                            <span class="old">
-                                $180
-                            </span>
-                        </div>
-                        <div class="pro-rating">
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- single-product end -->
+           
         </div>
     </div>
     <div role="tabpanel" class="tab-pane active" id="profile">
@@ -650,7 +143,7 @@
             <div class="col-md-12">
                 <div class="single-product">
                     <div class="product-img">
-                        <a href="/homes/filmdetail">
+                        <a href="{{url('/homes/filmdetail')}}">
                             <img class="primary-img" src="img/product/15.jpg" alt="" />
                             <img class="secondary-img" src="img/product/16.jpg" alt="" />
                         </a>
@@ -663,10 +156,7 @@
                         </h3>
                         <div class="pro-price">
                             <span class="normal">
-                                $150
-                            </span>
-                            <span class="old">
-                                $180
+                                ￥50
                             </span>
                         </div>
                         <div class="pro-rating">
@@ -676,10 +166,7 @@
                             </i>
                             <i class="fa fa-star">
                             </i>
-                            <i class="fa fa-star">
-                            </i>
-                            <i class="fa fa-star">
-                            </i>
+                           
                         </div>
                         <div class="product-desc">
                             <p>
@@ -692,23 +179,10 @@
                         <div class="product-action">
                             <div class="pro-button-top">
                                 <a href="#">
-                                    add to cart
+                                    购票
                                 </a>
                             </div>
-                            <div class="pro-button-bottom">
-                                <a href="#">
-                                    <i class="fa fa-heart">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-retweet">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-search-plus">
-                                    </i>
-                                </a>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

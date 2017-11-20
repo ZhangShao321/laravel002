@@ -17,6 +17,10 @@ class FilmRoomController extends Controller
 
     //影厅列表
     public function index()
+<<<<<<< HEAD
+    {
+       return view('/FilmAdmins/FilmRoom/list'); 
+=======
     {   
 
         // $res = DB::table('roominfo')->get();
@@ -24,6 +28,7 @@ class FilmRoomController extends Controller
 
         return view('/FilmAdmins/FilmRoom/list', ['res'=>$res]); 
 
+>>>>>>> 25ba28eb8f37d235eba55bd464d962b0d30aec1c
     }
 
 

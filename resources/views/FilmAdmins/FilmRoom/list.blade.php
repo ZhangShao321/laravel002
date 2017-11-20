@@ -29,7 +29,7 @@
                     <td>{{ $v->id }}</td>
                     <td>{{ $v->roomname }}</td>
                     <td>{{ $v->roomtype }}</td>
-                    <td>{{ $v->rtime }}</td>
+                    <td>{{ date('Y-m-d H:i:s', $v->rtime) }}</td>
                     <td>
                         @if($v->status==1)
                         <button id="{{ $v->id }}" name="{{ $v->status }}" class="b1">正在使用中...</button> 

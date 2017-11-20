@@ -81,9 +81,9 @@
                         你好 , 用户名
                     </div>
                     <ul>
-                    	<li><a href="#">修改头像</a></li>
-                        <li><a href="#">修改密码</a></li>
-                        <li><a href="index.html">退出</a></li>
+                    	<li><a href="{{asset('/FilmAdmins/Profile')}}">修改头像</a></li>
+                        <li><a href="">修改密码</a></li>
+                        <li><a href="{{asset('/FilmAdmins/outlogin')}}">退出</a></li>
                     </ul>
                 </div>
             </div>
@@ -123,7 +123,7 @@
                         <a href="/admins/#"><i class="icon-user"></i> 电影院管理</a>
                         <ul class="closed">
                            
-                              <li><a href="{{asset('/FilmAdmins/list')}}">电影院信息</a></li>
+                              <li><a href="{{asset('/FilmAdmins/info')}}">电影院信息</a></li>
                            
                         </ul>
                     </li>
@@ -153,9 +153,10 @@
                     <li>
                         <a href="/admins/#"><i class="icon-home-3"></i> 影厅管理</a>
                         <ul class="closed">
-
+                            
                             <li><a href="/FilmAdmins/room/list">影厅列表</a></li>
                             <li><a href="/FilmAdmins/room/add">添加影厅</a></li>                          
+
 
                         </ul>
                     </li>
@@ -196,6 +197,15 @@
         
         	<!-- Inner Container Start -->
             <div class="container">
+
+        
+             @if(session('msg'))
+                <div class="mws-form-message info" id="msg">
+                       {{session('msg')}}   
+                </div>         
+              
+             @endif
+             
             
             	<!-- Statistics Button Container -->
             	@section('content')
@@ -256,6 +266,15 @@
     <!-- Demo Scripts (remove if not needed) -->
     <script src="{{asset('/FilmAdmin/js/demo/demo.dashboard.js')}}"></script>
     <script src="{{asset('/FilmAdmin/js/seat/jquery.seat-charts.min.js')}}"></script>
+    <!-- 引入layer -->
+    <script type="text/javascript" src="{{asset('/FilmAdmin/layer/jquery.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/FilmAdmin/layer/layer.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/FilmAdmin/layer/extend/layer.ext.js')}}"></script>
+
+    <script type="text/javascript">
+
+            $('.mws-form-message').delay('3000').slideUp('2000');
+    </script>
 
         @section('js')
 

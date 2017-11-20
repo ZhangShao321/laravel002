@@ -23,6 +23,25 @@
 	</form>
 
 	<script type="text/javascript">
+
+		layer.alert('墨绿风格，点击确认看深蓝', {
+		    skin: 'layui-layer-molv' //样式类名  自定义样式
+		    ,closeBtn: 1    // 是否显示关闭按钮
+		    ,anim: 1 //动画类型
+		    ,btn: ['重要','奇葩'] //按钮
+		    ,icon: 6    // icon
+		    ,yes:function(){
+		        layer.msg('按钮1')
+		    }
+		    ,btn2:function(){
+		        layer.msg('按钮2')
+		    }});
+					
+
+
+
+
+
 			$.ajaxSetup({
 		        headers: {
 		            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

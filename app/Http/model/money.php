@@ -8,5 +8,6 @@ class money extends Model
 {
     //
      protected $table = 'money';
+     public $timestamps = false;
     
 }

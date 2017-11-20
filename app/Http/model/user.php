@@ -8,4 +8,5 @@ class user extends Model
 {
     //
      protected $table = 'user';
+     public $timestamps = false;
 }

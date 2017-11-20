@@ -12,14 +12,28 @@
 			        </span>
 			    </div>
 			    <div class="mws-panel-body no-padding">
-			        <form action="form_layouts.html" class="mws-form">
+
+				 @if (count($errors) > 0)
+            <div class="mws-form-message error">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+
+
+
+			        <form action="{{asset('/FilmAdmins/doAdd')}}" enctype="multipart/form-data"  class="mws-form" method="post">
 			            <div class="mws-form-inline">
 			                <div class="mws-form-row">
 			                    <label class="mws-form-label">
 			                        影片名称
 			                    </label>
 			                    <div class="mws-form-item">
-			                        <input type="text" class="small">
+			                        <input type="text" name="filmname" class="medium">
 			                    </div>
 			                </div>
 			                <div class="mws-form-row">
@@ -27,7 +41,7 @@
 			                       上映时间
 			                    </label>
 			                    <div class="mws-form-item">
-			                        <input type="text" class="medium">
+			                        <input type="text" name="showtime" class="medium">
 			                    </div>
 			                </div>
 			                <div class="mws-form-row">
@@ -35,7 +49,7 @@
 			                        关键字
 			                    </label>
 			                    <div class="mws-form-item">
-			                        <input type="text" class="large">
+			                        <input type="text" name="keywords" class="medium">
 			                    </div>
 			                </div>
 
@@ -44,7 +58,7 @@
 			                        导演
 			                    </label>
 			                    <div class="mws-form-item">
-			                        <input type="text" class="large">
+			                        <input type="text" name="director" class="medium">
 			                    </div>
 			                </div>
 
@@ -54,7 +68,16 @@
 			                        主演
 			                    </label>
 			                    <div class="mws-form-item">
-			                        <input type="text" class="large">
+			                        <input type="text" name="protagonist" class="medium">
+			                    </div>
+			                </div>
+
+							 <div class="mws-form-row">
+			                    <label class="mws-form-label">
+			                       时长
+			                    </label>
+			                    <div class="mws-form-item">
+			                        <input type="text" name="filmtime" class="medium">
 			                    </div>
 			                </div>
 
@@ -63,7 +86,7 @@
 			                       票价
 			                    </label>
 			                    <div class="mws-form-item">
-			                        <input type="text" class="large">
+			                        <input type="text" name="price" class="medium">
 			                    </div>
 			                </div>
 
@@ -76,31 +99,26 @@
 			                        图片
 			                    </label>
 			                    <div class="mws-form-item">
-			                       <input type="file" class="large">
+			                       <input type="file" name="filepic" class="medium">
 			                    </div>
 			                </div>
+
+
+			               
 
 							 <div class="mws-form-row">
 			                    <label class="mws-form-label">
 			                       简介
 			                    </label>
 			                    <div class="mws-form-item">
-			                        <textarea class="large" cols="" rows="">
+			                        <textarea class="medium" name="summary" cols="" rows="">
 			                        </textarea>
 			                    </div>
 			                </div>
 
 			                 
-			                <div class="mws-form-row">
-                    				<label class="mws-form-label">状态</label>
-                    				<div class="mws-form-item clearfix">
-                    					<ul class="mws-form-list inline">
-                    						<li><input  name="status" checked type="radio"> <label>开启</label></li>
-                    						<li><input  name="status" type="radio"> <label>禁用</label></li>
-                    						
-                    					</ul>
-                    				</div>
-                    		</div>
+			              
+                    		{{ csrf_field() }}
 
 			           
 			            </div>
