@@ -5,6 +5,12 @@
 
 
 @section('content')
+<<<<<<< HEAD
+
+
+@endsection
+
+=======
 <div class="mws-panel-body no-padding">
                     	<form action="form_layouts.html" class="mws-form">
                     		<div class="mws-form-inline">
@@ -73,3 +79,4 @@
                     	</form>
                     </div>
 @endsection
+>>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b

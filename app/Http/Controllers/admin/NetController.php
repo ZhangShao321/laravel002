@@ -15,8 +15,14 @@ class NetController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+<<<<<<< HEAD
+    {   
+        
+         return view('admin.net.index');
+=======
     {
         //
+>>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
     }
 
     /**
@@ -26,7 +32,11 @@ class NetController extends Controller
      */
     public function create()
     {
+<<<<<<< HEAD
+       
+=======
         //
+>>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
     }
 
     /**

@@ -44,7 +44,7 @@
           
             @endif
              
-                <form class="/admin/dologin" action="{{asset('/admin/dologin')}}" method="post">
+                <form class="/admin/dologin" action="{{asset('/FilmAdmins/admin/dologin')}}" method="post">
                     <div class="mws-form-row">
                         <div class="mws-form-item">
                             <input type="text" name="uname" class="mws-login-username required" placeholder="username">

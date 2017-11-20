@@ -18,7 +18,7 @@ Event::listen('illuminate.query',function($query){
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homes/index');
 });
 
 //404找不到页面
@@ -29,42 +29,47 @@ Route::get('/404',function(){
 
 //=======================后台信息===================================
 
+
 //后台路由组
 //prefix路由群组中的所有路由包含统一前缀
 //namepace控制器位于App\Http\Controllers命名空间下
 //
-Route::group(['prefix'=>'admin','namespace'=>'admin'], function () {
+	//后台路由组 中间件
+	Route::group(['prefix'=>'admin','namespace'=>'admin','middleware'=>'adminlogin'], function () {
+
+			//进入后台的首页
+			Route::get('/index', 'CeshiController@index');
+
+			//后台user用户管理
+			Route::resource('/user','UserController');
 
 
-		//进入后台的首页
-		Route::get('/index', 'CeshiController@index');
-
-		//后台user用户管理
-		Route::resource('user','UserController');
-
-		//后台guanliyuan管理员管理
-		Route::resource('guanliyuan','GuanliyuanController');
-		
-		//后台商户(电影院)管理
-		Route::resource('cinema','CinemaController');
-
-		//后台申请管理
-		Route::resource('req','RequestController');
-
-		//后台影视分类s
-		Route::resource('/film','FilmController');
-
-		//后台轮播图管理
-		Route::resource('/lunbo','LunboController');
-
-		//后台板块管理
-		Route::resource('/block','BlockController');
-
-		//后台网站配置
-		Route::resource('/net','NetController');
+			//后台管理员管理
+			Route::resource('/guanliyuan','GuanliyuanController');
+			//后台管理员修改状态
+			// Route::post('/guanliyuan/zt','GuanliyuanController@zt');
 
 
-});
+			//后台商户(电影院)管理
+			Route::resource('/ciname','CinemaController');
+
+			//后台申请管理
+			Route::resource('/request','RequestController');
+
+			//后台影视分类
+			Route::resource('/film','FilmController');
+
+			//后台轮播图管理
+			Route::resource('/lunbo','LunboController');
+
+			//后台板块管理
+			Route::resource('/block','BlockController');
+
+			//后台网站配置
+			Route::resource('/net','NetController');
+
+	});
+
 
 
 //电影院路由组 
@@ -107,7 +112,8 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
 
 
 
-    Route::group(['middleware'=>'filmlogin'],function(){
+    //'middleware'=>'filmlogin'
+    Route::group([],function(){
 
 
 
@@ -152,7 +158,6 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     Route::post('/room/update/{id}','FilmRoomController@update');
     Route::get('/room/delete/{id}','FilmRoomController@delete');
     Route::post('/room/work','FilmRoomController@work');
-    Route::post('/room/free','FilmRoomController@free');
 
    
     });

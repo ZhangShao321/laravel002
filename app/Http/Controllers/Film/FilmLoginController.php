@@ -51,9 +51,6 @@ class FilmLoginController extends Controller
     {
         // echo "这是处理登录方法";
 
-        
-
-
         //获取
         $res = $request->except('_token');
 

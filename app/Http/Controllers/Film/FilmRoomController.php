@@ -17,18 +17,15 @@ class FilmRoomController extends Controller
 
     //影厅列表
     public function index()
-<<<<<<< HEAD
-    {
-       return view('/FilmAdmins/FilmRoom/list'); 
-=======
-    {   
+
+    {  
 
         // $res = DB::table('roominfo')->get();
         $res = roominfo::all();
 
         return view('/FilmAdmins/FilmRoom/list', ['res'=>$res]); 
 
->>>>>>> 25ba28eb8f37d235eba55bd464d962b0d30aec1c
+
     }
 
 
@@ -200,26 +197,7 @@ class FilmRoomController extends Controller
             }
         }
 
-        /*$res = DB::table('roominfo')->where('id',$id)->update(['status'=>1]);
-
-        if($res){
-            echo '1';
-            // return redirect('/FilmAdmins/room/list');
-        }else{
-            echo '0';
-        }*/
+        
     }
-    public function free(Request $request)
-    {
-        $id = $request->except('_token');
-
-        $res = DB::table('roominfo')->where('id',$id)->update(['status'=>1]);
-
-        if($res){
-            echo '1';
-            // return redirect('/FilmAdmins/room/list');
-        }else{
-            echo '0';
-        }
-    }
+    
 }

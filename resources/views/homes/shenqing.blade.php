@@ -4,6 +4,8 @@
 
 @section('content')
 
+
+
 <!-- HOME SLIDER -->
 <div class="heading-banner">
     <div class="container">
@@ -104,7 +106,7 @@
         <div class="col-sm-offset-2 col-sm-5">
             {{ csrf_field() }}
                 
-            <button type="submit" id="func4" class="btn btn-danger" onclick="func4()">申请</button>
+            <button type="submit" id="fun" class="btn btn-danger" >申请</button>
         </div>
     </div>
     </fieldset>
@@ -115,26 +117,35 @@
 @section('js')
 
 <script type="text/javascript">
+    //弹框
+    $('#fun').click(function(){
+
+         layer.alert('申请成功，请等待处理', {
+            skin: 'layui-layer-molv' //样式类名  自定义样式
+            ,closeBtn: 1    // 是否显示关闭按钮
+            ,anim: 1 //动画类型
+            ,btn: ['确认'] //按钮
+            ,icon: 6    // icon
+            ,yes:function(){
+                layer.msg('跳转中')
+            }
+            ,btn2:function(){
+                layer.msg('跳转中')
+            }});
+    });
+
+   
+
     //表单验证
-    $.validator.setDefaults({
+    /*$.validator.setDefaults({
     submitHandler: function() {
       alert("提交事件!");
     }
     });
     $().ready(function() {
         $("#box").validate();
-    });
-    errorPlacement: function(error, element) {  
-        error.appendTo(element.parent());  
-    }
-
-
-    //弹框
-    function func4() {
-        //提示层
-        layer.msg('申请成功');
-    }
-    
+    });*/
+   
 
 </script>
 @endsection
