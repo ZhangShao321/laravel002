@@ -30,21 +30,21 @@
 		// alert($);
 		// alert(345);
 
-			layer.alert('见到你真的很高兴', {icon: 6});
+			// layer.alert('见到你真的很高兴', {icon: 6});
 
 
-		// layer.alert('墨绿风格，点击确认看深蓝', {
-		//     skin: 'layui-layer-molv' //样式类名  自定义样式
-		//     ,closeBtn: 1    // 是否显示关闭按钮
-		//     ,anim: 1 //动画类型
-		//     ,btn: ['重要','奇葩'] //按钮
-		//     ,icon: 6    // icon
-		//     ,yes:function(){
-		//         layer.msg('按钮1')
-		//     }
-		//     ,btn2:function(){
-		//         layer.msg('按钮2')
-		//     }});
+		layer.alert('墨绿风格，点击确认看深蓝', {
+		    skin: 'layui-layer-molv' //样式类名  自定义样式
+		    ,closeBtn: 1    // 是否显示关闭按钮
+		    ,anim: 1 //动画类型
+		    ,btn: ['重要','奇葩'] //按钮
+		    ,icon: 6    // icon
+		    ,yes:function(){
+		        layer.msg('按钮1')
+		    }
+		    ,btn2:function(){
+		        layer.msg('按钮2')
+		    }});
 					
 
 
