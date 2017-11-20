@@ -2,14 +2,20 @@
 
 namespace App\Http\Controllers\admin;
 
+<<<<<<< HEAD
 use Hash;
+=======
+>>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+<<<<<<< HEAD
 use App\Http\Model\user;
 
 
+=======
+>>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
 
 class GuanliyuanController extends Controller
 {
@@ -20,10 +26,15 @@ class GuanliyuanController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $res=user::where('auth','1')->get();
 
         return view('admin.guanliyuan.index',compact('res'));
        
+=======
+        //
+        return view('admin.guanliyuan.index');
+>>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
     }
 
     /**
@@ -35,7 +46,10 @@ class GuanliyuanController extends Controller
     {
         //
          return view('admin.guanliyuan.add');
+<<<<<<< HEAD
        
+=======
+>>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
     }
 
     /**
@@ -46,6 +60,7 @@ class GuanliyuanController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
 
          //表单验证
         $this->validate($request, [
@@ -83,6 +98,9 @@ class GuanliyuanController extends Controller
 
         
 
+=======
+        //
+>>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
     }
 
     /**
@@ -127,6 +145,7 @@ class GuanliyuanController extends Controller
      */
     public function destroy($id)
     {
+<<<<<<< HEAD
        
         $sql = user::where('id',$id)->delete();
         if($sql){
@@ -160,4 +179,8 @@ class GuanliyuanController extends Controller
 
     }
 
+=======
+        //
+    }
+>>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
 }

@@ -8,4 +8,5 @@ class cinema extends Model
 {
     //
      protected $table = 'cinema';
+      public $timestamps = false;
 }

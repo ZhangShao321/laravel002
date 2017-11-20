@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
+use App\Http\model\roominfo;
+use App\Http\model\seat;
 
 class FilmRoomController extends Controller
 {
@@ -15,12 +17,18 @@ class FilmRoomController extends Controller
 
     //影厅列表
     public function index()
+<<<<<<< HEAD
+    {
+       return view('/FilmAdmins/FilmRoom/list'); 
+=======
     {   
 
-        $res = DB::table('roominfo')->get();
+        // $res = DB::table('roominfo')->get();
+        $res = roominfo::all();
 
         return view('/FilmAdmins/FilmRoom/list', ['res'=>$res]); 
 
+>>>>>>> 25ba28eb8f37d235eba55bd464d962b0d30aec1c
     }
 
 
@@ -47,7 +55,8 @@ class FilmRoomController extends Controller
         $data['rtime'] = time();
 
         //添加到数据库
-        $id = DB::table('roominfo')->insertGetId($data);
+        // $id = DB::table('roominfo')->insertGetId($data);
+        $id = roominfo::insertGetId($data);
 
         //判断是否添加成功
         if($id){

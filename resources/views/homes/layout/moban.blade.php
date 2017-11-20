@@ -68,7 +68,7 @@
 				<div class="row">
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 						<div class="logo">
-							<a href="index.html"><img src="/homes/img/logo/logo.jpg" alt="" /></a>
+							<a href="{{url('/homes/index')}}"><img src="/homes/img/logo/logo.gif" alt="" /></a>
 						</div>
 					</div>
 					<div class="col-lg-6 col-md-5 col-sm-5 col-xs-6 hidden-xs">
@@ -87,10 +87,10 @@
 					        Hi,欢迎来到傻家伙!
 					    </p>
 					    <p>
-					        <a class="user_info_login" href="javascript:login();" style="color:purple">
+					        <a class="user_info_login" href="" style="color:purple">
 					            登录
 					        </a>
-					        <a class="user_info_reg" href="javascript:regist();" style="color:purple">
+					        <a class="user_info_reg" href="" style="color:purple">
 					            注册
 					        </a>
 					    </p>
@@ -109,10 +109,10 @@
 						<div class="main-menu">
 							<nav>
 								<ul>
-									<li><a href="/homes/index">首页</a></li>
-									<li><a href="/homes/filmlist">电影</a></li>
-									<li><a href="/homes/cinemalist">电影院</a></li>
-									<li style="float:right"><h2 >静于形，动于心，震撼尽在傻家伙电影院！</h2></li>
+									<li><a href="{{url('/homes/index')}}">首页</a></li>
+									<li><a href="{{url('/homes/filmlist')}}">电影</a></li>
+									<li><a href="{{url('/homes/cinemalist')}}">电影院</a></li>
+									<li style="float:right"><h2 >让生活遇见电影，让电影融入生活！</h2></li>
 								</ul>
 							</nav>
 						</div>
@@ -121,25 +121,7 @@
 			</div>
 		</div>            
 		<!-- main-menu-area end -->
-		<!-- mobile-menu-area start -->
-		<div class="mobile-menu-area visible-xs">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="mobile-menu">
-							<nav id="dropdown">
-								<ul>
-									<li><a href="index.html">电影</a></li>
-									<li><a href="about.html">电影院</a></li>
-									<li><a href="shop-list.html">Shop List</a></li>
-								</ul>
-							</nav>
-						</div>					
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- mobile-menu-area end -->			
+				
 	</header>
 </div>
 <!-- HOME SLIDER -->
@@ -155,7 +137,7 @@
 					<!-- footer-widget start -->
 					<div class="col-lg-3 col-md-3 col-sm-4">
 						<div class="footer-widget">
-							<img src="/homes/img/logo/logo.jpg" alt="" />
+							<img src="/homes/img/logo/logo.gif" alt="" />
 							<p><h4 style="color:white">傻家伙影视是一家成立了好多好多年的超清好多好多好多D的集好多好多种娱乐项目为一体的超超超超超超大型电影院</h4></p>
 							
 						</div>
@@ -206,6 +188,10 @@
 									<i class="fa fa-phone"> </i>
 									电话: +13838384380  
 								</li>
+								<li>
+									<i class="fa fa-plus"> </i>
+									<a href="{{url('/homes/add')}}" style="color:white">申请商户</a>  
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -251,6 +237,13 @@
 <script src="/homes/js/plugins.js"></script>
 <!-- main js -->
 <script src="/homes/js/main.js"></script>
+<script src="/homes/js/validate.js"></script>
+<script src="/homes/js/jquery.validate.messages_cn.js"></script>
+<script src="/homes/js/layer/layer.js"></script>
+<script src="/homes/js/layer/extend/layer.ext.js"></script>
+<script src="/homes/js/layer/jquery-1.8.3.min.js"></script>
 </body>
-<!-- Mirrored from themepure.net/tf/tp-shop-preview/tp-shop/index.html by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Apr 2016 11:24:56 GMT -->
 </html>
+@section('js')
+
+@show

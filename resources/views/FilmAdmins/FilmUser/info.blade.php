@@ -1,9 +1,12 @@
 @extends('FilmAdmins.layout.index')
 
-@section('title', '电影院编辑')
+@section('title', '电影院信息')
 
 
 @section('content')
+<<<<<<< HEAD
+	<h1>这是电影院信息</h1>
+=======
      
 		<div class="mws-panel grid_8">
 			    <div class="mws-panel-header">
@@ -19,7 +22,7 @@
 			                        电影院名称
 			                    </label>
 			                    <div class="mws-form-item">
-			                        <input type="text" class="small">
+			                        <input type="text" class="medium">
 			                    </div>
 			                </div>
 			                <div class="mws-form-row">
@@ -35,7 +38,7 @@
 			                        电话
 			                    </label>
 			                    <div class="mws-form-item">
-			                        <input type="text" class="large">
+			                        <input type="text" class="medium">
 			                    </div>
 			                </div>
 
@@ -44,7 +47,7 @@
 			                        城市
 			                    </label>
 			                    <div class="mws-form-item">
-			                        <input type="text" class="large">
+			                        <input type="text" class="medium">
 			                    </div>
 			                </div>
 
@@ -54,7 +57,7 @@
 			                        区域
 			                    </label>
 			                    <div class="mws-form-item">
-			                        <input type="text" class="large">
+			                        <input type="text" class="medium">
 			                    </div>
 			                </div>
 
@@ -63,7 +66,7 @@
 			                       状态
 			                    </label>
 			                    <div class="mws-form-item">
-			                        <input type="text" class="large">
+			                        <input type="text" class="medium">
 			                    </div>
 			                </div>
 
@@ -76,7 +79,12 @@
 			                        影院执照
 			                    </label>
 			                    <div class="mws-form-item">
-			                       <input type="file" class="large">
+			                    	<div style="width:180px;height:180px;border:1px solid #C5C5C5">
+			                    		
+										  <img src="1.jpg">
+
+			                    	</div>
+			                     
 			                    </div>
 			                </div>
 
@@ -85,7 +93,7 @@
 			                       影院地址
 			                    </label>
 			                    <div class="mws-form-item">
-			                        <textarea class="large" cols="" rows="">
+			                        <textarea class="medium" cols="" rows="">
 			                        </textarea>
 			                    </div>
 			                </div>
@@ -95,20 +103,11 @@
 			                       影院详细地址
 			                    </label>
 			                    <div class="mws-form-item">
-			                        <textarea class="large" cols="" rows="">
+			                        <textarea class="medium" cols="" rows="">
 			                        </textarea>
 			                    </div>
 			                </div>
-			                <div class="mws-form-row">
-                    				<label class="mws-form-label">状态</label>
-                    				<div class="mws-form-item clearfix">
-                    					<ul class="mws-form-list inline">
-                    						<li><input  name="status" checked type="radio"> <label>开启</label></li>
-                    						<li><input  name="status" type="radio"> <label>禁用</label></li>
-                    						
-                    					</ul>
-                    				</div>
-                    		</div>
+			               
 
 			           
 			            </div>
@@ -123,5 +122,6 @@
 
 
 
+>>>>>>> b687c23810de630981d22835f2e4a474fb1a8197
 
 @endsection
