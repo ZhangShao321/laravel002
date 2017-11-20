@@ -6,11 +6,6 @@
 
 @section('content')
 
-<<<<<<< HEAD
-	
-@endsection
-
-=======
 	<div class="mws-panel grid_8">
       	<div class="mws-panel-header">
           	<span>添加用户</span>
@@ -81,4 +76,4 @@
 </script>
 
 @endsection
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+

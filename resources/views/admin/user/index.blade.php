@@ -5,9 +5,6 @@
 
 @section('content')
 
-	
-<<<<<<< HEAD
-=======
 <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
     <div class="dataTables_length" id="DataTables_Table_1_length">
         <label>
@@ -132,6 +129,6 @@
         </a>
     </div>
 </div>
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
 
 @endsection

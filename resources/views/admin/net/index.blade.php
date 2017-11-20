@@ -5,7 +5,7 @@
 	
 @section('content')
 	
-<<<<<<< HEAD
+
 	<div class="mws-panel grid_8">
 	<div class="mws-panel-header">
     	<span>修改网站配置</span>
@@ -13,52 +13,43 @@
 
     <div class="mws-panel-body no-padding">
 
-    	@if (count($errors) > 0)
-		    <div class="mws-form-message error">
+    	@if (session('msg'))
+		    <div class="mws-form-message success">
 		        <ul>
-		            @foreach ($errors->all() as $error)
-		                <li style='font-size:17px;list-style:none'>{{ $error }}</li>
-		            @endforeach
+		            {{session('msg')}}
 		        </ul>
 		    </div>
 		@endif
 
-		<!-- <div class="mws-form-message error">
-		        	This is an error message
-		            <ul>
-		            	<li>You are too fast</li>
-		                <li>You are too slow</li>
-		            </ul>
-		        </div> -->
-
-    	<form action="/admin/user" class="mws-form" method='post' enctype='multipart/form-data'>
+	
+    	<form action="/admin/net/{{$res[0]->id}}" class="mws-form" method='post' enctype='multipart/form-data'>
     		<div class="mws-form-inline">
 
     			<div class="mws-form-row">
     				<label class="mws-form-label">网站名称:</label>
     				<div class="mws-form-item">
-    					<input type="text" class="small" name='username' value="">
+    					<input type="text" class="small" name='webname' value="{{$res[0]->webname}}">
     				</div>
     			</div>
 
     			<div class="mws-form-row">
     				<label class="mws-form-label">网站关键字:</label>
     				<div class="mws-form-item">
-    					<input type="text" class="small" name='email' value="">
+    					<input type="text" class="small" name='keywords' value="{{$res[0]->keywords}}">
     				</div>
     			</div>
 
     			<div class="mws-form-row">
     				<label class="mws-form-label">网站版权:</label>
     				<div class="mws-form-item">
-    					<input type="text" class="small" name='phone' value="">
+    					<input type="text" class="small" name='copy' value="{{$res[0]->copy}}">
     				</div>
     			</div>
 
     			<div class="mws-form-row">
     				<label class="mws-form-label">网站logo:</label>
     				<div class="mws-form-item">
-    					<input type="file" readonly="readonly" style="width: 100%; padding-right: 85px;" class="fileinput-preview" placeholder="文件上传" name='profile'>
+    					<img src="{{$res[0]->logo}}" style="width:70px;height:70px;"><input type="file" readonly="readonly" style="width: 100%; padding-right: 85px;" class="fileinput-preview" placeholder="文件上传" name='logo'>
     				</div>
     			</div>
 
@@ -84,6 +75,5 @@
     </div>    	
 </div>
 
-=======
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
 @endsection

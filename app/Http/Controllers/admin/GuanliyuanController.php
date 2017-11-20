@@ -2,20 +2,14 @@
 
 namespace App\Http\Controllers\admin;
 
-<<<<<<< HEAD
 use Hash;
-=======
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-<<<<<<< HEAD
+
 use App\Http\Model\user;
-
-
-=======
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
 
 class GuanliyuanController extends Controller
 {
@@ -26,15 +20,11 @@ class GuanliyuanController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-        $res=user::where('auth','1')->get();
 
+        $res=user::where('auth','1')->get();
+          
         return view('admin.guanliyuan.index',compact('res'));
-       
-=======
-        //
-        return view('admin.guanliyuan.index');
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
     }
 
     /**
@@ -46,10 +36,7 @@ class GuanliyuanController extends Controller
     {
         //
          return view('admin.guanliyuan.add');
-<<<<<<< HEAD
-       
-=======
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
     }
 
     /**
@@ -60,7 +47,7 @@ class GuanliyuanController extends Controller
      */
     public function store(Request $request)
     {
-<<<<<<< HEAD
+
 
          //表单验证
         $this->validate($request, [
@@ -85,22 +72,17 @@ class GuanliyuanController extends Controller
         $res['password']=Hash::make($res['password']);
 
         $res['lastlogin']=time();
-        // dd($res);
+       
        
        $sql=user::insert($res);  
-        // $sql=DB::table('user')->insert($res);
-
+      
         if($sql){
             return redirect('/admin/guanliyuan');
         }else{
             return back()->withInput();
         }
 
-        
 
-=======
-        //
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
     }
 
     /**
@@ -145,7 +127,7 @@ class GuanliyuanController extends Controller
      */
     public function destroy($id)
     {
-<<<<<<< HEAD
+
        
         $sql = user::where('id',$id)->delete();
         if($sql){
@@ -156,31 +138,5 @@ class GuanliyuanController extends Controller
     }
 
 
-    //后台管理员状态修改
-    public function zt(Request $request)
-    {
-        // $sql=user::where('id',$_GET['id']);
 
-       /* var_dump($request->all());
-
-        die;
-        if($a['status']=='1'){
-
-             $a['status']=='0';  
-        }else{
-
-            $a['status']=='1';  
-        }
-        */
-         // update插入数据库
-      
-
-
-
-    }
-
-=======
-        //
-    }
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
 }

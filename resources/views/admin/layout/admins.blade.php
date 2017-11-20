@@ -186,30 +186,19 @@
                 <div id="mws-user-photo">
                     <img src="" alt="User Photo">
                 </div>
-<<<<<<< HEAD
 
-                <!-- Username and Functions -->
-                <div id="mws-user-functions">
-                    
-            
-                    <div id="mws-username">
-                        Hello,admin
-=======
                 
                 <!-- Username and Functions -->
                 <div id="mws-user-functions">
                     <div id="mws-username">
                         Hello, 
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
                     </div>
                     <ul>
                         <li><a href="#">修改头像</a></li>
                         <li><a href="#">修改密码</a></li>
-<<<<<<< HEAD
                         <li><a href="/admin/login">退出</a></li>
-=======
-                        <li><a href="index.html">退出</a></li>
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
                     </ul>
                 </div>
             </div>
@@ -243,11 +232,7 @@
             
             <!-- Main Navigation -->
             <div id="mws-navigation">
-<<<<<<< HEAD
-               
-           
-=======
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
                 <ul>
                     
                     <li>
@@ -258,11 +243,9 @@
                         </ul>
                     </li>
 
-<<<<<<< HEAD
-                     <li>
-=======
+
                     <li>
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
                         <a href="#"><i class="icon-add-contact" ></i>管理员管理</a>
                         <ul class='closed'>
                             <li><a href="/admin/guanliyuan/create">管理员添加</a></li>
@@ -273,24 +256,19 @@
                     <li>
                         <a href="#"><i class="icon-film-camera" ></i>商户管理</a>
                         <ul class='closed'>
-<<<<<<< HEAD
-                            <li><a href="/admin/ciname/create">商户添加</a></li>
-                            <li><a href="/admin/ciname">商户列表</a></li>
-=======
+
                             <li><a href="/admin/cinema/create">商户添加</a></li>
                             <li><a href="/admin/cinema">商户列表</a></li>
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
                         </ul>
                     </li>
 
                      <li>
                         <a href="#"><i class="icon-plus" ></i>申请管理</a>
                         <ul class='closed'>                         
-<<<<<<< HEAD
+
                             <li><a href="/admin/request">申请列表</a></li>
-=======
-                            <li><a href="/admin/req">申请列表</a></li>
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
                         </ul>
                     </li>
 
@@ -327,25 +305,13 @@
                 </ul>
             </div>         
         </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
         
         <!-- Main Container Start -->
         <div id="mws-container" class="clearfix">
         
             <!-- Inner Container Start -->
             <div class="container">
-
-            @if(session('msg'))
-                <div class="mws-form-message info">                 
-
-                    {{session('msg')}}
-
-                </div>
-            @endif
-                
 
             @section('content')
 

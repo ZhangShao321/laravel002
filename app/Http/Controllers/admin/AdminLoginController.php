@@ -7,21 +7,12 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-<<<<<<< HEAD
+
 use Gregwar\Captcha\CaptchaBuilder;
 use App\Http\Model\user; 
 use Session;
 use Hash;
-=======
-use Flc\Alidayu\Client;
-use Flc\Alidayu\App;
-use Flc\Alidayu\Requests\AlibabaAliqinFcSmsNumSend;
-use Flc\Alidayu\Requests\IRequest;
-use Session;
 
-use Gregwar\Captcha\CaptchaBuilder;
-
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
 
 class AdminLoginController extends Controller
 {
@@ -30,18 +21,17 @@ class AdminLoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-<<<<<<< HEAD
+
     
     //加载登录页面
-=======
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
     public function index()
     {
         //
         return view('admin.login');
     }
    
-<<<<<<< HEAD
+
 
    //执行登录的方法
     public function dologin(Request $request)
@@ -88,9 +78,7 @@ class AdminLoginController extends Controller
     }
 
     //验证码
-=======
-   
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
     public function code()
     {
 

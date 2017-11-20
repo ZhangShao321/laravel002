@@ -11,9 +11,6 @@
 |
 */
 
-Event::listen('illuminate.query',function($query){
-     var_dump($query);
- }); 
 
 
 
@@ -29,7 +26,7 @@ Route::get('/404',function(){
 
 //=======================后台信息===================================
 
-<<<<<<< HEAD
+
 
 		
 		//prefix路由群组中的所有路由包含统一前缀
@@ -41,41 +38,6 @@ Route::get('/404',function(){
 		Route::post('/admin/dologin','admin\AdminLoginController@dologin');
 		//生成登录验证码 
 		Route::get('/admin/code','admin\AdminLoginController@code');
-=======
-//后台路由组
-//prefix路由群组中的所有路由包含统一前缀
-//namepace控制器位于App\Http\Controllers命名空间下
-//
-Route::group(['prefix'=>'admin','namespace'=>'admin'], function () {
-
-
-		//进入后台的首页
-		Route::get('/index', 'CeshiController@index');
-
-		//后台user用户管理
-		Route::resource('user','UserController');
-
-		//后台guanliyuan管理员管理
-		Route::resource('guanliyuan','GuanliyuanController');
-		
-		//后台商户(电影院)管理
-		Route::resource('cinema','CinemaController');
-
-		//后台申请管理
-		Route::resource('req','RequestController');
-
-		//后台影视分类s
-		Route::resource('/film','FilmController');
-
-		//后台轮播图管理
-		Route::resource('/lunbo','LunboController');
-
-		//后台板块管理
-		Route::resource('/block','BlockController');
-
-		//后台网站配置
-		Route::resource('/net','NetController');
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
 
 	//后台路由组 中间件
 	Route::group(['prefix'=>'admin','namespace'=>'admin','middleware'=>'adminlogin'], function () {
