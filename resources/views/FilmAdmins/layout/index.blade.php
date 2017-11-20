@@ -267,13 +267,16 @@
     <script src="{{asset('/FilmAdmin/js/demo/demo.dashboard.js')}}"></script>
     <script src="{{asset('/FilmAdmin/js/seat/jquery.seat-charts.min.js')}}"></script>
     <!-- 引入layer -->
-    <script type="text/javascript" src="{{asset('/FilmAdmin/layer/jquery.js')}}"></script>
-    <script type="text/javascript" src="{{asset('/FilmAdmin/layer/layer.js')}}"></script>
-    <script type="text/javascript" src="{{asset('/FilmAdmin/layer/extend/layer.ext.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/layer/jquery.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/layer/layer.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/layer/extend/layer.ext.js')}}"></script>
 
     <script type="text/javascript">
 
             $('.mws-form-message').delay('3000').slideUp('2000');
+
+
+
     </script>
 
         @section('js')

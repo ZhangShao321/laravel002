@@ -104,10 +104,14 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
             Route::get('money','FilmMoneyController@index');
 
              //测试
-            Route::get('login','TestController@index');
-            Route::get('test','TestController@doAction');
-            Route::get('te','TestController@test');
-            Route::post('panduan','TestController@login');
+            // Route::get('login','TestController@index');
+            // Route::get('test','TestController@doAction');
+            // Route::get('te','TestController@test');
+            // Route::post('panduan','TestController@login');
+            Route::get('test',function(){
+
+                return view("FilmAdmins.FilmUser.test");
+            });
 
             //影厅
 
