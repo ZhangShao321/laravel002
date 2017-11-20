@@ -79,10 +79,19 @@ class NetController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-             
+                        
         //判断是否有文件上传
         if($request->hasFile('logo')){
+            
+            //先查询
+            $find = config::where('id',$id)->first();
+            //判断图片是否存在  存在就删除
+            //遍历图片<img src="{{asset($find->logo)}}">
+                              
+            if(file_exists($find->logo))
+             {
+                unlink($find->logo);
+             }
 
             //获取文件名
             $name=rand(1111,9999).time();
@@ -102,7 +111,7 @@ class NetController extends Controller
         $res = $request->except('_token','_method');
 
        //修改上传logo的名字
-        $res['logo'] = '/adminsUplode/'.$name.'.'.$hz;
+        $res['logo'] = './adminsUplode/'.$name.'.'.$hz;
 
 
         //执行修改

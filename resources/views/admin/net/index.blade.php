@@ -49,7 +49,7 @@
     			<div class="mws-form-row">
     				<label class="mws-form-label">网站logo:</label>
     				<div class="mws-form-item">
-    					<img src="{{$res[0]->logo}}" style="width:70px;height:70px;"><input type="file" readonly="readonly" style="width: 100%; padding-right: 85px;" class="fileinput-preview" placeholder="文件上传" name='logo'>
+    					<img src="{{asset($res[0]->logo)}}" style="width:70px;height:70px;"><input type="file" readonly="readonly" style="width: 100%; padding-right: 85px;" class="fileinput-preview" placeholder="文件上传" name='logo'>
     				</div>
     			</div>
 
@@ -83,6 +83,6 @@
     <script type="text/javascript">
 
         $('.mws-form-message').delay(3000).slideUp(1000);
-        
+
     </script>
 @endsection
