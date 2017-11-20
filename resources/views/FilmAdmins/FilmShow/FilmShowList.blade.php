@@ -93,24 +93,28 @@
                     </tr>
                 </thead>
                 <tbody role="alert" aria-live="polite" aria-relevant="all">
-                      
-                        <tr class="odd">
+                     @foreach($film as $k => $v)
+                
+                   <tr class="odd">
+                    
                         <td class="  sorting_1">
-                            {{$data['id']}}
+                            {{$v->id}}
                         </td>
+                   
                         <td class=" ">
-                            {{$data['cinema']}}
+                            {{$v->filmname}}
                         </td>
+                     
                         <td class=" ">
-                            {{$data['roomname']}}
+                         
                            
                         </td>
                         <td class=" ">
-                            {{$data['cinema']}}
+                            
                             
                         </td>
                         <td class=" ">
-                            {{$data['time']}}
+                           开始时间
                             
                         </td>
                          <td class=" ">
@@ -118,7 +122,7 @@
                             
                         </td>
                          <td class=" ">
-                            {{$data['status']}}
+                            
                             
                         </td>
                          <td class=" ">
@@ -127,7 +131,7 @@
                             
                         </td>
                     </tr>
-                    
+                     @endforeach 
 
                    
                 </tbody>

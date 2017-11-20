@@ -116,6 +116,18 @@
 			                    </div>
 			                </div>
 
+			                <div class="mws-form-row">
+                				<label class="mws-form-label">状态</label>
+                				<div class="mws-form-item">
+                					<select class="large" name="status">
+                						 
+                                        <option value="1" selected>上映</option>
+                                        <option value="2">即将上映</option>
+                                        
+                					</select>
+                				</div>
+                    		</div>
+
 			                 
 			              
                     		{{ csrf_field() }}

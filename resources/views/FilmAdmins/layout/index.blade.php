@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <!-- Plugin Stylesheets first to ease overrides -->
-<link rel="stylesheet" type="text/css" href="{{asset('/FilmAdmin//FilmAdmin/plugins/colorpicker/colorpicker.css')}}" media="screen">
+<link rel="stylesheet" type="text/css" href="{{asset('/FilmAdmin/plugins/colorpicker/colorpicker.css')}}" media="screen">
 <link rel="stylesheet" type="text/css" href="{{asset('/FilmAdmin/custom-plugins/wizard/wizard.css')}}" media="screen">
 
 <!-- Required Stylesheets -->
@@ -35,6 +35,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset('/FilmAdmin/css/seat/jquery.seat-charts.css')}}" media="screen">
 
 <link rel="stylesheet" type="text/css" href="{{asset('/FilmAdmin/css/admin.css')}}" media="screen">
+<link rel="stylesheet" type="text/css" href="{{asset('/FilmAdmin/css/fenye.css')}}" media="screen">
 
 <title>@yield('title')</title>
 

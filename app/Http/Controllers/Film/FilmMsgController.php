@@ -20,9 +20,9 @@ class FilmMsgController extends Controller
 
       // $film = film::where('filmname','like','%5%')->paginate(3);
      $film = film::where('filmname','like','%'.$request->input('seach').'%')->paginate($request->input('num',10));
+         $sta = array(0=>'下架',1=>'上映',2=>'即将上映');
 
-
-        return view('FilmAdmins.FilmMag.FilmMsgList',['film'=> $film,'request'=>$request]);
+        return view('FilmAdmins.FilmMag.FilmMsgList',['film'=> $film,'request'=>$request,'sta'=>$sta]);
         
     }
 
@@ -197,7 +197,24 @@ class FilmMsgController extends Controller
     //信息删除
      public function delete(Request $request)
      {
-        echo "这是删除";
+        // echo "这是删除";
+         $id = $request->only('id');
+         $del = film::find($id);
+         // echo $id;
+         
+          if(file_exists($del[0]->filepic))
+           {
+              unlink($del[0]->filepic);
+           }
+
+           // $res = $del->delete();
+           if(film::where('id',$id)->delete())
+           {
+            echo "删除成功!";
+           }else{
+            echo "删除失败!";
+           }
+
      }
 
                

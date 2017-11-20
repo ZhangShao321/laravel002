@@ -11,9 +11,7 @@
 |
 */
 
-Event::listen('illuminate.query',function($query){
-     var_dump($query);
- }); 
+
 
 
 
@@ -73,10 +71,6 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
             //执行图片修改
             Route::post('dopro','FilmUserController@doPro');
 
-
-
-
-   
             //电影院信息
             Route::get('info','FilmUserController@FilmInfo');
 
@@ -97,6 +91,7 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
             //放映管理
             Route::get('filmShow','FilmShowController@index');
             Route::get('filmShowAdd','FilmShowController@add');
+            Route::post('showdoAdd','FilmShowController@doadd');
 
 
 

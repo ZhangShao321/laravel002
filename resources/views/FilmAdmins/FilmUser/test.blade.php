@@ -5,6 +5,9 @@
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<title>Document</title>
     <script src="/FilmAdmin/js/libs/jquery-1.8.3.min.js"></script>
+     <script type="text/javascript" src="{{asset('/FilmAdmin/layer/jquery.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/FilmAdmin/layer/layer.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/FilmAdmin/layer/extend/layer.ext.js')}}"></script>
 
 </head>
 <body>
@@ -42,59 +45,59 @@
 
 
 
-			$.ajaxSetup({
-		        headers: {
-		            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-		        }
-			});
-
-
-			$('#dvs').click(function(){
-
-
-
-						//获取phone
-					 //var phone = $('#phone').val(); 
-					 // console.log(phone);
-
-						$.ajax({
-							   type: "GET",
-							   url: "{{url('/FilmAdmins/test')}}",
-							   data: 'phone='+$('#phone').val(),
-							   success: function(msg){
-							     alert(msg);
-							   }
-							});
-
-						// $.get("/FilmAdmins/test",{phone:phone},function(data){
-						// 	console.log(data);
-						// });
-
-
-					// return false;
-			});
-
-
-			$('#judge').click(function(){
-				 var phone = $('#phone').val(); 
-				 var code = $("#code").val();
-
-
-				$.ajax({
-							   type: "GET",
-							   url: "{{url('/FilmAdmins/panduan')}}",
-							   data: 'phone='+phone&'code='+code,
-							   success: function(msg){
-							     alert(msg);
-							   }
-							});
-
-					return false;
-
-
-
-
+			// $.ajaxSetup({
+		 //        headers: {
+		 //            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		 //        }
 			// });
+
+
+			// $('#dvs').click(function(){
+
+
+
+			// 			//获取phone
+			// 		 //var phone = $('#phone').val(); 
+			// 		 // console.log(phone);
+
+			// 			$.ajax({
+			// 				   type: "GET",
+			// 				   url: "{{url('/FilmAdmins/test')}}",
+			// 				   data: 'phone='+$('#phone').val(),
+			// 				   success: function(msg){
+			// 				     alert(msg);
+			// 				   }
+			// 				});
+
+			// 			// $.get("/FilmAdmins/test",{phone:phone},function(data){
+			// 			// 	console.log(data);
+			// 			// });
+
+
+			// 		// return false;
+			// });
+
+
+			// $('#judge').click(function(){
+			// 	 var phone = $('#phone').val(); 
+			// 	 var code = $("#code").val();
+
+
+			// 	$.ajax({
+			// 				   type: "GET",
+			// 				   url: "{{url('/FilmAdmins/panduan')}}",
+			// 				   data: 'phone='+phone&'code='+code,
+			// 				   success: function(msg){
+			// 				     alert(msg);
+			// 				   }
+			// 				});
+
+			// 		return false;
+
+
+
+
+			// // });
 		
 			
 
