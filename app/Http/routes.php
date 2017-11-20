@@ -18,7 +18,7 @@ Event::listen('illuminate.query',function($query){
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homes/index');
 });
 
 //404找不到页面
