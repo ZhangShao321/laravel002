@@ -47,12 +47,14 @@ class FilmLoginController extends Controller
 
     public function doAction(Request $request)
     {
-        echo "这是处理登录方法";
+        // echo "这是处理登录方法";
 
         //获取
         $res = $request->except('_token');
 
+
        $dd = cinlogin::where('cinema',$res['cinema'])->first();
+        // dd($dd);
 
        if(!$dd)
         {
@@ -66,6 +68,7 @@ class FilmLoginController extends Controller
             return redirect('/FilmAdmins/FilmLogin')->with('msg','密码错误');
         }
 
+        
 
         //使用hash
         // Hash::check('plain-text', $hashedPassword)

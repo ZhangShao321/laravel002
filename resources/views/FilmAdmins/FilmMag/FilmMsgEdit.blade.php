@@ -26,7 +26,7 @@
 
 
 
-			        <form action="{{asset('/FilmAdmins/update?id='.$res->id)}}" enctype="multipart/form-data"  class="mws-form" method="post">
+			       <form action="{{asset('/FilmAdmins/update?id='.$res->id)}}" enctype="multipart/form-data"  class="mws-form" method="post">
 			            <div class="mws-form-inline">
 			                <div class="mws-form-row">
 			                    <label class="mws-form-label">

@@ -13,13 +13,16 @@ use Hash;
 class FilmMsgController extends Controller
 {
     //影片管理
-    public  function index()
+    public  function index(Request $request)
     {
 
-       $film =  film::get();
+       // $film =  film::get();
+
+      // $film = film::where('filmname','like','%5%')->paginate(3);
+     $film = film::where('filmname','like','%'.$request->input('seach').'%')->paginate($request->input('num',10));
 
 
-        return view('FilmAdmins.FilmMag.FilmMsgList',['film'=> $film]);
+        return view('FilmAdmins.FilmMag.FilmMsgList',['film'=> $film,'request'=>$request]);
         
     }
 
@@ -191,7 +194,11 @@ class FilmMsgController extends Controller
 
 
 
-    
+    //信息删除
+     public function delete(Request $request)
+     {
+        echo "这是删除";
+     }
 
                
 
