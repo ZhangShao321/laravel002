@@ -26,11 +26,9 @@
 
     <div id="mws-login-wrapper">
         <div id="mws-login">
-<<<<<<< HEAD
+
             <h1>后台登录</h1>
-=======
-            <h1>登录</h1>
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
             <div class="mws-login-lock"><i class="icon-lock"></i></div>
             <div id="mws-login-form">
                 
@@ -42,19 +40,13 @@
 
                         </div>
                     @endif
-<<<<<<< HEAD
+
               
                 <form class="mws-form" action="/admin/dologin" method="post">
                     <div class="mws-form-row">
                         <div class="mws-form-item">
                             <input type="text" name="phone" class="mws-login-username required" placeholder="请输入用户名">
-=======
 
-                <form class="mws-form" action="/admin/dologin" method="post">
-                    <div class="mws-form-row">
-                        <div class="mws-form-item">
-                            <input type="text" name="username" class="mws-login-username required" placeholder="请输入用户名">
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
                         </div>
                     </div>
                     <div class="mws-form-row">
@@ -95,7 +87,7 @@
 
     <!-- Login Script -->
    <script src="/admins/js/core/login.js"></script>
-<<<<<<< HEAD
+
     
     <script type="text/javascript">
 
@@ -106,8 +98,3 @@
 </html>
 
 
-=======
-
-</body>
-</html>
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
