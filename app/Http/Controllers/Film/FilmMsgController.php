@@ -197,6 +197,7 @@ class FilmMsgController extends Controller
     //信息删除
      public function delete(Request $request)
      {
+        var_dump($request);
         echo "这是删除";
      }
 
