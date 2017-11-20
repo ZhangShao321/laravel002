@@ -11,12 +11,11 @@
 |
 */
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 37e0468b33b4372cb9b3ca5e090caa97f447532c
+
+
 
 Route::get('/', function () {
     return view('homes/index');
@@ -99,7 +98,7 @@ Route::get('/admin/code','admin\AdminLoginController@code');
 // namespace  是控制器文件夹名 
 //  php artisan make:controller Film/FilmLoginController --plain
 
-<<<<<<< HEAD
+
 Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     //电影院首页
     Route::get('index','FilmUserController@index');
@@ -118,23 +117,16 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
 
     //退出登录
     Route::get('outlogin','FilmLoginController@outlogin');
-=======
-            //电影院信息
-            Route::get('info','FilmUserController@FilmInfo');
->>>>>>> 37e0468b33b4372cb9b3ca5e090caa97f447532c
+
 
 
 
     //'middleware'=>'filmlogin'
     Route::group([],function(){
 
-<<<<<<< HEAD
-=======
-            //放映管理
-            Route::get('filmShow','FilmShowController@index');
-            Route::get('filmShowAdd','FilmShowController@add');
-            Route::post('showdoAdd','FilmShowController@doadd');
->>>>>>> 37e0468b33b4372cb9b3ca5e090caa97f447532c
+
+            
+
 
 
     //电影院首页
@@ -164,6 +156,7 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     //放映管理
     Route::get('filmShow','FilmShowController@index');
     Route::get('filmShowAdd','FilmShowController@add');
+    Route::post('showdoAdd','FilmShowController@doadd');
 
     //钱包
     Route::get('money','FilmMoneyController@index');
