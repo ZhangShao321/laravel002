@@ -274,6 +274,9 @@
     <script type="text/javascript">
 
             $('.mws-form-message').delay('3000').slideUp('2000');
+
+
+
     </script>
 
         @section('js')

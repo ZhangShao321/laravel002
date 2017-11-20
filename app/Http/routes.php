@@ -98,6 +98,18 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     Route::get('filmShowAdd','FilmShowController@add');
 
 
+<<<<<<< HEAD
+=======
+             //测试
+            // Route::get('login','TestController@index');
+            // Route::get('test','TestController@doAction');
+            // Route::get('te','TestController@test');
+            // Route::post('panduan','TestController@login');
+            Route::get('test',function(){
+
+                return view("FilmAdmins.FilmUser.test");
+            });
+>>>>>>> 946daae72d9b6949aa128fec3d120822d38456d8
 
     //钱包
     Route::get('money','FilmMoneyController@index');
