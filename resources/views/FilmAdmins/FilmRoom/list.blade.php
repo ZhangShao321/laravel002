@@ -25,12 +25,18 @@
             <tbody>
 
             @foreach($res as $k=>$v)
-                <tr>
+                <tr align="center">
                     <td>{{ $v->id }}</td>
                     <td>{{ $v->roomname }}</td>
                     <td>{{ $v->roomtype }}</td>
                     <td>{{ $v->rtime }}</td>
-                    <td>{{ $v->status }}</td>
+                    <td>
+                        @if($v->status==1)
+                        <button id="{{ $v->id }}" name="{{ $v->status }}" class="b1">正在使用中...</button> 
+                        @else
+                        <button id="{{ $v->id }}" name="{{ $v->status }}" class="b1">正在检修中...</button>
+                        @endif
+                    </td>
                     <td>
                         <a href="/FilmAdmins/room/edit/{{ $v->id }}"><button>修改</button></a>
                         <a href="/FilmAdmins/room/delete/{{ $v->id }}"><button>删除</button></a>
@@ -48,7 +54,26 @@
 @endsection
 @section('js')      
 <script>
+$('.b1').click(function(){
 
+    var ids = $(this).attr('id');
+    var status = $(this).attr('name');
+    var bbb = $(this);
+
+    $.post('{{ url("/FilmAdmins/room/work") }}',{_token:'{{ csrf_token() }}', id:ids, status:status}, function(data){
+        
+        console.log(data);
+
+        if(data == 1){
+            bbb.text('正在检修中...');
+            bbb.attr('name',0);
+        } else if(data == 2){
+            bbb.text('正在使用中...');
+            bbb.attr('name',1);
+        } 
+    });
+
+})
 
 
 </script>

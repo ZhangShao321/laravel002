@@ -82,13 +82,15 @@ class FilmRoomController extends Controller
         $res['cid'] = session('cid') ?? 1;
 
         //写入数据
-        $id = DB::table('seat')->insertGetId($res);
+        // $id = DB::table('seat')->insertGetId($res);
+        $id = seat::insertGetId($res);
 
         // echo $id;die;
         //判断
         if($id){
             //修改影厅表的座位id
             $aaa = DB::table('roominfo')->where('id', $res['rid'])->update(['sid'=>$id]);
+            // $aaa = roominfo::where('id','=', $res['rid'])->update(['sid'=>$id]);
 
             if(!$aaa){
 
@@ -96,12 +98,20 @@ class FilmRoomController extends Controller
                 DB::table('roominfo')->where('id', $res['rid'])->delete();
 
                 // return redirect('/FilmAdmins/room/add');
-                echo '0';
+                // echo '0';
+
+                $aaa = array('url'=>'/FilmAdmins/room/add');
+
+                return $aaa;
 
             } else {
 
-                echo '1';
+                // echo '1';.
                 // return redirect('/FilmAdmins/room/list');
+
+                $arr = array('url'=>'/FilmAdmins/room/list');
+
+                return $arr;
                 
             }
         } else {
@@ -161,4 +171,50 @@ class FilmRoomController extends Controller
 
     }
 
+    //修改状态
+    public function work(Request $request)
+    {
+        $data = $request->except('_token');
+
+        // var_dump($data);die;
+
+        if($data['status'] == '1'){
+
+            $res1 = DB::table('roominfo')->where('id',$data['id'])->update(['status'=>0]);
+            if($res1){
+                echo '1';
+            }else{
+                echo '0';
+            }
+        }else if($data['status'] == '0'){
+            $res2 = DB::table('roominfo')->where('id',$data['id'])->update(['status'=>1]);
+            if($res2){
+                echo '2';
+            }else{
+                echo '0';
+            }
+        }
+
+        /*$res = DB::table('roominfo')->where('id',$id)->update(['status'=>1]);
+
+        if($res){
+            echo '1';
+            // return redirect('/FilmAdmins/room/list');
+        }else{
+            echo '0';
+        }*/
+    }
+    public function free(Request $request)
+    {
+        $id = $request->except('_token');
+
+        $res = DB::table('roominfo')->where('id',$id)->update(['status'=>1]);
+
+        if($res){
+            echo '1';
+            // return redirect('/FilmAdmins/room/list');
+        }else{
+            echo '0';
+        }
+    }
 }

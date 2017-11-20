@@ -89,8 +89,8 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     Route::get('/room/edit/{id}','FilmRoomController@edit');
     Route::post('/room/update/{id}','FilmRoomController@update');
     Route::get('/room/delete/{id}','FilmRoomController@delete');
-
-
+    Route::post('/room/work','FilmRoomController@work');
+    Route::post('/room/free','FilmRoomController@free');
 
 });
 
