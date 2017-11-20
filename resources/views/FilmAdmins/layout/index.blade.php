@@ -32,7 +32,7 @@
 <!-- Theme Stylesheet -->
 <link rel="stylesheet" type="text/css" href="/FilmAdmin/css/mws-theme.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/FilmAdmin/css/themer.css" media="screen">
-
+<link rel="stylesheet" type="text/css" href="/FilmAdmin/css/seat/jquery.seat-charts.css" media="screen">
 
 <style type="text/css">
     body, 
@@ -477,7 +477,7 @@
     <script type="text/javascript" src="{{asset('/FilmAdmin/layer/jquery.js')}}"></script>
     <script type="text/javascript" src="{{asset('/FilmAdmin/layer/layer.js')}}"></script>
     <script type="text/javascript" src="{{asset('/FilmAdmin/layer/extend/layer.ext.js')}}"></script>
-
+    <script src="/FilmAdmin/js/seat/jquery.seat-charts.min.js"></script>
     <script type="text/javascript">
 
             $('.mws-form-message').delay('3000').slideUp('2000');

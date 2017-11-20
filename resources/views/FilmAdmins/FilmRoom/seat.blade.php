@@ -143,9 +143,10 @@ function registSeat(){
 
         $.post('{{ url("/FilmAdmins/room/seat") }}', {_token:'{{ csrf_token() }}', seat:str, hang:hang, lie:lie, rid:'{{ $id }}'}, function(data){
 
+            console.log(data.url);
             location.href = data.url;
             
-        });
+        },'json');
 
         return false;
     });

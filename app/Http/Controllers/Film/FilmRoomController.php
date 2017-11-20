@@ -13,8 +13,6 @@ use App\Http\model\seat;
 class FilmRoomController extends Controller
 {
 
-
-
     //影厅列表
     public function index()
 
@@ -108,7 +106,7 @@ class FilmRoomController extends Controller
 
             } else {
 
-                // echo '1';.
+                // echo '1';
                 // return redirect('/FilmAdmins/room/list');
 
                 $arr = array('url'=>'/FilmAdmins/room/list');
@@ -210,8 +208,57 @@ class FilmRoomController extends Controller
 
         $res = DB::table('seat')->where('id',$sid)->first();
 
-        // var_dump($res);die;
+        $seat = $res->seat;
 
-        return view('/FilmAdmins/FilmRoom/seats',['res'=>$res]);
+        $seats = explode('#',$seat);
+
+        // echo "<pre>";
+        // var_dump($seats);die;
+
+        return view('/FilmAdmins/FilmRoom/seats',['res'=>$res, 'seat'=>$seats]);
+    }
+
+
+    //座位图修改
+    public function seatedit($id)
+    {
+        return  view('/FilmAdmins/FilmRoom/seat_edit',['id'=>$id]);
+    }
+
+    //执行修改座位
+    public function seatupdate(Request $request, $id)
+    {
+        
+        // echo $id;
+
+        //接收数据
+        $res = $request->except('_token');
+        //判断是否丢包
+        if(empty($res['seat']) && $res['rid']){
+
+            return back();
+        }
+
+
+        //写入数据
+        $aaa = DB::table('seat')->where('id',$id)->update($res);
+
+        // echo $aaa;die;
+        //判断
+        if($aaa){
+            
+
+            $arr = array('url'=>'/FilmAdmins/room/list');
+
+            return $arr;
+                
+            
+        } else {
+
+            $arr2 = array('url'=>'/FilmAdmins/room/list');
+
+            return $arr2;
+        }
+       
     }
 }

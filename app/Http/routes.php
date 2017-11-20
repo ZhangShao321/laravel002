@@ -11,11 +11,6 @@
 |
 */
 
-Event::listen('illuminate.query',function($query){
-     var_dump($query);
- }); 
-
-
 
 Route::get('/', function () {
     return view('homes/index');
@@ -166,6 +161,8 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     Route::get('/room/delete/{id}','FilmRoomController@delete');
     Route::post('/room/work','FilmRoomController@work');
     Route::get('/room/seats/{id}','FilmRoomController@seats');
+    Route::get('/room/seatedit/{id}','FilmRoomController@seatedit');
+    Route::post('/room/seatupdate/{id}','FilmRoomController@seatupdate');
 
    
     });

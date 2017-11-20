@@ -1,6 +1,6 @@
 @extends('FilmAdmins.layout.index')
 
-@section('title', '电影院座位图')
+@section('title', '电影院添加座位图')
 
 <style>
     #seat-maps .seatCharts-cell{
@@ -9,47 +9,39 @@
         line-height: 30px;
         text-align: center;
         font-size: 18px;
-        background: white;
     }
 
-     #seat-maps .cur{
+     #seat-maps .none{
         width: 30px;
         height: 30px;
         line-height: 30px;
         text-align: center;
         font-size: 18px;
-        background: blue;
-    }
-    #xiugai{
-        height: 50px;
-        padding-left: 20px;
-        background: lightblue;
-        padding-top: 18px;
+        background: white;
     }
 </style>
 @section('content') 
 
 <div class="mws-panel grid_8">
     <div class="mws-panel-header">
-        <span>座位图</span>
+        <span>修改座位图</span>
     </div>
     <div class="mws-panel-body no-padding">
         <form class="mws-form">
             <div class="mws-form-block">
 
-            <!-- <div class="mws-form-row">
+            <div class="mws-form-row">
                 <label class="mws-form-label">座位图</label>
-            
+
                 <div class="mws-form-item">
-                    行: <button onclick="registSeat()" id="butss" class="btn btn-danger">确认</button>
+                    行: <input type="text" id="x"  name="hang">
+                    列: <input type="text" id="y"  name="lie">
+                    <button onclick="registSeat()" id="butss" class="btn btn-danger">确认</button>
                 </div>
-            </div> -->
+            </div>
                  
             <div class="mws-form-row">
-                <label class="mws-form-label"><h3>座位图</h3></label>
-                <input type="hidden" id="x" value="{{ $res->hang }}"  name="hang">
-                <input type="hidden" id="y"  value="{{ $res->lie }}" name="lie">
-                 <br/>  
+                <label class="mws-form-label">座位图 (点击去掉多余座位)</label>
                 <div class="mws-form-item"> 
                     <div id="seat-maps"></div>
                     <ul id="selected-seats">
@@ -57,13 +49,14 @@
                 </div>
             </div> 
             <br>
-            </div></form>
-            <div class="mws-button-row" id="xiugai"  >
-                <a href="/FilmAdmins/room/seatedit/{{ $res->id }}"><button  class="btn btn-danger">修改</button></a>
+            </div>
+            <div class="mws-button-row">
+                {{ csrf_field() }}
+                <input type="submit" id="save"  value="修改" class="btn btn-danger">
                 
             </div>
             <!-- <div id="legend"></div> -->
-        
+        </form>
     </div>
 </div>
 
@@ -131,11 +124,32 @@ function registSeat(){
 
         // sc.get(['1_2', '4_1', '7_1', '7_2']).status('none');
 
-    @foreach($seat as $k=>$v)
+    $('input[type=submit]').click(function(){
 
-        $("#{{ $v }}").addClass('cur');
+        // console.log($('.available'));
+        var str = [];
 
-    @endforeach
+        $('.available').each(function(){
+
+            var zuo = $(this).attr('id');
+
+            str.push(zuo);
+        });
+        // console.log(str);
+
+        str = str.join('#');
+        var hang = $('#x').val();
+        var lie = $('#y').val();
+
+        $.post('{{ url("/FilmAdmins/room/seatupdate/$id") }}', {_token:'{{ csrf_token() }}', seat:str, hang:hang, lie:lie}, function(data){
+
+            console.log(data.url);
+            window.location.href = data.url;
+            
+        });
+
+        return false;
+    });
 
 }    
 
