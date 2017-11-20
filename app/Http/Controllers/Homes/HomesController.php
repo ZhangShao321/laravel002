@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Homes;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Model\cinema;
+use App\Http\Model\cininfo;
+use Hash;
+use DB;
 
 class HomesController extends Controller
 {
@@ -45,9 +49,12 @@ class HomesController extends Controller
 
     public function store(Request $request)
     {
-        $res = $request->except('_token');
+        $res = $request->except('_token','city','area','address');
+        $res1 = $request->only('city','area','address');
 
-        
+        $res['password'] = Hash::make($res['password']);
+
+
         if($request -> hasFile('license'))
         {
 
@@ -57,15 +64,30 @@ class HomesController extends Controller
             //获取后缀名
             $jpg = $request -> file('license')->getClientOriginalExtension();
           
-            
             //移动图片
             $request ->file('license') -> move('./homes/Uploads',$name.'.'.$jpg); 
         }  
 
-        $license = $name.'.'.$jpg;
+        $license = './homes/Uploads/'.$name.$name.'.'.$jpg;
         $res['license'] = $license;
 
-        cinema::insert($res);
+
+        DB::beginTransaction();
+
+        $cinema = cinema::insert($res);
+        $cininfo = cininfo::insert($res1);
+
+        //判断
+        if($cinema && $cininfo)
+        {   
+            DB::commit();
+            return redirect('/homes/index'); 
+
+        }else{
+            
+            DB::rollback();
+        }
+
 
     }    
         

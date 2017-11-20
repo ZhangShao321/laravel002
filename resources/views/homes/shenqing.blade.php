@@ -46,13 +46,39 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="address" class="col-sm-2 control-label">
-            电影院地址
+        <label for="phone" class="col-sm-2 control-label">
+            密码
         </label>
         <div class="col-sm-5">
-            <textarea class="form-control" rows="3" name="aid" required></textarea>
+            <input type="password" class="form-control" id="inputPassword3" placeholder="请输入密码" name="password" required>
         </div>
     </div>
+    <div class="form-group">
+        <label for="city" class="col-sm-2 control-label">
+            省份
+        </label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" id="inputPassword3" placeholder="请输入省份" name="city" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="city" class="col-sm-2 control-label">
+            市/区
+        </label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" id="inputPassword3" placeholder="请输入市/区" name="area" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="city" class="col-sm-2 control-label">
+            详细地址
+        </label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" id="inputPassword3" placeholder="请输入详细地址" name="address" required>
+        </div>
+    </div>
+   
+
     <div class="form-group">
         <label for="inputPassword3" class="col-sm-2 control-label">
             电影院执照
@@ -77,9 +103,8 @@
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-5">
             {{ csrf_field() }}
-            <button type="submit" class="btn btn-danger">
-                申请
-            </button>
+                
+            <button type="submit" id="func4" class="btn btn-danger" onclick="func4()">申请</button>
         </div>
     </div>
     </fieldset>
@@ -90,7 +115,7 @@
 @section('js')
 
 <script type="text/javascript">
-
+    //表单验证
     $.validator.setDefaults({
     submitHandler: function() {
       alert("提交事件!");
@@ -102,6 +127,14 @@
     errorPlacement: function(error, element) {  
         error.appendTo(element.parent());  
     }
+
+
+    //弹框
+    function func4() {
+        //提示层
+        layer.msg('申请成功');
+    }
+    
 
 </script>
 @endsection

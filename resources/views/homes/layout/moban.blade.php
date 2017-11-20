@@ -239,8 +239,9 @@
 <script src="/homes/js/main.js"></script>
 <script src="/homes/js/validate.js"></script>
 <script src="/homes/js/jquery.validate.messages_cn.js"></script>
-
-
+<script src="/homes/js/layer/layer.js"></script>
+<script src="/homes/js/layer/extend/layer.ext.js"></script>
+<script src="/homes/js/layer/jquery-1.8.3.min.js"></script>
 </body>
 </html>
 @section('js')
