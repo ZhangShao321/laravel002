@@ -368,7 +368,7 @@
                     </li>
 
                     <li>
-                        <a href="/admins/#"><i class="icon-calendar-month"></i> 座位管理</a>
+                        <a href="/admins/#"><i class="icon-calendar-month"></i> 电影票</a>
                         <ul class="closed">
                             <li><a href="#">添加座位</a></li>
                            

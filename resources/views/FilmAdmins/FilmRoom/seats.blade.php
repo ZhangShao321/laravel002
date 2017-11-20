@@ -37,13 +37,6 @@
         <form class="mws-form">
             <div class="mws-form-block">
 
-            <!-- <div class="mws-form-row">
-                <label class="mws-form-label">座位图</label>
-            
-                <div class="mws-form-item">
-                    行: <button onclick="registSeat()" id="butss" class="btn btn-danger">确认</button>
-                </div>
-            </div> -->
                  
             <div class="mws-form-row">
                 <label class="mws-form-label"><h3>座位图</h3></label>
