@@ -145,28 +145,7 @@
                 </thead>
                 <tbody role="alert" aria-live="polite" aria-relevant="all">
                     <style type="text/css">
-<<<<<<< HEAD
-                        
-                          /*  td{
-                                width:100px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis
-                            }*/
-                       
-                    </style>
-                  
-                       @foreach($film as $k => $v)
-                                <tr class="@if($k%2==0) odd @else even @endif">
-                                    <td class="sorting_1">{{$v->id}}</td>
-                                    <td class="">{{$v->filmname}}</td>
-                                    <td class="">{{$v->filmtime}}</td>
-                                    <td class="">{{$v->keywords}}</td>
-                                    <td class="">{{$v->director}}</td>
-                                    <td class="">{{$v->protagonist}}</td>
-                                    <td class="" >{{$v->summary}}</td>
-                                    <td class="">{{ $v->showtime }}</td>
-                                    <td class="">{{$v->price}}</td>
-                                    <td class="">{{$v->shownum}}</td>
-                                    <td class="">
-=======
+
                      table{
                         
                             table-layout:fixed;/* 只有定义了表格的布局算法为fixed，下面td的定义才能起作用。 */
@@ -202,25 +181,19 @@
                                     <td class="bian">{{$v->price}}</td>
                                     <td class="bian">{{$v->shownum}}</td>
                                     <td >
->>>>>>> 37e0468b33b4372cb9b3ca5e090caa97f447532c
+
                                         <img src="{{asset($v->filepic)}}" style="width:120px;height:60px"  />
                                     </td>
                                   
                                   
                                     
-<<<<<<< HEAD
-                                    <td class="">{{$v->status }}</td>
-                                   <td class="">
-                                     <a href="{{asset('/FilmAdmins/edit?id=').$v->id}}">编辑</a> 
-                                     <a id="del" name="{{$v->id}}" href="#">删除</a>
-                                     <!-- href="{{asset('/FilmAdmins/delete?id=').$v->id}} "-->
-=======
+
                                     <td class=""> {{$sta[$v->status] }}</td>
                                    <td style="overflow: visible; " class="">
                                      <a href="{{asset('/FilmAdmins/edit?id=').$v->id}}" >编辑</a> |
                                      <span style="cursor:pointer; color:#C5D52B" class="del"  value="{{$v->id}}"  >删除</span>
                                     
->>>>>>> 37e0468b33b4372cb9b3ca5e090caa97f447532c
+
 
                                    </td>
                                 </tr>
@@ -240,10 +213,7 @@
 
 
 
-<<<<<<< HEAD
-=======
-                               
->>>>>>> 37e0468b33b4372cb9b3ca5e090caa97f447532c
+
             </div>
 
         </div>
