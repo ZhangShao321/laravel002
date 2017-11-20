@@ -3,11 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
+<<<<<<< HEAD
 	<title>测试</title>
     <!-- <script src="/FilmAdmin/js/libs/jquery-1.8.3.min.js"></script> -->
      <script type="text/javascript" src="/FilmAdmin/layer/jquery.js"></script>
     <script type="text/javascript" src="/FilmAdmin/layer/layer.js"></script>
     <script type="text/javascript" src="/FilmAdmin/layer/extend/layer.ext.js"></script>
+=======
+	<title>Document</title>
+    <script src="/FilmAdmin/js/libs/jquery-1.8.3.min.js"></script>
+     <script type="text/javascript" src="{{asset('/FilmAdmin/layer/jquery.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/FilmAdmin/layer/layer.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/FilmAdmin/layer/extend/layer.ext.js')}}"></script>
+>>>>>>> 37e0468b33b4372cb9b3ca5e090caa97f447532c
 
 </head>
 <body>
@@ -103,7 +111,7 @@
 
 
 
-			// });
+			// // });
 		
 			
 

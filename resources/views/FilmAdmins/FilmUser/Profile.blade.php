@@ -19,7 +19,7 @@
 							<br/>
 			            	<div style="width:240px;height:240px;border:1px solid #C5C5C5;margin:auto;">
 								
-								<img src="{{asset($res->clogo)}}" style="width:239px;height:239px"  />
+								<img src="{{asset($res->clogo)}}" style="width:239px;height:239px"/>
 
 							</div>
 

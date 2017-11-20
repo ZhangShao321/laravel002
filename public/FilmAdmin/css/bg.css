@@ -1,7 +1,7 @@
 body, 
 #mws-container
 {
-	background-image:url("{{asset('/admins/images/core/bg/bright_squares.png')}}");
+	background-image:url("{{asset('/FilmAdmin/images/core/bg/bright_squares.png')}}");
 }
 
 #mws-sidebar, 

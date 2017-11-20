@@ -10,8 +10,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <!-- Plugin Stylesheets first to ease overrides -->
+<<<<<<< HEAD
 <link rel="stylesheet" type="text/css" href="/FilmAdmin//FilmAdmin/plugins/colorpicker/colorpicker.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/FilmAdmin/custom-plugins/wizard/wizard.css" media="screen">
+=======
+<link rel="stylesheet" type="text/css" href="{{asset('/FilmAdmin/plugins/colorpicker/colorpicker.css')}}" media="screen">
+<link rel="stylesheet" type="text/css" href="{{asset('/FilmAdmin/custom-plugins/wizard/wizard.css')}}" media="screen">
+>>>>>>> 37e0468b33b4372cb9b3ca5e090caa97f447532c
 
 <!-- Required Stylesheets -->
 <link rel="stylesheet" type="text/css" href="/FilmAdmin/bootstrap/css/bootstrap.min.css" media="screen">
@@ -118,7 +123,10 @@
 
 <link rel="stylesheet" type="text/css" href="{{asset('/FilmAdmin/css/admin.css')}}" media="screen">
 <link rel="stylesheet" type="text/css" href="{{asset('/FilmAdmin/css/fenye.css')}}" media="screen">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 37e0468b33b4372cb9b3ca5e090caa97f447532c
 
 <title>@yield('title')</title>
 

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
      .pagination li{
+=======
+   .pagination li{
+>>>>>>> 37e0468b33b4372cb9b3ca5e090caa97f447532c
 
                             background-color: #444444;
                             border-left: 1px solid rgba(255, 255, 255, 0.15);
@@ -36,4 +40,8 @@
                          .pagination .disabled{
                                   color: #666666;
                                  cursor: default;
+<<<<<<< HEAD
                                 }
+=======
+                                }
+>>>>>>> 37e0468b33b4372cb9b3ca5e090caa97f447532c
