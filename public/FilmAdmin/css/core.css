@@ -11,7 +11,7 @@
 ================================================== */
 
 #mws-header {
-    background: url(../images/core/mws-header-bg.png) repeat-x left bottom;
+    background: url({{asset('/FilmAdmin/images/core/mws-header-bg.png')}}) repeat-x left bottom;
     border-bottom: 4px solid;
     z-index: 100;
     position: relative;
@@ -286,7 +286,7 @@
     z-index: 1;
     position: relative;
     float: left;
-    background-image: url(../images/core/mws-dark-bg.png);
+    background-image: url("{{asset('/FilmAdmin/images/core/mws-dark-bg.png')}}");
     padding-top: 10px;
 }
 
@@ -297,11 +297,11 @@
     left: 191px;
     width: 17px;
     z-index: 2;
-    background: url(../images/core/mws-sidebar-stitch.png) repeat-y;
+    background: url("{{asset('/FilmAdmin/images/core/mws-sidebar-stitch.png')}}") repeat-y;
 }
 
 #mws-sidebar-bg {
-    background-image: url(../images/core/mws-dark-bg.png);
+    background-image: url("{{asset('/FilmAdmin/images/core/mws-dark-bg.png')}}");
     position: absolute;
     left: 0;
     top: 0;
@@ -579,7 +579,8 @@
         display: block;
         width: auto;
         height: 40px;
-        background: url(../images/core/mws-dark-bg.png) repeat;
+        background: url("{{asset('/FilmAdmin//images/core/mws-dark-bg.png')}}")
+         repeat;
     }
 
     #mws-logo-container #mws-logo-wrap {

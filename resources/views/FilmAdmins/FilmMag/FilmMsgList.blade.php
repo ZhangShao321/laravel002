@@ -55,18 +55,18 @@
                     <tr role="row">
                         <th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0"
                         rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending"
-                        style="width: 157px;">
+                        >
                            ID
                         </th>
                         <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0"
                         rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending"
-                        style="width: 209px;">
+                        >
                            名称
                         </th>
                         
                          <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0"
                         rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending"
-                        style="width: 209px;">
+                       >
                         时长
                         </th>
 
@@ -74,24 +74,24 @@
 
                         <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0"
                         rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
-                        style="width: 191px;">
+                        >
                             关键字
                         </th>
                         <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0"
                         rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
-                        style="width: 137px;">
+                        >
                             导演
                         </th>
                         <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0"
                         rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending"
-                        style="width: 101px;">
+                        >
                         
                             主演
                         </th>
 
                         <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0"
                         rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending"
-                        style="width: 101px;">
+                       >
                         
                             简介
                         </th>
@@ -99,21 +99,21 @@
 
                         <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0"
                         rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending"
-                        style="width: 101px;">
+                        >
                         
                             上映时间
                         </th>
 
                         <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0"
                         rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending"
-                        style="width: 101px;">
+                        >
                         
                             票价
                         </th>
 
                       <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0"
                         rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending"
-                        style="width: 101px;">
+                        >
                         
                             售票总数
                         </th>
@@ -124,20 +124,20 @@
 
                         <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0"
                         rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending"
-                        style="width: 101px;">
+                       >
                         
                         图片
                         </th>
 
                         <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0"
                         rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending"
-                        style="width: 101px;">
+                       >
                         
                         状态
                         </th>
-                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0"
+                        <th class="sorting"  role="columnheader" tabindex="0" aria-controls="DataTables_Table_0"
                         rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending"
-                        style="width: 101px;">
+                       style="width:70px" >
                         
                         操作
                         </th>
@@ -145,6 +145,7 @@
                 </thead>
                 <tbody role="alert" aria-live="polite" aria-relevant="all">
                     <style type="text/css">
+<<<<<<< HEAD
                         
                           /*  td{
                                 width:100px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis
@@ -165,16 +166,61 @@
                                     <td class="">{{$v->price}}</td>
                                     <td class="">{{$v->shownum}}</td>
                                     <td class="">
+=======
+                     table{
+                        
+                            table-layout:fixed;/* 只有定义了表格的布局算法为fixed，下面td的定义才能起作用。 */
+
+                            font-size: 12px;
+                        }
+                        td{
+                           
+                            word-break:keep-all;/* 不换行 */
+                            white-space:nowrap;/* 不换行 */
+                            overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+                            text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+                        }
+
+                     
+                    
+
+                    </style>
+
+
+
+                  
+                       @foreach($film as $k => $v)
+                                <tr class="">
+                                    <td class="bian">{{$v->id}}</td>
+                                    <td class="bian">{{$v->filmname}}</td>
+                                    <td class="bian">{{$v->filmtime}}</td>
+                                    <td class="bian">{{$v->keywords}}</td>
+                                    <td class="bian">{{$v->director}}</td>
+                                    <td class="bian">{{$v->protagonist}}</td>
+                                    <td class="bian">{{$v->summary}}</td>
+                                    <td class="bian">{{ $v->showtime }}</td>
+                                    <td class="bian">{{$v->price}}</td>
+                                    <td class="bian">{{$v->shownum}}</td>
+                                    <td >
+>>>>>>> 37e0468b33b4372cb9b3ca5e090caa97f447532c
                                         <img src="{{asset($v->filepic)}}" style="width:120px;height:60px"  />
                                     </td>
                                   
                                   
                                     
+<<<<<<< HEAD
                                     <td class="">{{$v->status }}</td>
                                    <td class="">
                                      <a href="{{asset('/FilmAdmins/edit?id=').$v->id}}">编辑</a> 
                                      <a id="del" name="{{$v->id}}" href="#">删除</a>
                                      <!-- href="{{asset('/FilmAdmins/delete?id=').$v->id}} "-->
+=======
+                                    <td class=""> {{$sta[$v->status] }}</td>
+                                   <td style="overflow: visible; " class="">
+                                     <a href="{{asset('/FilmAdmins/edit?id=').$v->id}}" >编辑</a> |
+                                     <span style="cursor:pointer; color:#C5D52B" class="del"  value="{{$v->id}}"  >删除</span>
+                                    
+>>>>>>> 37e0468b33b4372cb9b3ca5e090caa97f447532c
 
                                    </td>
                                 </tr>
@@ -194,15 +240,15 @@
 
 
 
+<<<<<<< HEAD
+=======
+                               
+>>>>>>> 37e0468b33b4372cb9b3ca5e090caa97f447532c
             </div>
 
         </div>
     </div>
 </div>
-
-                 
-
-
 
 
 
@@ -212,6 +258,75 @@
 
 
 @section('js');
+
+<script type="text/javascript">
+
+    //删除
+    $("span").click(function(){
+        //获取id
+         var id = $(this).attr('value');
+         layer.alert('你确定要删除此信息', {
+            skin: 'layui-layer-molv' //样式类名  自定义样式
+            ,closeBtn: 1    // 是否显示关闭按钮
+            ,anim: 1 //动画类型
+            ,btn: ['确定','取消'] //按钮
+            ,icon: 3    // icon  6 笑脸  4,锁  5 哭 3,?  2,X  1,√ 0,!
+            ,shadeClose: false
+            ,yes:function(){
+                // layer.msg('执行中');
+                layer.msg('执行中', {
+                              icon: 16
+                              ,shade: 0.01
+                            });
+
+                // console.log(id);
+                $.ajax({
+                            type: "GET",
+                            url: "{{url('/FilmAdmins/delete')}}",
+                            data: 'id='+id,
+                            success: function(msg){
+                              alert(msg);
+                              // console.log(msg);
+                               location.reload();  
+                            }
+                         });
+
+
+
+
+            }
+            ,btn2:function(){
+                // layer.msg('按钮2');取消执行的按钮
+            }});
+    });
+
+
+
+
+
+
+    //说表移入效果
+
+    $('tbody  .bian').mouseover(function(e){
+             var val=$(e.target).text(); // 每一个格子的文本值
+              layer.tips(val, '.bian', {
+                  tips: [1, '#78BA32'] //还可配置颜色
+                });
+
+
+    });
+
+
+
+       
+
+    
+</script>
+
+
+@endsection;
+
+
 
     <script type="text/javascript">
         // alert($);
@@ -259,4 +374,3 @@
 
 
 
-@endsection;

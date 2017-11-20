@@ -28,8 +28,11 @@ class FilmUserController extends Controller
 
     public function Profile()
     {
-         $res = cinema::find(1);
 
+        //获取用户session
+        $id = session('uid');
+    
+        $res = cinema::find($id);
     	return view('FilmAdmins.FilmUser.Profile',['res'=>$res]);
     }
 
