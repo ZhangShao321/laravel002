@@ -30,43 +30,43 @@ class TestController extends Controller
 
     public function doAction(Request $request)
     {
-    	$phone = $request->input('phone');
-    	// $code = $request->input('code');
+   //  	$phone = $request->input('phone');
+   //  	// $code = $request->input('code');
     
-   		// 配置信息
-			$config = [
-			    'app_key'    => '23470922',
-			    'app_secret' => '665345491559f6f682a65f3bf2e08644',
-			    // 'sandbox'    => true,  // 是否为沙箱环境，默认false
-			];
+   // 		// 配置信息
+			// $config = [
+			//     'app_key'    => '23470922',
+			//     'app_secret' => '665345491559f6f682a65f3bf2e08644',
+			//     // 'sandbox'    => true,  // 是否为沙箱环境，默认false
+			// ];
 
 
-			// 使用方法一
-			$client = new Client(new App($config));
-			$req    = new AlibabaAliqinFcSmsNumSend;
-			$code =  rand(100000, 999999);
-			session(['code' => $code]);
-			$req->setRecNum($phone)
-			    ->setSmsParam([
-			        'number' => $code
-			    ])
-			    ->setSmsFreeSignName('兄弟连')
-			    ->setSmsTemplateCode('SMS_75835101');
+			// // 使用方法一
+			// $client = new Client(new App($config));
+			// $req    = new AlibabaAliqinFcSmsNumSend;
+			// $code =  rand(100000, 999999);
+			// session(['code' => $code]);
+			// $req->setRecNum($phone)
+			//     ->setSmsParam([
+			//         'number' => $code
+			//     ])
+			//     ->setSmsFreeSignName('兄弟连')
+			//     ->setSmsTemplateCode('SMS_75835101');
 
-			$resp = $client->execute($req);
+			// $resp = $client->execute($req);
 
-			// dd($resp);
-			// echo $phone;
+			// // dd($resp);
+			// // echo $phone;
 			
-			if($resp->result->model)
-			{
-				return "发送成功";
-				//print_r($resp);
+			// if($resp->result->model)
+			// {
+			// 	return "发送成功";
+			// 	//print_r($resp);
 				
 
-			}else{
-				return "发送失败!";
-			}
+			// }else{
+			// 	return "发送失败!";
+			// }
 
 			
 

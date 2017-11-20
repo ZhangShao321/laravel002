@@ -29,13 +29,94 @@ Route::get('/404',function(){
 
 //=======================后台信息===================================
 
+<<<<<<< HEAD
 
+		
+		//prefix路由群组中的所有路由包含统一前缀
+		//namepace控制器位于App\Http\Controllers命名空间下
+		//
+		//后台登录页面
+		Route::get('/admin/login','admin\AdminLoginController@index'); 
+		//执行登录的方法
+		Route::post('/admin/dologin','admin\AdminLoginController@dologin');
+		//生成登录验证码 
+		Route::get('/admin/code','admin\AdminLoginController@code');
+=======
 //后台路由组
-Route::group([], function(){
+//prefix路由群组中的所有路由包含统一前缀
+//namepace控制器位于App\Http\Controllers命名空间下
+//
+Route::group(['prefix'=>'admin','namespace'=>'admin'], function () {
 
 
-});
+		//进入后台的首页
+		Route::get('/index', 'CeshiController@index');
 
+		//后台user用户管理
+		Route::resource('user','UserController');
+
+		//后台guanliyuan管理员管理
+		Route::resource('guanliyuan','GuanliyuanController');
+		
+		//后台商户(电影院)管理
+		Route::resource('cinema','CinemaController');
+
+		//后台申请管理
+		Route::resource('req','RequestController');
+
+		//后台影视分类s
+		Route::resource('/film','FilmController');
+
+		//后台轮播图管理
+		Route::resource('/lunbo','LunboController');
+
+		//后台板块管理
+		Route::resource('/block','BlockController');
+
+		//后台网站配置
+		Route::resource('/net','NetController');
+>>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
+	//后台路由组 中间件
+	Route::group(['prefix'=>'admin','namespace'=>'admin','middleware'=>'adminlogin'], function () {
+
+			//进入后台的首页
+			Route::get('/index', 'CeshiController@index');
+
+			//后台user用户管理
+			Route::resource('/user','UserController');
+
+
+			//后台管理员管理
+			Route::resource('/guanliyuan','GuanliyuanController');
+			//后台管理员修改状态
+			// Route::post('/guanliyuan/zt','GuanliyuanController@zt');
+
+
+			//后台商户(电影院)管理
+			Route::resource('/ciname','CinemaController');
+
+			//后台申请管理
+			Route::resource('/request','RequestController');
+
+			//后台影视分类
+			Route::resource('/film','FilmController');
+
+			//后台轮播图管理
+			Route::resource('/lunbo','LunboController');
+
+			//后台板块管理
+			Route::resource('/block','BlockController');
+
+			//后台网站配置
+			Route::resource('/net','NetController');
+
+	});
+
+
+
+//电影院路由组 
+//  php artisan make:controller Film/FilmLoginController --plain
 
 
 //====================电影院信息=================================
@@ -43,13 +124,29 @@ Route::group([], function(){
 
 
 
+//电影院登录
+Route::get('/FilmLogin','FilmLoginController@filmindex');
+//电影院登录验证码
+Route::get('/FilmLogin/code','FilmLoginController@code');
+
+//电影院验证码
+Route::get('/Film','FilmLoginController@code');
 
 
-//电影院路由组 
+
+
+//电影院路由组
+//访问 prefix -> resources 中view视图中的 文件夹名
+// namespace  是控制器文件夹名 
 //  php artisan make:controller Film/FilmLoginController --plain
 
 Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
+    //电影院首页
+    Route::get('index','FilmUserController@index');
+    //电影院信息
+    Route::get('info','FilmUserController@FilmInfo');
 
+    Route::get('/add','FilmRoomController@add');
 
 
       //电影院登录
@@ -76,6 +173,11 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
 
 
 
+
+
+
+
+
    
             //电影院信息
             Route::get('info','FilmUserController@FilmInfo');
@@ -94,6 +196,7 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
 
 
 
+
             //放映管理
             Route::get('filmShow','FilmShowController@index');
             Route::get('filmShowAdd','FilmShowController@add');
@@ -103,11 +206,7 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
             //钱包
             Route::get('money','FilmMoneyController@index');
 
-             //测试
-            Route::get('login','TestController@index');
-            Route::get('test','TestController@doAction');
-            Route::get('te','TestController@test');
-            Route::post('panduan','TestController@login');
+
 
             //影厅
 
@@ -140,7 +239,9 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
 //===============================前台信息=============================
 
 
-//前台路由组
+
+
+
 Route::group(['prefix' => 'homes', 'namespace' => 'Homes'], function(){
 
 	//前台首页
@@ -152,8 +253,8 @@ Route::group(['prefix' => 'homes', 'namespace' => 'Homes'], function(){
 	//电影详情页
 	Route::get('filmdetail','HomesController@filmdetail');
 
-	//电影院列表
-	Route::get('cinemalist','HomesController@cinemalist');
+
+
 
 	//电影院详情
     Route::get('cinemadetail','HomesController@cinemadetail');
@@ -161,4 +262,5 @@ Route::group(['prefix' => 'homes', 'namespace' => 'Homes'], function(){
     //申请商户
 	Route::get('add','HomesController@add');
     Route::post('store','HomesController@store');
+
 });
