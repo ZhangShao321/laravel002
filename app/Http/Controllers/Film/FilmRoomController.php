@@ -210,6 +210,8 @@ class FilmRoomController extends Controller
 
         $res = DB::table('seat')->where('id',$sid)->first();
 
-        return view('#');
+        // var_dump($res);die;
+
+        return view('/FilmAdmins/FilmRoom/seats',['res'=>$res]);
     }
 }
