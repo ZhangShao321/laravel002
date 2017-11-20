@@ -13,6 +13,7 @@
 
 
 
+
 Route::get('/', function () {
     return view('homes/index');
 });
@@ -119,6 +120,7 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
 
     //'middleware'=>'filmlogin'
     Route::group([],function(){
+
 
 
 
