@@ -186,6 +186,10 @@
                                     </td>
                                   
                                   
+<<<<<<< HEAD
+=======
+                                    
+>>>>>>> xzj
 
                                     <td class=""> {{$sta[$v->status] }}</td>
                                    <td style="overflow: visible; " class="">
@@ -212,6 +216,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> xzj
             </div>
 
         </div>
