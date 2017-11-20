@@ -144,7 +144,7 @@ class UserController extends Controller
     public function destroy($id)
     {
         
-<
+
         // var_dump($id);
         //  //删除
         // $res = user::delete($id);
