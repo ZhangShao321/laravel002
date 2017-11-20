@@ -35,6 +35,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset('/FilmAdmin/css/seat/jquery.seat-charts.css')}}" media="screen">
 
 <link rel="stylesheet" type="text/css" href="{{asset('/FilmAdmin/css/admin.css')}}" media="screen">
+<link rel="stylesheet" type="text/css" href="{{asset('/FilmAdmin/css/fenye.css')}}" media="screen">
 
 <title>@yield('title')</title>
 

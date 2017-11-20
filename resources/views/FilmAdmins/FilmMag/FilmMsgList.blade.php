@@ -144,6 +144,13 @@
                     </tr>
                 </thead>
                 <tbody role="alert" aria-live="polite" aria-relevant="all">
+                    <style type="text/css">
+                        
+                          /*  td{
+                                width:100px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis
+                            }*/
+                       
+                    </style>
                   
                        @foreach($film as $k => $v)
                                 <tr class="@if($k%2==0) odd @else even @endif">
@@ -153,7 +160,7 @@
                                     <td class="">{{$v->keywords}}</td>
                                     <td class="">{{$v->director}}</td>
                                     <td class="">{{$v->protagonist}}</td>
-                                    <td class="">{{$v->summary}}</td>
+                                    <td class="" >{{$v->summary}}</td>
                                     <td class="">{{ $v->showtime }}</td>
                                     <td class="">{{$v->price}}</td>
                                     <td class="">{{$v->shownum}}</td>
@@ -165,8 +172,9 @@
                                     
                                     <td class="">{{$v->status }}</td>
                                    <td class="">
-                                     <a href="{{asset('/FilmAdmins/edit?id=').$v->id}}">编辑</a> |
-                                     <a id="del" href="{{asset('/FilmAdmins/delete?id=').$v->id}}">删除</a>
+                                     <a href="{{asset('/FilmAdmins/edit?id=').$v->id}}">编辑</a> 
+                                     <a id="del" name="{{$v->id}}" href="#">删除</a>
+                                     <!-- href="{{asset('/FilmAdmins/delete?id=').$v->id}} "-->
 
                                    </td>
                                 </tr>
@@ -186,49 +194,6 @@
 
 
 
-                               <style type="text/css">
-
-                        .pagination li{
-
-                            background-color: #444444;
-                            border-left: 1px solid rgba(255, 255, 255, 0.15);
-                            border-right: 1px solid rgba(0, 0, 0, 0.5);
-                            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.15) inset;
-                            color: #fff;
-                            cursor: pointer;
-                            display: block;
-                            float: left;
-                            font-size: 12px;
-                            height: 20px;
-                            line-height: 20px;
-                            outline: medium none;
-                            padding: 0 10px;
-                            text-align: center;
-                            text-decoration: none;
-
-                         }
-                         .pagination  .active{
-
-                                 
-                                background-color: #c5d52b;
-                                 background-image: none;
-                                border: medium none;
-                                box-shadow: 0 0 4px rgba(0, 0, 0, 0.25) inset;
-                                color: #323232;
-                               
-
-                                 }
-
-                        .pagination a{
-                            color: #fff;
-                        }
-                        
-                         .pagination .disabled{
-                                  color: #666666;
-                                 cursor: default;
-                                }
-
-                    </style>
             </div>
 
         </div>
@@ -247,6 +212,51 @@
 
 
 @section('js');
+
+    <script type="text/javascript">
+        // alert($);
+        $("#del").click(function(){
+
+
+
+            layer.alert('你确定要删除该信息吗', {
+            skin: 'layui-layer-molv' //样式类名  自定义样式
+            ,closeBtn: 1    // 是否显示关闭按钮
+            ,anim: 1 //动画类型
+            ,btn: ['确定','取消'] //按钮
+            ,icon: 6    // icon
+            ,yes:function(){
+                layer.msg('按钮1')
+
+                //确认发送ajax
+                var id = $('#del').attr('name');
+
+               console.log();
+
+               
+                $.get("{{asset('/FilmAdmins/delete')}}",{id:id},function(data){
+                      // console.log(data);
+                      alert(data+"删除成功");
+                      });
+
+
+
+
+
+            }
+            ,btn2:function(){
+                layer.msg('按钮2')
+            }});
+                    
+
+
+
+
+
+        });
+
+    </script>
+
 
 
 @endsection;
