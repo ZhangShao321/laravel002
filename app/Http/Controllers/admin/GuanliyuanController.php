@@ -74,9 +74,9 @@ class GuanliyuanController extends Controller
 
         $res=$request->except('_token');
        
-        $res['password']=Hash::make($res['password']);
+        $res['password'] = Hash::make($res['password']);
 
-        $res['lastlogin']=time();
+        $res['lastlogin'] = time();
         // dd($res);
        
        $sql=user::insert($res);  

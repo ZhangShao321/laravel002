@@ -202,7 +202,6 @@
 
                         <li><a href="/admin/login">退出</a></li>
 
-                        <li><a href="index.html">退出</a></li>
 
                     </ul>
                 </div>
