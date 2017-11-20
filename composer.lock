@@ -4,15 +4,13 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
+
     "hash": "afdbf38eb8013046f1b627726753163a",
-=======
-<<<<<<< HEAD
+
     "content-hash": "28544f49459613d669347d96a2465c34",
-=======
->>>>>>> 1530585e1d3295da4246f60944213b8fb9843c12
+
     "content-hash": "e5a937eaf4388471b28249d1d9ec8be8",
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -268,11 +266,9 @@
                 "singularize",
                 "string"
             ],
-<<<<<<< HEAD
+
             "time": "2017-07-22 12:18:28"
-=======
-            "time": "2017-07-22T12:18:28+00:00"
-<<<<<<< HEAD
+
         },
         {
             "name": "endroid/qrcode",
@@ -342,9 +338,7 @@
                 "symfony"
             ],
             "time": "2017-10-22T12:17:28+00:00"
-=======
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
->>>>>>> 1530585e1d3295da4246f60944213b8fb9843c12
+
         },
         {
             "name": "flc/alidayu",
@@ -571,11 +565,9 @@
                 "serialize",
                 "tokenizer"
             ],
-<<<<<<< HEAD
+
             "time": "2016-12-07 09:37:55"
-=======
-            "time": "2016-12-07T09:37:55+00:00"
-<<<<<<< HEAD
+
         },
         {
             "name": "khanamiryan/qrcode-detector-decoder",
@@ -626,9 +618,7 @@
                 "zxing"
             ],
             "time": "2017-01-13T09:11:46+00:00"
-=======
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
->>>>>>> 1530585e1d3295da4246f60944213b8fb9843c12
+
         },
         {
             "name": "laravel/framework",
@@ -962,11 +952,9 @@
                 "cron",
                 "schedule"
             ],
-<<<<<<< HEAD
+
             "time": "2017-01-23 04:29:33"
-=======
-            "time": "2017-01-23T04:29:33+00:00"
-<<<<<<< HEAD
+
         },
         {
             "name": "myclabs/php-enum",
@@ -1011,9 +999,7 @@
                 "enum"
             ],
             "time": "2017-06-28T16:24:08+00:00"
-=======
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
->>>>>>> 1530585e1d3295da4246f60944213b8fb9843c12
+
         },
         {
             "name": "nesbot/carbon",
@@ -1350,13 +1336,12 @@
             },
             "dist": {
                 "type": "zip",
-<<<<<<< HEAD
-                "url": "https://files.phpcomposer.com/files/symfony/console/f1983b12e0560ad419ccc9ca344c2f245da1a1f6.zip",
-                "reference": "f1983b12e0560ad419ccc9ca344c2f245da1a1f6",
-=======
+
+
+
                 "url": "https://api.github.com/repos/symfony/console/zipball/c9a214bc07f1d80c87681f4d7fb7aa97938f78d4",
                 "reference": "c9a214bc07f1d80c87681f4d7fb7aa97938f78d4",
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
                 "shasum": ""
             },
             "require": {
@@ -1403,15 +1388,9 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
+
             "time": "2017-11-15 09:26:39"
-=======
-<<<<<<< HEAD
-            "time": "2017-11-11T22:09:14+00:00"
-=======
-            "time": "2017-11-15T09:26:39+00:00"
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
->>>>>>> 1530585e1d3295da4246f60944213b8fb9843c12
+
         },
         {
             "name": "symfony/css-selector",
@@ -1753,13 +1732,13 @@
             },
             "dist": {
                 "type": "zip",
-<<<<<<< HEAD
+
                 "url": "https://files.phpcomposer.com/files/symfony/http-kernel/9fd1817c7900944a066b1bc1653237e382513665.zip",
                 "reference": "9fd1817c7900944a066b1bc1653237e382513665",
-=======
+
                 "url": "https://api.github.com/repos/symfony/http-kernel/zipball/3048915fd5456053435561c70f9586d2b88ef449",
                 "reference": "3048915fd5456053435561c70f9586d2b88ef449",
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
                 "shasum": ""
             },
             "require": {
@@ -1829,11 +1808,9 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
+
             "time": "2017-11-16 16:24:22"
-=======
-<<<<<<< HEAD
-            "time": "2017-11-13T18:51:22+00:00"
+
         },
         {
             "name": "symfony/inflector",
@@ -1945,10 +1922,7 @@
                 "options"
             ],
             "time": "2017-04-12T14:14:56+00:00"
-=======
-            "time": "2017-11-16T16:24:22+00:00"
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
->>>>>>> 1530585e1d3295da4246f60944213b8fb9843c12
+
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -2063,11 +2037,9 @@
                 "portable",
                 "shim"
             ],
-<<<<<<< HEAD
+
             "time": "2017-10-11 12:05:26"
-=======
-            "time": "2017-10-11T12:05:26+00:00"
-<<<<<<< HEAD
+
         },
         {
             "name": "symfony/polyfill-php70",
@@ -2127,9 +2099,7 @@
                 "shim"
             ],
             "time": "2017-10-11T12:05:26+00:00"
-=======
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
->>>>>>> 1530585e1d3295da4246f60944213b8fb9843c12
+
         },
         {
             "name": "symfony/polyfill-util",
@@ -2230,11 +2200,9 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
+
             "time": "2017-10-29 09:49:53"
-=======
-            "time": "2017-10-29T09:49:53+00:00"
-<<<<<<< HEAD
+
         },
         {
             "name": "symfony/property-access",
@@ -2303,9 +2271,7 @@
                 "reflection"
             ],
             "time": "2017-07-03T08:12:02+00:00"
-=======
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
->>>>>>> 1530585e1d3295da4246f60944213b8fb9843c12
+
         },
         {
             "name": "symfony/routing",
@@ -3847,17 +3813,16 @@
             },
             "dist": {
                 "type": "zip",
-<<<<<<< HEAD
+
                 "url": "https://api.github.com/repos/symfony/yaml/zipball/0938408c4faa518d95230deabb5f595bf0de31b9",
                 "reference": "0938408c4faa518d95230deabb5f595bf0de31b9",
-=======
-<<<<<<< HEAD
+
                 "url": "https://files.phpcomposer.com/files/symfony/yaml/ddc23324e6cfe066f3dd34a37ff494fa80b617ed.zip",
-=======
+
                 "url": "https://api.github.com/repos/symfony/yaml/zipball/ddc23324e6cfe066f3dd34a37ff494fa80b617ed",
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
                 "reference": "ddc23324e6cfe066f3dd34a37ff494fa80b617ed",
->>>>>>> 1530585e1d3295da4246f60944213b8fb9843c12
+
                 "shasum": ""
             },
             "require": {
