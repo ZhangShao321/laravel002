@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+
 use Hash;
 
 use Illuminate\Http\Request;
@@ -10,6 +11,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Http\Model\user;
+
+use DB;
+
 
 class GuanliyuanController extends Controller
 {
@@ -21,9 +25,11 @@ class GuanliyuanController extends Controller
     public function index()
     {
 
+
         $res=user::where('auth','1')->get();
-          
+         
         return view('admin.guanliyuan.index',compact('res'));
+
 
     }
 

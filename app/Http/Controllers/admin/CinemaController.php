@@ -15,13 +15,10 @@ class CinemaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-<<<<<<< HEAD
-    {
-        //
-=======
+
     {   
         echo "11111";
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
         return view('admin.cinema.index');
     }
 
@@ -32,13 +29,10 @@ class CinemaController extends Controller
      */
     public function create()
     {
-<<<<<<< HEAD
+
         //
        return view('admin.cinema.add');
-=======
-        
-        return view('admin.cinema.add');
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
     }
 
     /**

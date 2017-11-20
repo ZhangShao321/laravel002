@@ -17,10 +17,7 @@ class LunboController extends Controller
     public function index()
     {
         return view('admin.lunbo.index');
-<<<<<<< HEAD
-=======
-        // echo "i";
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
     }
 
     /**
@@ -30,11 +27,9 @@ class LunboController extends Controller
      */
     public function create()
     {
-<<<<<<< HEAD
+
          return view('admin.lunbo.add');
-=======
-         
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
     }
 
     /**

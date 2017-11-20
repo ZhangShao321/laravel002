@@ -40,7 +40,7 @@
                     <td>
                         <a href="/FilmAdmins/room/edit/{{ $v->id }}"><button>修改</button></a>
                         <a href="/FilmAdmins/room/delete/{{ $v->id }}"><button>删除</button></a>
-                        <a href="/FilmAdmins/room/seats/{{ $v->id }}"><button>座位</button></a>
+                        <a href=""><button>座位</button></a>
                     </td>
                 </tr>
             @endforeach   

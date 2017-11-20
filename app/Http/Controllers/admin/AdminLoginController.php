@@ -22,9 +22,6 @@ class AdminLoginController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    
-    //加载登录页面
-
     public function index()
     {
         //

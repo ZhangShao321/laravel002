@@ -15,7 +15,7 @@
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homes/index');
 });
 
 //404找不到页面
@@ -28,16 +28,17 @@ Route::get('/404',function(){
 
 
 
-		
-		//prefix路由群组中的所有路由包含统一前缀
-		//namepace控制器位于App\Http\Controllers命名空间下
-		//
-		//后台登录页面
-		Route::get('/admin/login','admin\AdminLoginController@index'); 
-		//执行登录的方法
-		Route::post('/admin/dologin','admin\AdminLoginController@dologin');
-		//生成登录验证码 
-		Route::get('/admin/code','admin\AdminLoginController@code');
+//后台路由组
+//prefix路由群组中的所有路由包含统一前缀
+//namepace控制器位于App\Http\Controllers命名空间下
+//
+//后台登录页面
+Route::get('/admin/login','admin\AdminLoginController@index'); 
+//执行登录的方法
+Route::post('/admin/dologin','admin\AdminLoginController@dologin');
+//生成登录验证码 
+Route::get('/admin/code','admin\AdminLoginController@code');
+        
 
 	//后台路由组 中间件
 	Route::group(['prefix'=>'admin','namespace'=>'admin','middleware'=>'adminlogin'], function () {
@@ -86,13 +87,7 @@ Route::get('/404',function(){
 
 
 
-//电影院登录
-Route::get('/FilmLogin','FilmLoginController@filmindex');
-//电影院登录验证码
-Route::get('/FilmLogin/code','FilmLoginController@code');
 
-//电影院验证码
-Route::get('/Film','FilmLoginController@code');
 
 
 
@@ -111,81 +106,68 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     Route::get('/add','FilmRoomController@add');
 
 
-      //电影院登录
+    //电影院登录
     Route::get('FilmLogin','FilmLoginController@index');
     //电影院登录验证码
-    Route::get('FilmCode','FilmLoginController@code');
+    Route::get('/FilmLogin/code','FilmLoginController@code');
     //处理登录
     Route::post('doAction','FilmLoginController@doAction');
 
     //退出登录
     Route::get('outlogin','FilmLoginController@outlogin');
 
-    Route::group(['middleware'=>'filmlogin'],function(){
+
+
+    //'middleware'=>'filmlogin'
+    Route::group([],function(){
 
 
 
-            //电影院首页
-            Route::get('index','FilmUserController@index');
-            //电影院logo修改
-            Route::get('Profile','FilmUserController@Profile');
-            //执行图片修改
-            Route::post('dopro','FilmUserController@doPro');
+    //电影院首页
+    Route::get('index','FilmUserController@index');
+    //电影院logo修改
+    Route::get('Profile','FilmUserController@Profile');
+    //执行图片修改
+    Route::post('dopro','FilmUserController@doPro');
 
 
+    //电影院信息
+    Route::get('info','FilmUserController@FilmInfo');
+
+    //影片管理
+    Route::get('filmMsg','FilmMsgController@index');
+    Route::get('filmMsgAdd','FilmMsgController@add');
+    //处理影片
+    Route::post('doAdd','FilmMsgController@doAdd');
+    //编辑页面
+    Route::get('edit','FilmMsgController@edit');
+    //处理更新
+    Route::post('update','FilmMsgController@update');
+    //删除
+    Route::get('delete','FilmMsgController@delete');
 
 
+    //放映管理
+    Route::get('filmShow','FilmShowController@index');
+    Route::get('filmShowAdd','FilmShowController@add');
+
+    //钱包
+    Route::get('money','FilmMoneyController@index');
 
 
-
-
+    //影厅
+    Route::get('/room/add','FilmRoomController@add');
+    Route::post('/room/insert','FilmRoomController@insert');
+    Route::get('/room/list','FilmRoomController@index');
+    Route::post('/room/seat','FilmRoomController@seat');
+    Route::get('/room/edit/{id}','FilmRoomController@edit');
+    Route::post('/room/update/{id}','FilmRoomController@update');
+    Route::get('/room/delete/{id}','FilmRoomController@delete');
+    Route::post('/room/work','FilmRoomController@work');
+    Route::get('/room/seats/{id}','FilmRoomController@seats');
 
    
-            //电影院信息
-            Route::get('info','FilmUserController@FilmInfo');
-
-            //影片管理
-            Route::get('filmMsg','FilmMsgController@index');
-            Route::get('filmMsgAdd','FilmMsgController@add');
-            //处理影片
-            Route::post('doAdd','FilmMsgController@doAdd');
-            //编辑页面
-            Route::get('edit','FilmMsgController@edit');
-            //处理更新
-            Route::post('update','FilmMsgController@update');
-            //删除
-            Route::get('delete','FilmMsgController@delete');
-
-
-
-
-            //放映管理
-            Route::get('filmShow','FilmShowController@index');
-            Route::get('filmShowAdd','FilmShowController@add');
-
-
-
-            //钱包
-            Route::get('money','FilmMoneyController@index');
-
-
-
-            //影厅
-
-
-            Route::get('/room/add','FilmRoomController@add');
-            Route::post('/room/insert','FilmRoomController@insert');
-            Route::get('/room/list','FilmRoomController@index');
-            Route::post('/room/seat','FilmRoomController@seat');
-            Route::get('/room/edit/{id}','FilmRoomController@edit');
-            Route::post('/room/update/{id}','FilmRoomController@update');
-            Route::get('/room/delete/{id}','FilmRoomController@delete');
-
-
-
-     });
-   
-
+    });
 
 
 

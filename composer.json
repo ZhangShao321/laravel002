@@ -9,7 +9,8 @@
         "laravel/framework": "5.1.*",
         "gregwar/captcha": "v1.1.3",
         "flc/alidayu": "^2.0",
-        "endroid/qrcode": "^2.4"
+        "endroid/qrcode": "^2.4",
+        "predis/predis": "~1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

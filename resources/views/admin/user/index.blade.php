@@ -5,6 +5,7 @@
 
 @section('content')
 
+
 <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
     <div class="dataTables_length" id="DataTables_Table_1_length">
         <label>

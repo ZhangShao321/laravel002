@@ -35,8 +35,10 @@ class UserController extends Controller
     {
         //显示添加用户表单
 
-      
-         return view('admin.user.add');
+
+       return view('admin.user.add');
+       
+
 
        
     }
@@ -47,7 +49,6 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-
 
     public function store(Request $request)
     {
@@ -140,6 +141,11 @@ class UserController extends Controller
     public function destroy($id)
     {
         
+        // var_dump($id);
+        //  //删除
+        // $res = user::delete($id);
+
+        // var_dump($res);die;
         $res=DB::table('user')->where('id',$id)->delete();
 
         // var_dump($res);die;

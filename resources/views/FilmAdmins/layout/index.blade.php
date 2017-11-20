@@ -116,6 +116,10 @@
 
 
 
+<link rel="stylesheet" type="text/css" href="{{asset('/FilmAdmin/css/admin.css')}}" media="screen">
+<link rel="stylesheet" type="text/css" href="{{asset('/FilmAdmin/css/fenye.css')}}" media="screen">
+
+
 <title>@yield('title')</title>
 
 </head>
@@ -279,15 +283,11 @@
                         Hello, John Doe
                     </div>
                     <ul>
-<<<<<<< HEAD
-                    	<li><a href="#">Profile</a></li>
-                        <li><a href="#">Change Password</a></li>
-                        <li><a href="index.html">Logout</a></li>
-=======
+
                     	<li><a href="{{asset('/FilmAdmins/Profile')}}">修改头像</a></li>
                         <li><a href="">修改密码</a></li>
                         <li><a href="{{asset('/FilmAdmins/outlogin')}}">退出</a></li>
->>>>>>> b687c23810de630981d22835f2e4a474fb1a8197
+
                     </ul>
                 </div>
             </div>
@@ -326,12 +326,9 @@
                     <li>
                         <a href="/admins/#"><i class="icon-user"></i> 电影院管理</a>
                         <ul class="closed">
-<<<<<<< HEAD
+
                             <li><a href="{{asset('/FilmAdmins/info')}}">电影院信息</a></li>
-=======
-                           
-                              <li><a href="{{asset('/FilmAdmins/info')}}">电影院信息</a></li>
->>>>>>> b687c23810de630981d22835f2e4a474fb1a8197
+
                            
                         </ul>
                     </li>
@@ -361,17 +358,12 @@
                     <li>
                         <a href="/admins/#"><i class="icon-home-3"></i> 影厅管理</a>
                         <ul class="closed">
-<<<<<<< HEAD
-                            <li><a href="/filmroom">影厅列表</a></li>
-                            <li><a href="/filmroom/add">添加影厅</a></li>
-                           
-=======
+
                             
                             <li><a href="/FilmAdmins/room/list">影厅列表</a></li>
                             <li><a href="/FilmAdmins/room/add">添加影厅</a></li>                          
 
 
->>>>>>> b687c23810de630981d22835f2e4a474fb1a8197
                         </ul>
                     </li>
 
@@ -478,10 +470,7 @@
     <script src="/FilmAdmin/js/core/themer.js"></script>
 
     <!-- Demo Scripts (remove if not needed) -->
-<<<<<<< HEAD
-    <script src="/FilmAdmin/js/demo/demo.dashboard.js"></script>
 
-=======
     <script src="{{asset('/FilmAdmin/js/demo/demo.dashboard.js')}}"></script>
     <script src="{{asset('/FilmAdmin/js/seat/jquery.seat-charts.min.js')}}"></script>
     <!-- 引入layer -->
@@ -496,7 +485,7 @@
 
 
     </script>
->>>>>>> b687c23810de630981d22835f2e4a474fb1a8197
+
 
         @section('js')
 

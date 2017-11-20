@@ -2,12 +2,7 @@
         
 @section('title','商户列表')
 
-<<<<<<< HEAD
-	
-@section('content')
-	
-		
-=======
+
 
 @section('content')
 	<div class="mws-panel grid_8">
@@ -38,7 +33,7 @@
             </table>
         </div>
     </div>
->>>>>>> eb39acf43462b13edef35b450481a0f84b29ba8b
+
 
 
 @endsection

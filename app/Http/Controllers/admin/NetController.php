@@ -18,6 +18,7 @@ class NetController extends Controller
     public function index()
     {   
         
+
         $res=config::all();
         // $res=DB::table('config')->get();
         // dd($res);
@@ -93,7 +94,8 @@ class NetController extends Controller
             $request->file('logo')->move('./adminsUplode',$name.'.'.$hz);
         }else{
 
-             return back()->with('msg','请上传文件!');
+             return back()->with('msg','请上传网站logo!');
+             die;
         }
 
 

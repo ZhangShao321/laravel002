@@ -68,9 +68,16 @@
 
                                    {{csrf_field() }}
                                    <input type="submit" class="btn btn-danger" value="添加">
-                                                     
+
+                              
+              
+
                               </div>
-                   
+                         </form>
+                    </div>         
+                </div>
+
+
 
 @endsection
 

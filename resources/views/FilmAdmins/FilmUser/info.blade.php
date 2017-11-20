@@ -4,9 +4,9 @@
 
 
 @section('content')
-<<<<<<< HEAD
-	<h1>这是电影院信息</h1>
-=======
+
+	<!-- <h1>这是电影院信息</h1> -->
+
      
 		<div class="mws-panel grid_8">
 			    <div class="mws-panel-header">
@@ -122,6 +122,6 @@
 
 
 
->>>>>>> b687c23810de630981d22835f2e4a474fb1a8197
+
 
 @endsection

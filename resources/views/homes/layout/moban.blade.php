@@ -32,6 +32,8 @@
 <link rel="stylesheet" href="/homes/css/responsive.css">
 <!-- modernizr css -->
 <script src="/homes/js/vendor/modernizr-2.8.3.min.js"></script>
+
+
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -126,7 +128,9 @@
 </div>
 <!-- HOME SLIDER -->
 @section('content')
-            
+   
+
+
 @show
 <!-- footer start -->
 <footer>
@@ -216,6 +220,7 @@
 		<!-- footer-bottom-area end -->
 	</footer>
 <!-- footer end -->
+
 <!-- all js here -->
 <!-- jquery latest version -->
 <script src="/homes/js/vendor/jquery-1.12.0.min.js"></script>
@@ -237,13 +242,16 @@
 <script src="/homes/js/plugins.js"></script>
 <!-- main js -->
 <script src="/homes/js/main.js"></script>
+<!-- 表单验证js -->
 <script src="/homes/js/validate.js"></script>
 <script src="/homes/js/jquery.validate.messages_cn.js"></script>
-<script src="/homes/js/layer/layer.js"></script>
-<script src="/homes/js/layer/extend/layer.ext.js"></script>
-<script src="/homes/js/layer/jquery-1.8.3.min.js"></script>
+<!-- 弹框js -->
+<script type="text/javascript" src="{{asset('/homes/js/layer/layer.js')}}"></script>
+<script type="text/javascript" src="{{asset('/homes/js/layer/extend/layer.ext.js')}}"></script>
+
 </body>
 </html>
+
 @section('js')
 
 @show

@@ -17,18 +17,15 @@ class FilmRoomController extends Controller
 
     //影厅列表
     public function index()
-<<<<<<< HEAD
-    {
-       return view('/FilmAdmins/FilmRoom/list'); 
-=======
-    {   
+
+    {  
 
         // $res = DB::table('roominfo')->get();
         $res = roominfo::all();
 
         return view('/FilmAdmins/FilmRoom/list', ['res'=>$res]); 
 
->>>>>>> 25ba28eb8f37d235eba55bd464d962b0d30aec1c
+
     }
 
 
@@ -87,13 +84,15 @@ class FilmRoomController extends Controller
         $res['cid'] = session('cid') ?? 1;
 
         //写入数据
-        $id = DB::table('seat')->insertGetId($res);
+        // $id = DB::table('seat')->insertGetId($res);
+        $id = seat::insertGetId($res);
 
         // echo $id;die;
         //判断
         if($id){
             //修改影厅表的座位id
             $aaa = DB::table('roominfo')->where('id', $res['rid'])->update(['sid'=>$id]);
+            // $aaa = roominfo::where('id','=', $res['rid'])->update(['sid'=>$id]);
 
             if(!$aaa){
 
@@ -101,12 +100,20 @@ class FilmRoomController extends Controller
                 DB::table('roominfo')->where('id', $res['rid'])->delete();
 
                 // return redirect('/FilmAdmins/room/add');
-                echo '0';
+                // echo '0';
+
+                $aaa = array('url'=>'/FilmAdmins/room/add');
+
+                return $aaa;
 
             } else {
 
-                echo '1';
+                // echo '1';.
                 // return redirect('/FilmAdmins/room/list');
+
+                $arr = array('url'=>'/FilmAdmins/room/list');
+
+                return $arr;
                 
             }
         } else {
@@ -166,4 +173,43 @@ class FilmRoomController extends Controller
 
     }
 
+    //修改状态
+    public function work(Request $request)
+    {
+        $data = $request->except('_token');
+
+        // var_dump($data);die;
+
+        if($data['status'] == '1'){
+
+            $res1 = DB::table('roominfo')->where('id',$data['id'])->update(['status'=>0]);
+            if($res1){
+                echo '1';
+            }else{
+                echo '0';
+            }
+        }else if($data['status'] == '0'){
+            $res2 = DB::table('roominfo')->where('id',$data['id'])->update(['status'=>1]);
+            if($res2){
+                echo '2';
+            }else{
+                echo '0';
+            }
+        }
+
+        
+    }
+    
+
+    //显示座位图
+    public function seats($id)
+    {
+        $data = DB::table('roominfo')->where('id',$id)->first();
+
+        $sid = $data->sid;
+
+        $res = DB::table('seat')->where('id',$sid)->first();
+
+        return view('#');
+    }
 }

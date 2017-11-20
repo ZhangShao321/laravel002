@@ -48,7 +48,7 @@
         
             <!-- Logo Wrapper, images put within this wrapper will always be vertically centered -->
             <div id="mws-logo-wrap">
-                <h2 style='color:white'>lamp192</h2>
+                <h2 style='color:white'>my houtai</h2>
             </div>
         </div>
         
@@ -187,18 +187,23 @@
                     <img src="" alt="User Photo">
                 </div>
 
-                
                 <!-- Username and Functions -->
                 <div id="mws-user-functions">
+                    
+            
                     <div id="mws-username">
-                        Hello, 
+                        Hello,admin
+
 
                     </div>
                     <ul>
                         <li><a href="#">修改头像</a></li>
                         <li><a href="#">修改密码</a></li>
+
+
                         <li><a href="/admin/login">退出</a></li>
 
+                      
                     </ul>
                 </div>
             </div>
@@ -244,7 +249,7 @@
                     </li>
 
 
-                    <li>
+                     <li>
 
                         <a href="#"><i class="icon-add-contact" ></i>管理员管理</a>
                         <ul class='closed'>
@@ -315,8 +320,7 @@
 
             @section('content')
 
-            
-                
+                          
 
             @show
 
