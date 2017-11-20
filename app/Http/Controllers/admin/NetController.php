@@ -6,14 +6,18 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use DB;
-use Hash;
-class UserController extends Controller
+
+class NetController extends Controller
 {
-    public function index(Request $request)
-    {
-       
-       return view('admin.user.index');
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {   
+        
+         return view('admin.net.index');
     }
 
     /**
@@ -23,9 +27,6 @@ class UserController extends Controller
      */
     public function create()
     {
-        //显示添加用户表单
-       return view('admin.user.add');
-       
        
     }
 
@@ -35,11 +36,9 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-
-
-        public function store(Request $request)
-        {
-           
+    public function store(Request $request)
+    {
+        //
     }
 
     /**
@@ -61,7 +60,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        
+        //
     }
 
     /**
@@ -73,8 +72,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-       
-
+        //
     }
 
     /**
@@ -85,7 +83,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        
-       
+        //
     }
 }

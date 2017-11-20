@@ -186,16 +186,18 @@
                 <div id="mws-user-photo">
                     <img src="" alt="User Photo">
                 </div>
-                
+
                 <!-- Username and Functions -->
                 <div id="mws-user-functions">
+                    
+            
                     <div id="mws-username">
-                        Hello, 
+                        Hello,admin
                     </div>
                     <ul>
                         <li><a href="#">修改头像</a></li>
                         <li><a href="#">修改密码</a></li>
-                        <li><a href="index.html">退出</a></li>
+                        <li><a href="/admin/login">退出</a></li>
                     </ul>
                 </div>
             </div>
@@ -229,6 +231,8 @@
             
             <!-- Main Navigation -->
             <div id="mws-navigation">
+               
+           
                 <ul>
                     
                     <li>
@@ -238,8 +242,60 @@
                             <li><a href="/admin/user">用户列表</a></li>
                         </ul>
                     </li>
-                    
+
+                     <li>
+                        <a href="#"><i class="icon-add-contact" ></i>管理员管理</a>
+                        <ul class='closed'>
+                            <li><a href="/admin/guanliyuan/create">管理员添加</a></li>
+                            <li><a href="/admin/guanliyuan">管理员列表</a></li>
+                        </ul>
+                    </li>
                    
+                    <li>
+                        <a href="#"><i class="icon-film-camera" ></i>商户管理</a>
+                        <ul class='closed'>
+                            <li><a href="/admin/ciname/create">商户添加</a></li>
+                            <li><a href="/admin/ciname">商户列表</a></li>
+                        </ul>
+                    </li>
+
+                     <li>
+                        <a href="#"><i class="icon-plus" ></i>申请管理</a>
+                        <ul class='closed'>                         
+                            <li><a href="/admin/request">申请列表</a></li>
+                        </ul>
+                    </li>
+
+                     <li>
+                        <a href="#"><i class="icon-film" ></i>影视分类</a>
+                        <ul class='closed'>
+                            <li><a href="/admin/film/create">添加分类</a></li>
+                            <li><a href="/admin/film">影视分类列表</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="icon-pictures" ></i>轮播图管理</a>
+                        <ul class='closed'>
+                            <li><a href="/admin/lunbo/create">添加轮播图</a></li>
+                            <li><a href="/admin/lunbo">轮播图列表</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="icon-align-justify" ></i>板块管理</a>
+                        <ul class='closed'>
+                            <li><a href="/admin/block/create">添加板块</a></li>
+                            <li><a href="/admin/block">板块列表</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="icon-snowflake"></i>网站配置</a>
+                        <ul class='closed'>
+                            <li><a href="/admin/net">网站配置</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>         
         </div>

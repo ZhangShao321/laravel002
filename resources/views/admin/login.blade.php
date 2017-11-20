@@ -38,7 +38,7 @@
 
                         </div>
                     @endif
-
+              
                 <form class="mws-form" action="/admin/dologin" method="post">
                     <div class="mws-form-row">
                         <div class="mws-form-item">
@@ -83,6 +83,13 @@
 
     <!-- Login Script -->
    <script src="/admins/js/core/login.js"></script>
+    
+    <script type="text/javascript">
 
+        $('.mws-form-message').delay(5000).slideUp();
+
+    </script>
 </body>
 </html>
+
+

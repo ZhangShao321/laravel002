@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-
+use Session;
 class AdminLoginMiddleware
 {
     /**
@@ -15,9 +15,9 @@ class AdminLoginMiddleware
      */
     public function handle($request, Closure $next)
     {    
-         $id = session('uid');
+         $id = session('aid');
 
-        if(!$id){
+       if(!$id){
 
             $ip = $request->ip();
 
@@ -31,5 +31,6 @@ class AdminLoginMiddleware
             return $next($request);
 
         }
+          var_dump($id);
     }
 }

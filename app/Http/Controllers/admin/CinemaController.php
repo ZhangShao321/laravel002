@@ -17,6 +17,7 @@ class CinemaController extends Controller
     public function index()
     {
         //
+        return view('admin.cinema.index');
     }
 
     /**
@@ -27,6 +28,7 @@ class CinemaController extends Controller
     public function create()
     {
         //
+       return view('admin.cinema.add');
     }
 
     /**

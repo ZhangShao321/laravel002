@@ -1,11 +1,8 @@
-
 @extends('admin.layout.admins')
         
-@section('title','添加用户')
-
-
-@section('content')
+@section('title','轮播图列表')
 
 	
+@section('content')
+	
 @endsection
-

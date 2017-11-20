@@ -4,8 +4,5 @@
 
 	
 @section('content')
-	
-		
-
-
+	商户列表页面
 @endsection
