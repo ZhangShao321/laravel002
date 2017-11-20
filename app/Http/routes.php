@@ -34,6 +34,13 @@ Route::get('/404',function(){
 //prefix路由群组中的所有路由包含统一前缀
 //namepace控制器位于App\Http\Controllers命名空间下
 //
+//后台登录页面
+Route::get('/admin/login','admin\AdminLoginController@index'); 
+//执行登录的方法
+Route::post('/admin/dologin','admin\AdminLoginController@dologin');
+//生成登录验证码 
+Route::get('/admin/code','admin\AdminLoginController@code');
+        
 	//后台路由组 中间件
 	Route::group(['prefix'=>'admin','namespace'=>'admin','middleware'=>'adminlogin'], function () {
 
