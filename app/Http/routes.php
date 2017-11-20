@@ -144,15 +144,10 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
 //===============================前台信息=============================
 
 
-
-
-
-
-
 //前台路由组
 Route::group(['prefix' => 'homes', 'namespace' => 'Homes'], function(){
 
-	//首页
+	//前台首页
 	Route::get('index','HomesController@index');
 
 	//电影列表页
@@ -165,5 +160,9 @@ Route::group(['prefix' => 'homes', 'namespace' => 'Homes'], function(){
 	Route::get('cinemalist','HomesController@cinemalist');
 
 	//电影院详情
-	Route::get('cinemadetail','HomesController@cinemadetail');
+    Route::get('cinemadetail','HomesController@cinemadetail');
+
+    //申请商户
+	Route::get('add','HomesController@add');
+    Route::post('store','HomesController@store');
 });
