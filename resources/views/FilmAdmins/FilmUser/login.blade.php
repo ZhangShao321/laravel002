@@ -35,12 +35,12 @@
             <div id="mws-login-form">
 
 
-             @if(session('msg'))
-            <div class="mws-form-message info" id="msg">
+            @if(session('msg'))
+                <div class="mws-form-message info" id="msg">
 
            
-                    {{session('msg')}}   
-                     </div>         
+                {{session('msg')}}   
+                </div>         
           
             @endif
              
@@ -60,7 +60,7 @@
                         <div class="mws-form-item">
                             <input type="type" name="code" placeholder="请输入验证码" class="mws-login " style="width:120px;height:30px;margin-right:10px" >
 
-                            <img src="{{asset('/FilmLogin/code')}}" class="img-rounded" onclick="this.src = this.src += '?1'" >
+                            <img src="{{asset('/FilmAdmins/FilmLogin/code')}}" class="img-rounded" onclick="this.src = this.src += '?1'" >
                         </div>
                     </div>
                     

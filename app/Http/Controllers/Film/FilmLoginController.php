@@ -27,7 +27,8 @@ class FilmLoginController extends Controller
 	  //电影院信息填写
     public function code()
     {
-         //生成验证码图片的Builder对象，配置相应属性
+        // echo 1111;die;
+        //生成验证码图片的Builder对象，配置相应属性
         $builder = new CaptchaBuilder;
         //可以设置图片宽高及字体
         $builder->build($width = 120, $height = 40, $font = null);
@@ -36,6 +37,7 @@ class FilmLoginController extends Controller
 
         //把内容存入session
         Session::flash('vcode', $phrase);
+
         //生成图片
         header("Cache-Control: no-cache, must-revalidate");
         header('Content-Type: image/jpeg');
@@ -49,11 +51,14 @@ class FilmLoginController extends Controller
     {
         // echo "这是处理登录方法";
 
+        
+
+
         //获取
         $res = $request->except('_token');
 
 
-       $dd = cinlogin::where('cinema',$res['cinema'])->first();
+        $dd = cinlogin::where('cinema',$res['cinema'])->first();
         // dd($dd);
 
        if(!$dd)

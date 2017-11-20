@@ -76,13 +76,7 @@ Route::group(['prefix'=>'admin','namespace'=>'admin'], function () {
 
 
 
-//电影院登录
-Route::get('/FilmLogin','FilmLoginController@filmindex');
-//电影院登录验证码
-Route::get('/FilmLogin/code','FilmLoginController@code');
 
-//电影院验证码
-Route::get('/Film','FilmLoginController@code');
 
 
 
@@ -101,10 +95,10 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     Route::get('/add','FilmRoomController@add');
 
 
-      //电影院登录
+    //电影院登录
     Route::get('FilmLogin','FilmLoginController@index');
     //电影院登录验证码
-    Route::get('FilmCode','FilmLoginController@code');
+    Route::get('/FilmLogin/code','FilmLoginController@code');
     //处理登录
     Route::post('doAction','FilmLoginController@doAction');
 
