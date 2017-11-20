@@ -8,5 +8,6 @@ class film extends Model
 {
     //
      protected $table = 'film';
+     public $timestamps = false;
     
 }

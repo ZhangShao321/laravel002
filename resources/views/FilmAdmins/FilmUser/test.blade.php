@@ -3,8 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
-	<title>Document</title>
-    <script src="/FilmAdmin/js/libs/jquery-1.8.3.min.js"></script>
+	<title>测试</title>
+    <!-- <script src="/FilmAdmin/js/libs/jquery-1.8.3.min.js"></script> -->
+     <script type="text/javascript" src="/FilmAdmin/layer/jquery.js"></script>
+    <script type="text/javascript" src="/FilmAdmin/layer/layer.js"></script>
+    <script type="text/javascript" src="/FilmAdmin/layer/extend/layer.ext.js"></script>
 
 </head>
 <body>
@@ -23,54 +26,79 @@
 	</form>
 
 	<script type="text/javascript">
-			$.ajaxSetup({
-		        headers: {
-		            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-		        }
-			});
+
+		// alert($);
+		// alert(345);
+
+			// layer.alert('见到你真的很高兴', {icon: 6});
 
 
-			$('#dvs').click(function(){
+		layer.alert('墨绿风格，点击确认看深蓝', {
+		    skin: 'layui-layer-molv' //样式类名  自定义样式
+		    ,closeBtn: 1    // 是否显示关闭按钮
+		    ,anim: 1 //动画类型
+		    ,btn: ['重要','奇葩'] //按钮
+		    ,icon: 6    // icon
+		    ,yes:function(){
+		        layer.msg('按钮1')
+		    }
+		    ,btn2:function(){
+		        layer.msg('按钮2')
+		    }});
+					
 
 
 
-						//获取phone
-					 //var phone = $('#phone').val(); 
-					 // console.log(phone);
-
-						$.ajax({
-							   type: "GET",
-							   url: "{{url('/FilmAdmins/test')}}",
-							   data: 'phone='+$('#phone').val(),
-							   success: function(msg){
-							     alert(msg);
-							   }
-							});
-
-						// $.get("/FilmAdmins/test",{phone:phone},function(data){
-						// 	console.log(data);
-						// });
 
 
-					// return false;
-			});
+			// $.ajaxSetup({
+		 //        headers: {
+		 //            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		 //        }
+			// });
 
 
-			$('#judge').click(function(){
-				 var phone = $('#phone').val(); 
-				 var code = $("#code").val();
+			// $('#dvs').click(function(){
 
 
-				$.ajax({
-							   type: "GET",
-							   url: "{{url('/FilmAdmins/panduan')}}",
-							   data: 'phone='+phone&'code='+code,
-							   success: function(msg){
-							     alert(msg);
-							   }
-							});
 
-					return false;
+			// 			//获取phone
+			// 		 //var phone = $('#phone').val(); 
+			// 		 // console.log(phone);
+
+			// 			$.ajax({
+			// 				   type: "GET",
+			// 				   url: "{{url('/FilmAdmins/test')}}",
+			// 				   data: 'phone='+$('#phone').val(),
+			// 				   success: function(msg){
+			// 				     alert(msg);
+			// 				   }
+			// 				});
+
+			// 			// $.get("/FilmAdmins/test",{phone:phone},function(data){
+			// 			// 	console.log(data);
+			// 			// });
+
+
+			// 		// return false;
+			// });
+
+
+			// $('#judge').click(function(){
+			// 	 var phone = $('#phone').val(); 
+			// 	 var code = $("#code").val();
+
+
+			// 	$.ajax({
+			// 				   type: "GET",
+			// 				   url: "{{url('/FilmAdmins/panduan')}}",
+			// 				   data: 'phone='+phone&'code='+code,
+			// 				   success: function(msg){
+			// 				     alert(msg);
+			// 				   }
+			// 				});
+
+			// 		return false;
 
 
 

@@ -15,7 +15,7 @@ class FilmLoginMiddleware
      */
     public function handle($request, Closure $next)
     {
-        $id = session('fid');
+        $id = session('uid');
 
         if(!$id){
 
@@ -25,7 +25,7 @@ class FilmLoginMiddleware
 
             file_put_contents('FileLoginid.txt',$str,FILE_APPEND);
 
-            return redirect('/film/login');
+            return redirect("/FilmAdmins/FilmLogin");
         } else {
 
             return $next($request);

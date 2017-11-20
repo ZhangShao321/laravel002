@@ -8,5 +8,6 @@ class cininfo extends Model
 {
     //
      protected $table = 'cininfo';
+        public $timestamps = false;
     
 }

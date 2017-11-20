@@ -8,5 +8,6 @@ class lunbo extends Model
 {
     //
      protected $table = 'lunbo';
+     public $timestamps = false;
     
 }
