@@ -67,7 +67,8 @@
 			                       开始时间
 			                    </label>
 			                    <div class="mws-form-item">
-			                        <input type="text" name="time" class="medium">
+			                        <!-- <input type="text" name="time" class="medium"> -->
+                                 <input type="text" name="time" class="large" id="AbsentEndDate" runat="server"  readonly="readonly" />  
 			                    </div>
 			                </div>
 
@@ -94,9 +95,7 @@
 
 
 
-@section('js');
-
-
+@section('js')
 
 
 @endsection

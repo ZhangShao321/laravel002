@@ -16,9 +16,6 @@ class FilmMsgController extends Controller
     public  function index(Request $request)
     {
 
-       // $film =  film::get();
-
-      // $film = film::where('filmname','like','%5%')->paginate(3);
      $film = film::where('filmname','like','%'.$request->input('seach').'%')->paginate($request->input('num',10));
          $sta = array(0=>'下架',1=>'上映',2=>'即将上映');
 
@@ -40,8 +37,7 @@ class FilmMsgController extends Controller
         // 时间支持格式"2017-08-08","2017/08/08",
                 
         $this->validate($request, [
-        'filmname' => 'required',
-        'showtime' => 'required|regex:/\d{4}[-\/]\d{2}[-\/]\d{2}/',  //
+        'filmname' => 'required', 
         'keywords' => 'required',
         'director' => 'required',
         'protagonist' => 'required',
@@ -53,8 +49,6 @@ class FilmMsgController extends Controller
         
         ],[
             'filmname.required'=>'影片名称不能为空',
-            'showtime.regex'=>'上映日期格式错误',
-            'showtime.required'=>'上映日期不能为空',
             'keywords.required'=>'关键字不能为空',
             'director.required'=>'导员不能为空',
             'protagonist.required'=>'主演不能为空',
@@ -65,9 +59,15 @@ class FilmMsgController extends Controller
             ]
         );
      
-        $info = $request->except(['_token','filepic']);
-        $res = $request->only(['filepic']);
+   
+        $info = $request->except(['_token','filepic','showtime']);
       
+        $res = $request->only(['filepic']);
+
+        $showtime = $request->only('showtime');
+
+        $info['showtime'] = strtotime($showtime['showtime']);
+
 
                 // //判断文件是否上传
                 if($request -> hasFile('filepic'))
@@ -130,8 +130,7 @@ class FilmMsgController extends Controller
     public function update(Request $request)
     {
         $this->validate($request, [
-        'filmname' => 'required',
-        'showtime' => 'required|regex:/\d{4}[-\/]\d{2}[-\/]\d{2}/',  //
+        'filmname' => 'required', 
         'keywords' => 'required',
         'director' => 'required',
         'protagonist' => 'required',
@@ -142,8 +141,6 @@ class FilmMsgController extends Controller
         
         ],[
             'filmname.required'=>'影片名称不能为空',
-            'showtime.regex'=>'上映日期格式错误',
-            'showtime.required'=>'上映日期不能为空',
             'keywords.required'=>'关键字不能为空',
             'director.required'=>'导员不能为空',
             'protagonist.required'=>'主演不能为空',
@@ -153,9 +150,12 @@ class FilmMsgController extends Controller
             ]
         );
 
-      $id = $request->only('id');
-      $res =  $request->except('id','_token','id','filepic');
 
+
+      $id = $request->only('id');
+      $showtime = $request->only('showtime');
+      $res =  $request->except('id','_token','id','filepic','showtime');
+      $res['showtime'] = strtotime($showtime['showtime']);
              // //判断文件是否上传
               if($request -> hasFile('filepic'))
               {

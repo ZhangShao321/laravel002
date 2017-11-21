@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Http\Model\cinema;
+use App\Http\Model\cinlogin;
 class FilmUserController extends Controller
 {
     //
@@ -42,9 +43,14 @@ class FilmUserController extends Controller
     {
 
              //先删除原先的图片
+          
+         
+              $cid = cinlogin::find(session('uid'));
+
+              $id = $cid->cid;
 
             //1,先查询
-            $find = cinema::find(1);
+            $find = cinema::find($id);
             //2,判断图片是否存在
             //存在就删除
             if(file_exists($find->clogo))
@@ -71,7 +77,7 @@ class FilmUserController extends Controller
 
                 $clogo = './public/FilmPublic/Uploads/'.$name.'.'.$jpg;
 
-                $info =cinema::find(1); 
+                $info =cinema::find($id); 
                 $info->clogo = "{$clogo}";
                 if($info->save())
                 {

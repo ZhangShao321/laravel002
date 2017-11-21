@@ -41,7 +41,8 @@
 			                       上映时间
 			                    </label>
 			                    <div class="mws-form-item">
-			                        <input type="text" name="showtime" class="medium">
+			                     <input type="text" value="" name="showtime" class="large"  id="EndDate" runat="server"  readonly="readonly" />  
+			                        
 			                    </div>
 			                </div>
 			                <div class="mws-form-row">

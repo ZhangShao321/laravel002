@@ -27,10 +27,10 @@
                             <option value="10" @if(isset($_GET['num'])  ? $_GET['num'] : '10')) selected="selected"  @endif >
                             10
                             </option>
-                            <option value="25" @if($request->num == '25')  selected="selected" @endif >
+                            <option value="25" @if($request->num == '15')  selected="selected" @endif >
                                 25
                             </option>
-                            <option value="50" @if($request->num == '50')  selected="selected" @endif  >
+                            <option value="50" @if($request->num == '25')  selected="selected" @endif  >
                                 50
                             </option>
                        
@@ -176,7 +176,7 @@
                                     <td class="bian">{{$v->director}}</td>
                                     <td class="bian">{{$v->protagonist}}</td>
                                     <td class="bian">{{$v->summary}}</td>
-                                    <td class="bian">{{ $v->showtime }}</td>
+                                    <td class="bian">{{ date('Y-m-d',$v->showtime) }}</td>
                                     <td class="bian">{{$v->price}}</td>
                                     <td class="bian">{{$v->shownum}}</td>
                                     <td >
@@ -189,8 +189,6 @@
                                    <td style="overflow: visible; " class="">
                                      <a href="{{asset('/FilmAdmins/edit?id=').$v->id}}" >编辑</a> |
                                      <span style="cursor:pointer; color:#C5D52B" class="del"  value="{{$v->id}}"  >删除</span>
-                                    
-
                                    </td>
                                 </tr>
                      @endforeach 

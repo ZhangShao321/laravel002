@@ -13,15 +13,15 @@
 			    </div>
 			    <div class="mws-panel-body no-padding">
 
-				 @if (count($errors) > 0)
-            <div class="mws-form-message error">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+			 @if (count($errors) > 0)
+	            <div class="mws-form-message error">
+	                <ul>
+	                    @foreach ($errors->all() as $error)
+	                        <li>{{ $error }}</li>
+	                    @endforeach
+	                </ul>
+	            </div>
+	        @endif
 
 
 
@@ -41,7 +41,8 @@
 			                       上映时间
 			                    </label>
 			                    <div class="mws-form-item">
-			                        <input type="text" name="showtime" value="{{$res->showtime}}" class="medium">
+			                     <input type="text" value="{{date('Y-m-d',$res->showtime)}}" name="showtime" class="large"  id="EndDate" runat="server"  readonly="readonly" />  
+                                
 			                    </div>
 			                </div>
 			                <div class="mws-form-row">

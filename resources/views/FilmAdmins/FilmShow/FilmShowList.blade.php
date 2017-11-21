@@ -93,7 +93,7 @@
                     </tr>
                 </thead>
                 <tbody role="alert" aria-live="polite" aria-relevant="all">
-                     @foreach($film as $k => $v)
+                     @foreach($roo as $k => $v)
                 
                    <tr class="odd">
                     
@@ -106,28 +106,30 @@
                         </td>
                      
                         <td class=" ">
-                         
+                          {{$v->roomname}}
                            
                         </td>
                         <td class=" ">
-                            
+                             {{$v->cinema}}
                             
                         </td>
                         <td class=" ">
-                           开始时间
+                            {{date('Y-m-d H:i:s',$v->time)}}
+                            <!-- date('YYYY-mm-dd hh:mm:ss') -->
                             
                         </td>
                          <td class=" ">
-                            结束时间
-                            
-                        </td>
-                         <td class=" ">
+                           结束时间
                             
                             
                         </td>
                          <td class=" ">
-                           <a href="#">编辑</a>
-                           <a href="#">删除</a>
+                             {{ $arr[$v->status]}}
+                            
+                        </td>
+                         <td class=" ">
+                           <a href="{{asset('/FilmAdmins/showEdit?id=').$v->id}}">编辑</a>
+                          <span style="cursor:pointer; color:#C5D52B" class="del"  value="{{$v->id}}"  >删除</span>
                             
                         </td>
                     </tr>
@@ -140,37 +142,6 @@
                 Showing 1 to 10 of 57 entries
             </div>
             <div class="dataTables_paginate paging_full_numbers" id="DataTables_Table_1_paginate">
-                <a tabindex="0" class="first paginate_button paginate_button_disabled"
-                id="DataTables_Table_1_first">
-                    First
-                </a>
-                <a tabindex="0" class="previous paginate_button paginate_button_disabled"
-                id="DataTables_Table_1_previous">
-                    Previous
-                </a>
-                <span>
-                    <a tabindex="0" class="paginate_active">
-                        1
-                    </a>
-                    <a tabindex="0" class="paginate_button">
-                        2
-                    </a>
-                    <a tabindex="0" class="paginate_button">
-                        3
-                    </a>
-                    <a tabindex="0" class="paginate_button">
-                        4
-                    </a>
-                    <a tabindex="0" class="paginate_button">
-                        5
-                    </a>
-                </span>
-                <a tabindex="0" class="next paginate_button" id="DataTables_Table_1_next">
-                    Next
-                </a>
-                <a tabindex="0" class="last paginate_button" id="DataTables_Table_1_last">
-                    Last
-                </a>
             </div>
         </div>
     </div>
@@ -185,3 +156,62 @@
 
 
 @endsection
+
+
+@section('js');
+
+<script type="text/javascript">
+
+    //删除
+    $("span").click(function(){
+        //获取id
+         var id = $(this).attr('value');
+        
+         layer.alert('你确定要删除此信息', {
+            skin: 'layui-layer-molv' //样式类名  自定义样式
+            ,closeBtn: 1    // 是否显示关闭按钮
+            ,anim: 1 //动画类型
+            ,btn: ['确定','取消'] //按钮
+            ,icon: 5    // icon  6 笑脸  4,锁  5 哭 3,?  2,X  1,√ 0,!
+            ,shadeClose: false
+            ,yes:function(){
+                // layer.msg('执行中');
+                layer.msg('执行中', {
+                              icon: 16
+                              ,shade: 0.01
+                            });
+
+                console.log(id);
+                $.ajax({
+                            type: "GET",
+                            url: "{{url('/FilmAdmins/showDelete')}}",
+                            data: 'id='+id,
+                            success: function(msg){
+                              alert(msg);
+                              // console.log(msg);
+                               location.reload();  
+                            }
+                         });
+
+
+
+
+            }
+            ,btn2:function(){
+                // layer.msg('按钮2');取消执行的按钮
+            }});
+    });
+
+
+
+
+
+
+    
+       
+
+    
+</script>
+
+
+@endsection;

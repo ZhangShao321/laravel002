@@ -50,17 +50,17 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
 
 
 
-      //电影院登录
-    Route::get('FilmLogin','FilmLoginController@index');
-    //电影院登录验证码
-    Route::get('FilmCode','FilmLoginController@code');
-    //处理登录
-    Route::post('doAction','FilmLoginController@doAction');
+          //电影院登录
+        Route::get('FilmLogin','FilmLoginController@index');
+        //电影院登录验证码
+        Route::get('FilmCode','FilmLoginController@code');
+        //处理登录
+        Route::post('doAction','FilmLoginController@doAction');
 
-    //退出登录
-    Route::get('outlogin','FilmLoginController@outlogin');
+        //退出登录
+        Route::get('outlogin','FilmLoginController@outlogin');
 
-    Route::group(['middleware'=>'filmlogin'],function(){
+        Route::group(['middleware'=>'filmlogin'],function(){
 
 
 
@@ -92,6 +92,11 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
             Route::get('filmShow','FilmShowController@index');
             Route::get('filmShowAdd','FilmShowController@add');
             Route::post('showdoAdd','FilmShowController@doadd');
+            //放映编辑
+            Route::get('showEdit','FilmShowController@edit');
+            Route::post('showUpdate','FilmShowController@update');
+            //删除放映
+            Route::get('showDelete','FilmShowController@delete');
 
 
 
