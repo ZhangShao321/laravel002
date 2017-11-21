@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 
 use App\Http\Model\film;
 use Hash;
+use DB;
 
 class FilmMsgController extends Controller
 {
@@ -19,18 +20,20 @@ class FilmMsgController extends Controller
        // $film =  film::get();
 
       // $film = film::where('filmname','like','%5%')->paginate(3);
-     $film = film::where('filmname','like','%'.$request->input('seach').'%')->paginate($request->input('num',10));
-         $sta = array(0=>'下架',1=>'上映',2=>'即将上映');
+      $film = film::where('filmname','like','%'.$request->input('seach').'%')->paginate($request->input('num',10));
+      $sta = array(0=>'下架',1=>'上映',2=>'即将上映');
 
         return view('FilmAdmins.FilmMag.FilmMsgList',['film'=> $film,'request'=>$request,'sta'=>$sta]);
         
     }
 
     public function add()
-    {
-        return view('FilmAdmins.FilmMag.FilmMsgAdd');
+    { 
+        //查询类型
+        $data = DB::table('filmtype')->where('status',1)->get();
 
-    	
+        return view('FilmAdmins.FilmMag.FilmMsgAdd',['data'=>$data]);
+
     }
 
     //处理添加
@@ -87,6 +90,7 @@ class FilmMsgController extends Controller
                  // var_dump($filepic);
 
                   $info['filepic'] = $filepic;
+                  $info['cid'] = session('cid') ?? 1;
 
 
 

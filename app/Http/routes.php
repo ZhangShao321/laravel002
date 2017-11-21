@@ -174,8 +174,9 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
 
     //电影票
     Route::get('/ticket/list', 'FilmTicketController@index');
-
-   
+    Route::get('/ticket/shop/{id}', 'FilmTicketController@shop');
+    Route::post('/ticket/shopseat/{id}', 'FilmTicketController@shopseat');
+    Route::post('/ticket/shopseat_into/{id}', 'FilmTicketController@shopseat_into');
     });
 
 

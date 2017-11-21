@@ -46,7 +46,7 @@ class FilmShowController extends Controller
     {
           
           $cinema = cinema::get();
-          $roominfo = roominfo::where("status",'0')->get();
+          $roominfo = roominfo::where("status",1)->get();
 
           $film = film::get();
 
