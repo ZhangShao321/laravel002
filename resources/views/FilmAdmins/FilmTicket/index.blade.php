@@ -15,9 +15,9 @@
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>电影名称</th>
                     <th>影厅名称</th>
-                    <th>影厅类型</th>
-                    <th>添加时间</th>
+                    <th>放映时间</th>
                     <th>状态</th>
                     <th>操作</th>
                 </tr>

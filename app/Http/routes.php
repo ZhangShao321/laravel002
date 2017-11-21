@@ -171,6 +171,10 @@ Route::group(['prefix' => 'FilmAdmins', 'namespace' => 'Film'],function(){
     Route::get('/room/seatedit/{id}','FilmRoomController@seatedit');
     Route::post('/room/seatupdate/{id}','FilmRoomController@seatupdate');
 
+
+    //电影票
+    Route::get('/ticket/list', 'FilmTicketController@index');
+
    
     });
 

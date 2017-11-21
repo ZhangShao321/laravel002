@@ -197,10 +197,7 @@ class FilmMsgController extends Controller
     //信息删除
      public function delete(Request $request)
      {
-<<<<<<< HEAD
-        var_dump($request);
-        echo "这是删除";
-=======
+
         // echo "这是删除";
          $id = $request->only('id');
          $del = film::find($id);
@@ -219,7 +216,7 @@ class FilmMsgController extends Controller
             echo "删除失败!";
            }
 
->>>>>>> 37e0468b33b4372cb9b3ca5e090caa97f447532c
+
      }
 
                

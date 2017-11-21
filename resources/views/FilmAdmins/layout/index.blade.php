@@ -340,8 +340,8 @@
                     <li>
                         <a href="/admins/#"><i class="icon-th"></i> 影片管理</a>
                         <ul class="closed">
-                            <li><a href="#">影片列表</a></li>
-                            <li><a href="#">添加影片</a></li>
+                            <li><a href="/FilmAdmins/filmMsg">影片列表</a></li>
+                            <li><a href="/FilmAdmins/filmMsgAdd">添加影片</a></li>
                            
                         </ul>
                     </li>
@@ -350,8 +350,8 @@
                     <li>
                         <a href="/admins/#"><i class="icon-television"></i> 影片放映</a>
                         <ul class="closed">
-                            <li><a href="#">用户列表</a></li>
-                            <li><a href="#">用户添加</a></li>
+                            <li><a href="/FilmAdmins/filmShow">放映列表</a></li>
+                            <li><a href="/FilmAdmins/filmShowAdd">添加放映</a></li>
                            
                         </ul>
                     </li>
@@ -372,7 +372,7 @@
                     <li>
                         <a href="/admins/#"><i class="icon-calendar-month"></i> 电影票</a>
                         <ul class="closed">
-                            <li><a href="#">添加座位</a></li>
+                            <li><a href="/FilmAdmins/ticket/list">电影票详情</a></li>
                            
                            
                         </ul>
@@ -381,7 +381,7 @@
                     <li>
                         <a href="/admins/#"><i class="icon-database"></i> 钱包信息</a>
                         <ul class="closed">
-                            <li><a href="#">钱包列表</a></li>
+                            <li><a href="/FilmAdmins/money">钱包列表</a></li>
                             
                            
                         </ul>
